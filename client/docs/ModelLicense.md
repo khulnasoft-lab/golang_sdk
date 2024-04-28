@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CurrentHosts** | Pointer to **int32** |  | [optional] 
-**DeepfenceSupportEmail** | Pointer to **string** |  | [optional] 
+**KengineSupportEmail** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **EndDate** | Pointer to **string** |  | [optional] 
 **IsActive** | Pointer to **bool** |  | [optional] 
@@ -67,30 +67,30 @@ SetCurrentHosts sets CurrentHosts field to given value.
 
 HasCurrentHosts returns a boolean if a field has been set.
 
-### GetDeepfenceSupportEmail
+### GetKengineSupportEmail
 
-`func (o *ModelLicense) GetDeepfenceSupportEmail() string`
+`func (o *ModelLicense) GetKengineSupportEmail() string`
 
-GetDeepfenceSupportEmail returns the DeepfenceSupportEmail field if non-nil, zero value otherwise.
+GetKengineSupportEmail returns the KengineSupportEmail field if non-nil, zero value otherwise.
 
-### GetDeepfenceSupportEmailOk
+### GetKengineSupportEmailOk
 
-`func (o *ModelLicense) GetDeepfenceSupportEmailOk() (*string, bool)`
+`func (o *ModelLicense) GetKengineSupportEmailOk() (*string, bool)`
 
-GetDeepfenceSupportEmailOk returns a tuple with the DeepfenceSupportEmail field if it's non-nil, zero value otherwise
+GetKengineSupportEmailOk returns a tuple with the KengineSupportEmail field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeepfenceSupportEmail
+### SetKengineSupportEmail
 
-`func (o *ModelLicense) SetDeepfenceSupportEmail(v string)`
+`func (o *ModelLicense) SetKengineSupportEmail(v string)`
 
-SetDeepfenceSupportEmail sets DeepfenceSupportEmail field to given value.
+SetKengineSupportEmail sets KengineSupportEmail field to given value.
 
-### HasDeepfenceSupportEmail
+### HasKengineSupportEmail
 
-`func (o *ModelLicense) HasDeepfenceSupportEmail() bool`
+`func (o *ModelLicense) HasKengineSupportEmail() bool`
 
-HasDeepfenceSupportEmail returns a boolean if a field has been set.
+HasKengineSupportEmail returns a boolean if a field has been set.
 
 ### GetDescription
 

@@ -4,53 +4,53 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CountCloudAccounts**](SearchAPI.md#CountCloudAccounts) | **Post** /deepfence/search/count/cloud-accounts | Count Cloud Nodes
-[**CountCloudComplianceScans**](SearchAPI.md#CountCloudComplianceScans) | **Post** /deepfence/search/count/cloud-compliance/scans | Count Cloud Compliance Scan results
-[**CountCloudCompliances**](SearchAPI.md#CountCloudCompliances) | **Post** /deepfence/search/count/cloud-compliances | Count Cloud compliances
-[**CountCloudResources**](SearchAPI.md#CountCloudResources) | **Post** /deepfence/search/count/cloud-resources | Count Cloud resources
-[**CountComplianceRules**](SearchAPI.md#CountComplianceRules) | **Post** /deepfence/search/count/compliance-rules | Count Compliance Rules
-[**CountComplianceScans**](SearchAPI.md#CountComplianceScans) | **Post** /deepfence/search/count/compliance/scans | Count Compliance Scan results
-[**CountCompliances**](SearchAPI.md#CountCompliances) | **Post** /deepfence/search/count/compliances | Count Compliances
-[**CountContainerImages**](SearchAPI.md#CountContainerImages) | **Post** /deepfence/search/count/images | Count Container images
-[**CountContainers**](SearchAPI.md#CountContainers) | **Post** /deepfence/search/count/containers | Count Containers data
-[**CountHosts**](SearchAPI.md#CountHosts) | **Post** /deepfence/search/count/hosts | Count hosts
-[**CountKubernetesClusters**](SearchAPI.md#CountKubernetesClusters) | **Post** /deepfence/search/count/kubernetes-clusters | Count Kubernetes clusters
-[**CountMalwareRules**](SearchAPI.md#CountMalwareRules) | **Post** /deepfence/search/count/malware-rules | Count Malware Rules
-[**CountMalwareScans**](SearchAPI.md#CountMalwareScans) | **Post** /deepfence/search/count/malware/scans | Count Malware Scan results
-[**CountMalwares**](SearchAPI.md#CountMalwares) | **Post** /deepfence/search/count/malwares | Count Malwares
-[**CountNodes**](SearchAPI.md#CountNodes) | **Get** /deepfence/search/count/nodes | Count nodes
-[**CountPods**](SearchAPI.md#CountPods) | **Post** /deepfence/search/count/pods | Count Pods
-[**CountRegistryAccounts**](SearchAPI.md#CountRegistryAccounts) | **Post** /deepfence/search/count/registry-accounts | Count Registry Accounts
-[**CountSecretRules**](SearchAPI.md#CountSecretRules) | **Post** /deepfence/search/count/secret-rules | Count Secret Rules
-[**CountSecrets**](SearchAPI.md#CountSecrets) | **Post** /deepfence/search/count/secrets | Count Secrets
-[**CountSecretsScans**](SearchAPI.md#CountSecretsScans) | **Post** /deepfence/search/count/secret/scans | Count Secret Scan results
-[**CountVulnerabilities**](SearchAPI.md#CountVulnerabilities) | **Post** /deepfence/search/count/vulnerabilities | Count Vulnerabilities
-[**CountVulnerabilityRules**](SearchAPI.md#CountVulnerabilityRules) | **Post** /deepfence/search/count/vulnerability-rules | Count Vulnerability Rules
-[**CountVulnerabilityScans**](SearchAPI.md#CountVulnerabilityScans) | **Post** /deepfence/search/count/vulnerability/scans | Count Vulnerability Scan results
-[**GetCloudComplianceFilters**](SearchAPI.md#GetCloudComplianceFilters) | **Post** /deepfence/filters/cloud-compliance | Get Cloud Compliance Filters
-[**GetComplianceFilters**](SearchAPI.md#GetComplianceFilters) | **Post** /deepfence/filters/compliance | Get Compliance Filters
-[**SearchCloudAccounts**](SearchAPI.md#SearchCloudAccounts) | **Post** /deepfence/search/cloud-accounts | Search Cloud Nodes
-[**SearchCloudComplianceScans**](SearchAPI.md#SearchCloudComplianceScans) | **Post** /deepfence/search/cloud-compliance/scans | Search Cloud Compliance Scan results
-[**SearchCloudCompliances**](SearchAPI.md#SearchCloudCompliances) | **Post** /deepfence/search/cloud-compliances | Search Cloud compliances
-[**SearchCloudResources**](SearchAPI.md#SearchCloudResources) | **Post** /deepfence/search/cloud-resources | Search Cloud Resources
-[**SearchComplianceRules**](SearchAPI.md#SearchComplianceRules) | **Post** /deepfence/search/compliance-rules | Search Compliance Rules
-[**SearchComplianceScans**](SearchAPI.md#SearchComplianceScans) | **Post** /deepfence/search/compliance/scans | Search Compliance Scan results
-[**SearchCompliances**](SearchAPI.md#SearchCompliances) | **Post** /deepfence/search/compliances | Search Compliances
-[**SearchContainerImages**](SearchAPI.md#SearchContainerImages) | **Post** /deepfence/search/images | Search Container images
-[**SearchContainers**](SearchAPI.md#SearchContainers) | **Post** /deepfence/search/containers | Search Containers data
-[**SearchHosts**](SearchAPI.md#SearchHosts) | **Post** /deepfence/search/hosts | Search hosts
-[**SearchKubernetesClusters**](SearchAPI.md#SearchKubernetesClusters) | **Post** /deepfence/search/kubernetes-clusters | Search Kuberenetes Clusters
-[**SearchMalwareRules**](SearchAPI.md#SearchMalwareRules) | **Post** /deepfence/search/malware-rules | Search Malware Rules
-[**SearchMalwareScans**](SearchAPI.md#SearchMalwareScans) | **Post** /deepfence/search/malware/scans | Search Malware Scan results
-[**SearchMalwares**](SearchAPI.md#SearchMalwares) | **Post** /deepfence/search/malwares | Search Malwares
-[**SearchPods**](SearchAPI.md#SearchPods) | **Post** /deepfence/search/pods | Search Pods
-[**SearchRegistryAccounts**](SearchAPI.md#SearchRegistryAccounts) | **Post** /deepfence/search/registry-accounts | Search Registry Accounts
-[**SearchSecretRules**](SearchAPI.md#SearchSecretRules) | **Post** /deepfence/search/secret-rules | Search Secret Rules
-[**SearchSecrets**](SearchAPI.md#SearchSecrets) | **Post** /deepfence/search/secrets | Search Secrets
-[**SearchSecretsScans**](SearchAPI.md#SearchSecretsScans) | **Post** /deepfence/search/secret/scans | Search Secrets Scan results
-[**SearchVulerabilityRules**](SearchAPI.md#SearchVulerabilityRules) | **Post** /deepfence/search/vulnerability-rules | Search Vulnerability Rules
-[**SearchVulnerabilities**](SearchAPI.md#SearchVulnerabilities) | **Post** /deepfence/search/vulnerabilities | Search Vulnerabilities
-[**SearchVulnerabilityScans**](SearchAPI.md#SearchVulnerabilityScans) | **Post** /deepfence/search/vulnerability/scans | Search Vulnerability Scan results
+[**CountCloudAccounts**](SearchAPI.md#CountCloudAccounts) | **Post** /kengine/search/count/cloud-accounts | Count Cloud Nodes
+[**CountCloudComplianceScans**](SearchAPI.md#CountCloudComplianceScans) | **Post** /kengine/search/count/cloud-compliance/scans | Count Cloud Compliance Scan results
+[**CountCloudCompliances**](SearchAPI.md#CountCloudCompliances) | **Post** /kengine/search/count/cloud-compliances | Count Cloud compliances
+[**CountCloudResources**](SearchAPI.md#CountCloudResources) | **Post** /kengine/search/count/cloud-resources | Count Cloud resources
+[**CountComplianceRules**](SearchAPI.md#CountComplianceRules) | **Post** /kengine/search/count/compliance-rules | Count Compliance Rules
+[**CountComplianceScans**](SearchAPI.md#CountComplianceScans) | **Post** /kengine/search/count/compliance/scans | Count Compliance Scan results
+[**CountCompliances**](SearchAPI.md#CountCompliances) | **Post** /kengine/search/count/compliances | Count Compliances
+[**CountContainerImages**](SearchAPI.md#CountContainerImages) | **Post** /kengine/search/count/images | Count Container images
+[**CountContainers**](SearchAPI.md#CountContainers) | **Post** /kengine/search/count/containers | Count Containers data
+[**CountHosts**](SearchAPI.md#CountHosts) | **Post** /kengine/search/count/hosts | Count hosts
+[**CountKubernetesClusters**](SearchAPI.md#CountKubernetesClusters) | **Post** /kengine/search/count/kubernetes-clusters | Count Kubernetes clusters
+[**CountMalwareRules**](SearchAPI.md#CountMalwareRules) | **Post** /kengine/search/count/malware-rules | Count Malware Rules
+[**CountMalwareScans**](SearchAPI.md#CountMalwareScans) | **Post** /kengine/search/count/malware/scans | Count Malware Scan results
+[**CountMalwares**](SearchAPI.md#CountMalwares) | **Post** /kengine/search/count/malwares | Count Malwares
+[**CountNodes**](SearchAPI.md#CountNodes) | **Get** /kengine/search/count/nodes | Count nodes
+[**CountPods**](SearchAPI.md#CountPods) | **Post** /kengine/search/count/pods | Count Pods
+[**CountRegistryAccounts**](SearchAPI.md#CountRegistryAccounts) | **Post** /kengine/search/count/registry-accounts | Count Registry Accounts
+[**CountSecretRules**](SearchAPI.md#CountSecretRules) | **Post** /kengine/search/count/secret-rules | Count Secret Rules
+[**CountSecrets**](SearchAPI.md#CountSecrets) | **Post** /kengine/search/count/secrets | Count Secrets
+[**CountSecretsScans**](SearchAPI.md#CountSecretsScans) | **Post** /kengine/search/count/secret/scans | Count Secret Scan results
+[**CountVulnerabilities**](SearchAPI.md#CountVulnerabilities) | **Post** /kengine/search/count/vulnerabilities | Count Vulnerabilities
+[**CountVulnerabilityRules**](SearchAPI.md#CountVulnerabilityRules) | **Post** /kengine/search/count/vulnerability-rules | Count Vulnerability Rules
+[**CountVulnerabilityScans**](SearchAPI.md#CountVulnerabilityScans) | **Post** /kengine/search/count/vulnerability/scans | Count Vulnerability Scan results
+[**GetCloudComplianceFilters**](SearchAPI.md#GetCloudComplianceFilters) | **Post** /kengine/filters/cloud-compliance | Get Cloud Compliance Filters
+[**GetComplianceFilters**](SearchAPI.md#GetComplianceFilters) | **Post** /kengine/filters/compliance | Get Compliance Filters
+[**SearchCloudAccounts**](SearchAPI.md#SearchCloudAccounts) | **Post** /kengine/search/cloud-accounts | Search Cloud Nodes
+[**SearchCloudComplianceScans**](SearchAPI.md#SearchCloudComplianceScans) | **Post** /kengine/search/cloud-compliance/scans | Search Cloud Compliance Scan results
+[**SearchCloudCompliances**](SearchAPI.md#SearchCloudCompliances) | **Post** /kengine/search/cloud-compliances | Search Cloud compliances
+[**SearchCloudResources**](SearchAPI.md#SearchCloudResources) | **Post** /kengine/search/cloud-resources | Search Cloud Resources
+[**SearchComplianceRules**](SearchAPI.md#SearchComplianceRules) | **Post** /kengine/search/compliance-rules | Search Compliance Rules
+[**SearchComplianceScans**](SearchAPI.md#SearchComplianceScans) | **Post** /kengine/search/compliance/scans | Search Compliance Scan results
+[**SearchCompliances**](SearchAPI.md#SearchCompliances) | **Post** /kengine/search/compliances | Search Compliances
+[**SearchContainerImages**](SearchAPI.md#SearchContainerImages) | **Post** /kengine/search/images | Search Container images
+[**SearchContainers**](SearchAPI.md#SearchContainers) | **Post** /kengine/search/containers | Search Containers data
+[**SearchHosts**](SearchAPI.md#SearchHosts) | **Post** /kengine/search/hosts | Search hosts
+[**SearchKubernetesClusters**](SearchAPI.md#SearchKubernetesClusters) | **Post** /kengine/search/kubernetes-clusters | Search Kuberenetes Clusters
+[**SearchMalwareRules**](SearchAPI.md#SearchMalwareRules) | **Post** /kengine/search/malware-rules | Search Malware Rules
+[**SearchMalwareScans**](SearchAPI.md#SearchMalwareScans) | **Post** /kengine/search/malware/scans | Search Malware Scan results
+[**SearchMalwares**](SearchAPI.md#SearchMalwares) | **Post** /kengine/search/malwares | Search Malwares
+[**SearchPods**](SearchAPI.md#SearchPods) | **Post** /kengine/search/pods | Search Pods
+[**SearchRegistryAccounts**](SearchAPI.md#SearchRegistryAccounts) | **Post** /kengine/search/registry-accounts | Search Registry Accounts
+[**SearchSecretRules**](SearchAPI.md#SearchSecretRules) | **Post** /kengine/search/secret-rules | Search Secret Rules
+[**SearchSecrets**](SearchAPI.md#SearchSecrets) | **Post** /kengine/search/secrets | Search Secrets
+[**SearchSecretsScans**](SearchAPI.md#SearchSecretsScans) | **Post** /kengine/search/secret/scans | Search Secrets Scan results
+[**SearchVulerabilityRules**](SearchAPI.md#SearchVulerabilityRules) | **Post** /kengine/search/vulnerability-rules | Search Vulnerability Rules
+[**SearchVulnerabilities**](SearchAPI.md#SearchVulnerabilities) | **Post** /kengine/search/vulnerabilities | Search Vulnerabilities
+[**SearchVulnerabilityScans**](SearchAPI.md#SearchVulnerabilityScans) | **Post** /kengine/search/vulnerability/scans | Search Vulnerability Scan results
 
 
 

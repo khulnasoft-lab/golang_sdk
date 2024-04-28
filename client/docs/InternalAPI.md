@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetConsoleApiToken**](InternalAPI.md#GetConsoleApiToken) | **Get** /deepfence/internal/console-api-token | Get api-token for console agent
+[**GetConsoleApiToken**](InternalAPI.md#GetConsoleApiToken) | **Get** /kengine/internal/console-api-token | Get api-token for console agent
 
 
 

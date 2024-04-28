@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CompleteCloudCompliance**](CompletionAPI.md#CompleteCloudCompliance) | **Post** /deepfence/complete/cloud-compliance | Get Completion for cloud compliance fields
-[**CompleteComplianceInfo**](CompletionAPI.md#CompleteComplianceInfo) | **Post** /deepfence/complete/compliance | Get Completion for compliance fields
-[**CompleteHostInfo**](CompletionAPI.md#CompleteHostInfo) | **Post** /deepfence/complete/host | Get Completion for host fields
-[**CompleteProcessInfo**](CompletionAPI.md#CompleteProcessInfo) | **Post** /deepfence/complete/process | Get Completion for process fields
-[**CompleteVulnerabilityInfo**](CompletionAPI.md#CompleteVulnerabilityInfo) | **Post** /deepfence/complete/vulnerability | Get Completion for vulnerability fields
+[**CompleteCloudCompliance**](CompletionAPI.md#CompleteCloudCompliance) | **Post** /kengine/complete/cloud-compliance | Get Completion for cloud compliance fields
+[**CompleteComplianceInfo**](CompletionAPI.md#CompleteComplianceInfo) | **Post** /kengine/complete/compliance | Get Completion for compliance fields
+[**CompleteHostInfo**](CompletionAPI.md#CompleteHostInfo) | **Post** /kengine/complete/host | Get Completion for host fields
+[**CompleteProcessInfo**](CompletionAPI.md#CompleteProcessInfo) | **Post** /kengine/complete/process | Get Completion for process fields
+[**CompleteVulnerabilityInfo**](CompletionAPI.md#CompleteVulnerabilityInfo) | **Post** /kengine/complete/vulnerability | Get Completion for vulnerability fields
 
 
 

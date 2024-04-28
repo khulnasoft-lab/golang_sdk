@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetIndividualThreatGraph**](ThreatAPI.md#GetIndividualThreatGraph) | **Post** /deepfence/graph/threat/individual | Get Vulnerability Threat Graph
-[**GetThreatGraph**](ThreatAPI.md#GetThreatGraph) | **Post** /deepfence/graph/threat | Get Threat Graph
+[**GetIndividualThreatGraph**](ThreatAPI.md#GetIndividualThreatGraph) | **Post** /kengine/graph/threat/individual | Get Vulnerability Threat Graph
+[**GetThreatGraph**](ThreatAPI.md#GetThreatGraph) | **Post** /kengine/graph/threat | Get Threat Graph
 
 
 

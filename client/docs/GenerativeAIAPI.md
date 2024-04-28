@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddGenerativeAiIntegrationBedrock**](GenerativeAIAPI.md#AddGenerativeAiIntegrationBedrock) | **Post** /deepfence/generative-ai-integration/bedrock | Add AWS Bedrock Generative AI Integration
-[**AddGenerativeAiIntegrationOpenAI**](GenerativeAIAPI.md#AddGenerativeAiIntegrationOpenAI) | **Post** /deepfence/generative-ai-integration/openai | Add OpenAI Generative AI Integration
-[**AutoAddGenerativeAiIntegration**](GenerativeAIAPI.md#AutoAddGenerativeAiIntegration) | **Post** /deepfence/generative-ai-integration/auto-add | Automatically add Generative AI Integration
-[**DeleteGenerativeAiIntegration**](GenerativeAIAPI.md#DeleteGenerativeAiIntegration) | **Delete** /deepfence/generative-ai-integration/{integration_id} | Delete Generative AI Integration
-[**GenerativeAiIntegrationCloudPostureQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationCloudPostureQuery) | **Post** /deepfence/generative-ai-integration/query/cloud-posture | Send Cloud Posture query to Generative AI Integration
-[**GenerativeAiIntegrationKubernetesPostureQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationKubernetesPostureQuery) | **Post** /deepfence/generative-ai-integration/query/kubernetes-posture | Send Kubernetes Posture query to Generative AI Integration
-[**GenerativeAiIntegrationLinuxPostureQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationLinuxPostureQuery) | **Post** /deepfence/generative-ai-integration/query/linux-posture | Send Linux Posture query to Generative AI Integration
-[**GenerativeAiIntegrationMalwareQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationMalwareQuery) | **Post** /deepfence/generative-ai-integration/query/malware | Send Malware query to Generative AI Integration
-[**GenerativeAiIntegrationSecretQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationSecretQuery) | **Post** /deepfence/generative-ai-integration/query/secret | Send Secret query to Generative AI Integration
-[**GenerativeAiIntegrationVulnerabilityQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationVulnerabilityQuery) | **Post** /deepfence/generative-ai-integration/query/vulnerability | Send Vulnerability query to Generative AI Integration
-[**ListGenerativeAiIntegration**](GenerativeAIAPI.md#ListGenerativeAiIntegration) | **Get** /deepfence/generative-ai-integration | List Generative AI Integrations
-[**SetDefaultGenerativeAiIntegration**](GenerativeAIAPI.md#SetDefaultGenerativeAiIntegration) | **Put** /deepfence/generative-ai-integration/{integration_id}/default | Set Default Generative AI Integration
+[**AddGenerativeAiIntegrationBedrock**](GenerativeAIAPI.md#AddGenerativeAiIntegrationBedrock) | **Post** /kengine/generative-ai-integration/bedrock | Add AWS Bedrock Generative AI Integration
+[**AddGenerativeAiIntegrationOpenAI**](GenerativeAIAPI.md#AddGenerativeAiIntegrationOpenAI) | **Post** /kengine/generative-ai-integration/openai | Add OpenAI Generative AI Integration
+[**AutoAddGenerativeAiIntegration**](GenerativeAIAPI.md#AutoAddGenerativeAiIntegration) | **Post** /kengine/generative-ai-integration/auto-add | Automatically add Generative AI Integration
+[**DeleteGenerativeAiIntegration**](GenerativeAIAPI.md#DeleteGenerativeAiIntegration) | **Delete** /kengine/generative-ai-integration/{integration_id} | Delete Generative AI Integration
+[**GenerativeAiIntegrationCloudPostureQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationCloudPostureQuery) | **Post** /kengine/generative-ai-integration/query/cloud-posture | Send Cloud Posture query to Generative AI Integration
+[**GenerativeAiIntegrationKubernetesPostureQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationKubernetesPostureQuery) | **Post** /kengine/generative-ai-integration/query/kubernetes-posture | Send Kubernetes Posture query to Generative AI Integration
+[**GenerativeAiIntegrationLinuxPostureQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationLinuxPostureQuery) | **Post** /kengine/generative-ai-integration/query/linux-posture | Send Linux Posture query to Generative AI Integration
+[**GenerativeAiIntegrationMalwareQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationMalwareQuery) | **Post** /kengine/generative-ai-integration/query/malware | Send Malware query to Generative AI Integration
+[**GenerativeAiIntegrationSecretQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationSecretQuery) | **Post** /kengine/generative-ai-integration/query/secret | Send Secret query to Generative AI Integration
+[**GenerativeAiIntegrationVulnerabilityQuery**](GenerativeAIAPI.md#GenerativeAiIntegrationVulnerabilityQuery) | **Post** /kengine/generative-ai-integration/query/vulnerability | Send Vulnerability query to Generative AI Integration
+[**ListGenerativeAiIntegration**](GenerativeAIAPI.md#ListGenerativeAiIntegration) | **Get** /kengine/generative-ai-integration | List Generative AI Integrations
+[**SetDefaultGenerativeAiIntegration**](GenerativeAIAPI.md#SetDefaultGenerativeAiIntegration) | **Put** /kengine/generative-ai-integration/{integration_id}/default | Set Default Generative AI Integration
 
 
 

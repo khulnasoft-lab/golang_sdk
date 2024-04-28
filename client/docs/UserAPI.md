@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteCurrentUser**](UserAPI.md#DeleteCurrentUser) | **Delete** /deepfence/user | Delete Current User
-[**DeleteUser**](UserAPI.md#DeleteUser) | **Delete** /deepfence/users/{id} | Delete User by User ID
-[**GetApiTokens**](UserAPI.md#GetApiTokens) | **Get** /deepfence/api-token | Get User&#39;s API Tokens
-[**GetCurrentUser**](UserAPI.md#GetCurrentUser) | **Get** /deepfence/user | Get Current User
-[**GetUser**](UserAPI.md#GetUser) | **Get** /deepfence/users/{id} | Get User by User ID
-[**GetUsers**](UserAPI.md#GetUsers) | **Get** /deepfence/users | Get all users
-[**InviteUser**](UserAPI.md#InviteUser) | **Post** /deepfence/user/invite | Invite User
-[**RegisterInvitedUser**](UserAPI.md#RegisterInvitedUser) | **Post** /deepfence/user/invite/register | Register Invited User
-[**RegisterUser**](UserAPI.md#RegisterUser) | **Post** /deepfence/user/register | Register User
-[**ResetApiTokens**](UserAPI.md#ResetApiTokens) | **Post** /deepfence/api-token/reset | Reset User&#39;s API Tokens
-[**ResetPasswordRequest**](UserAPI.md#ResetPasswordRequest) | **Post** /deepfence/user/reset-password/request | Reset Password Request
-[**UpdateCurrentUser**](UserAPI.md#UpdateCurrentUser) | **Put** /deepfence/user | Update Current User
-[**UpdatePassword**](UserAPI.md#UpdatePassword) | **Put** /deepfence/user/password | Update Password
-[**UpdateUser**](UserAPI.md#UpdateUser) | **Put** /deepfence/users/{id} | Update User by User ID
-[**VerifyResetPasswordRequest**](UserAPI.md#VerifyResetPasswordRequest) | **Post** /deepfence/user/reset-password/verify | Verify and Reset Password
+[**DeleteCurrentUser**](UserAPI.md#DeleteCurrentUser) | **Delete** /kengine/user | Delete Current User
+[**DeleteUser**](UserAPI.md#DeleteUser) | **Delete** /kengine/users/{id} | Delete User by User ID
+[**GetApiTokens**](UserAPI.md#GetApiTokens) | **Get** /kengine/api-token | Get User&#39;s API Tokens
+[**GetCurrentUser**](UserAPI.md#GetCurrentUser) | **Get** /kengine/user | Get Current User
+[**GetUser**](UserAPI.md#GetUser) | **Get** /kengine/users/{id} | Get User by User ID
+[**GetUsers**](UserAPI.md#GetUsers) | **Get** /kengine/users | Get all users
+[**InviteUser**](UserAPI.md#InviteUser) | **Post** /kengine/user/invite | Invite User
+[**RegisterInvitedUser**](UserAPI.md#RegisterInvitedUser) | **Post** /kengine/user/invite/register | Register Invited User
+[**RegisterUser**](UserAPI.md#RegisterUser) | **Post** /kengine/user/register | Register User
+[**ResetApiTokens**](UserAPI.md#ResetApiTokens) | **Post** /kengine/api-token/reset | Reset User&#39;s API Tokens
+[**ResetPasswordRequest**](UserAPI.md#ResetPasswordRequest) | **Post** /kengine/user/reset-password/request | Reset Password Request
+[**UpdateCurrentUser**](UserAPI.md#UpdateCurrentUser) | **Put** /kengine/user | Update Current User
+[**UpdatePassword**](UserAPI.md#UpdatePassword) | **Put** /kengine/user/password | Update Password
+[**UpdateUser**](UserAPI.md#UpdateUser) | **Put** /kengine/users/{id} | Update User by User ID
+[**VerifyResetPasswordRequest**](UserAPI.md#VerifyResetPasswordRequest) | **Post** /kengine/user/reset-password/verify | Verify and Reset Password
 
 
 

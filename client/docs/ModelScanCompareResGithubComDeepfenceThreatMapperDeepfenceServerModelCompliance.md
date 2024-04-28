@@ -1,4 +1,4 @@
-# ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance
+# ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance
 
 ## Properties
 
@@ -8,51 +8,51 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance
+### NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance
 
-`func NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance(new []ModelCompliance, ) *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance`
+`func NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance(new []ModelCompliance, ) *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance`
 
-NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance instantiates a new ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance object
+NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance instantiates a new ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelComplianceWithDefaults
+### NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelComplianceWithDefaults
 
-`func NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelComplianceWithDefaults() *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance`
+`func NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelComplianceWithDefaults() *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance`
 
-NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelComplianceWithDefaults instantiates a new ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance object
+NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelComplianceWithDefaults instantiates a new ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetNew
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance) GetNew() []ModelCompliance`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance) GetNew() []ModelCompliance`
 
 GetNew returns the New field if non-nil, zero value otherwise.
 
 ### GetNewOk
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance) GetNewOk() (*[]ModelCompliance, bool)`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance) GetNewOk() (*[]ModelCompliance, bool)`
 
 GetNewOk returns a tuple with the New field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNew
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance) SetNew(v []ModelCompliance)`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance) SetNew(v []ModelCompliance)`
 
 SetNew sets New field to given value.
 
 
 ### SetNewNil
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance) SetNewNil(b bool)`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance) SetNewNil(b bool)`
 
  SetNewNil sets the value for New to be an explicit nil
 
 ### UnsetNew
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance) UnsetNew()`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance) UnsetNew()`
 
 UnsetNew ensures that no value is present for New, not even an explicit nil
 

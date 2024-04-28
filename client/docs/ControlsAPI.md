@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DisableAgentPlugin**](ControlsAPI.md#DisableAgentPlugin) | **Post** /deepfence/controls/agent-plugins/disable | Schedule new agent plugin version disabling
-[**DisableCloudNodeControls**](ControlsAPI.md#DisableCloudNodeControls) | **Post** /deepfence/controls/cloud-node/disable | Disable Cloud Node Controls
-[**EnableAgentPlugin**](ControlsAPI.md#EnableAgentPlugin) | **Post** /deepfence/controls/agent-plugins/enable | Schedule new agent plugin version enabling
-[**EnableCloudNodeControls**](ControlsAPI.md#EnableCloudNodeControls) | **Post** /deepfence/controls/cloud-node/enable | Enable Cloud Node Controls
-[**GetAgentControls**](ControlsAPI.md#GetAgentControls) | **Post** /deepfence/controls/agent | Fetch Agent Actions
-[**GetAgentInitControls**](ControlsAPI.md#GetAgentInitControls) | **Post** /deepfence/controls/agent-init | Fetch Agent Init Actions
-[**GetCloudNodeControls**](ControlsAPI.md#GetCloudNodeControls) | **Post** /deepfence/controls/cloud-node | Fetch Cloud Node Controls
-[**GetKubernetesClusterControls**](ControlsAPI.md#GetKubernetesClusterControls) | **Post** /deepfence/controls/kubernetes-cluster | Fetch Kubernetes Cluster Actions
-[**UpgradeAgentVersion**](ControlsAPI.md#UpgradeAgentVersion) | **Post** /deepfence/controls/agent-upgrade | Schedule new agent version upgrade
+[**DisableAgentPlugin**](ControlsAPI.md#DisableAgentPlugin) | **Post** /kengine/controls/agent-plugins/disable | Schedule new agent plugin version disabling
+[**DisableCloudNodeControls**](ControlsAPI.md#DisableCloudNodeControls) | **Post** /kengine/controls/cloud-node/disable | Disable Cloud Node Controls
+[**EnableAgentPlugin**](ControlsAPI.md#EnableAgentPlugin) | **Post** /kengine/controls/agent-plugins/enable | Schedule new agent plugin version enabling
+[**EnableCloudNodeControls**](ControlsAPI.md#EnableCloudNodeControls) | **Post** /kengine/controls/cloud-node/enable | Enable Cloud Node Controls
+[**GetAgentControls**](ControlsAPI.md#GetAgentControls) | **Post** /kengine/controls/agent | Fetch Agent Actions
+[**GetAgentInitControls**](ControlsAPI.md#GetAgentInitControls) | **Post** /kengine/controls/agent-init | Fetch Agent Init Actions
+[**GetCloudNodeControls**](ControlsAPI.md#GetCloudNodeControls) | **Post** /kengine/controls/cloud-node | Fetch Cloud Node Controls
+[**GetKubernetesClusterControls**](ControlsAPI.md#GetKubernetesClusterControls) | **Post** /kengine/controls/kubernetes-cluster | Fetch Kubernetes Cluster Actions
+[**UpgradeAgentVersion**](ControlsAPI.md#UpgradeAgentVersion) | **Post** /kengine/controls/agent-upgrade | Schedule new agent version upgrade
 
 
 

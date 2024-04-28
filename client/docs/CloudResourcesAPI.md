@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**IngestCloudResources**](CloudResourcesAPI.md#IngestCloudResources) | **Post** /deepfence/ingest/cloud-resources | Ingest Cloud resources
+[**IngestCloudResources**](CloudResourcesAPI.md#IngestCloudResources) | **Post** /kengine/ingest/cloud-resources | Ingest Cloud resources
 
 
 

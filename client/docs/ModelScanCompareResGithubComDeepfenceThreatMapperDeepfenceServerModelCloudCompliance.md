@@ -1,4 +1,4 @@
-# ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance
+# ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance
 
 ## Properties
 
@@ -8,51 +8,51 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance
+### NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance
 
-`func NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance(new []ModelCloudCompliance, ) *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance`
+`func NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance(new []ModelCloudCompliance, ) *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance`
 
-NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance instantiates a new ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance object
+NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance instantiates a new ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudComplianceWithDefaults
+### NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudComplianceWithDefaults
 
-`func NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudComplianceWithDefaults() *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance`
+`func NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudComplianceWithDefaults() *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance`
 
-NewModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudComplianceWithDefaults instantiates a new ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance object
+NewModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudComplianceWithDefaults instantiates a new ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetNew
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance) GetNew() []ModelCloudCompliance`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance) GetNew() []ModelCloudCompliance`
 
 GetNew returns the New field if non-nil, zero value otherwise.
 
 ### GetNewOk
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance) GetNewOk() (*[]ModelCloudCompliance, bool)`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance) GetNewOk() (*[]ModelCloudCompliance, bool)`
 
 GetNewOk returns a tuple with the New field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNew
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance) SetNew(v []ModelCloudCompliance)`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance) SetNew(v []ModelCloudCompliance)`
 
 SetNew sets New field to given value.
 
 
 ### SetNewNil
 
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance) SetNewNil(b bool)`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance) SetNewNil(b bool)`
 
  SetNewNil sets the value for New to be an explicit nil
 
 ### UnsetNew
-`func (o *ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance) UnsetNew()`
+`func (o *ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance) UnsetNew()`
 
 UnsetNew ensures that no value is present for New, not even an explicit nil
 

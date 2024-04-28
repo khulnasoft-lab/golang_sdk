@@ -1,10 +1,10 @@
 openapi: 3.0.3
 info:
   contact:
-    email: community@deepfence.io
-    name: Deepfence Support
-    url: https://deepfence.io
-  description: "Deepfence Runtime API provides programmatic control over Deepfence\
+    email: community@kengine.io
+    name: Kengine Support
+    url: https://kengine.io
+  description: "Kengine Runtime API provides programmatic control over Kengine\
     \ microservice securing your container, kubernetes and cloud deployments. The\
     \ API abstracts away underlying infrastructure details like cloud provider, \n\
     container distros, container orchestrator and type of deployment. This is one\
@@ -15,11 +15,11 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
   termsOfService: /tos
-  title: Deepfence ThreatMapper
+  title: Kengine ThreatMapper
   version: 2.2.0
 externalDocs:
-  description: Deepfence Community
-  url: https://community.deepfence.io
+  description: Kengine Community
+  url: https://community.kengine.io
 servers:
 - url: /
 tags:
@@ -31,7 +31,7 @@ tags:
 - name: Malware Scan
 - name: Vulnerability
 paths:
-  /deepfence/agent-deployment/binary/download-url:
+  /kengine/agent-deployment/binary/download-url:
     get:
       description: Get agent binary download url
       operationId: getAgentBinaryDownloadURL
@@ -69,7 +69,7 @@ paths:
       summary: Get agent binary download url
       tags:
       - Settings
-  /deepfence/api-token:
+  /kengine/api-token:
     get:
       description: Get logged in user's API Tokens
       operationId: getApiTokens
@@ -109,7 +109,7 @@ paths:
       summary: Get User's API Tokens
       tags:
       - User
-  /deepfence/api-token/reset:
+  /kengine/api-token/reset:
     post:
       description: Reset user's API Tokens
       operationId: resetApiTokens
@@ -149,7 +149,7 @@ paths:
       summary: Reset User's API Tokens
       tags:
       - User
-  /deepfence/auth/token:
+  /kengine/auth/token:
     post:
       description: "Get access token for programmatic API access, by providing API\
         \ Token"
@@ -191,7 +191,7 @@ paths:
       summary: Get Access Token for API Token
       tags:
       - Authentication
-  /deepfence/auth/token/refresh:
+  /kengine/auth/token/refresh:
     post:
       description: Reissue access token using refresh token
       operationId: authTokenRefresh
@@ -229,7 +229,7 @@ paths:
       summary: Refresh access token
       tags:
       - Authentication
-  /deepfence/cloud-node/account:
+  /kengine/cloud-node/account:
     post:
       description: Register Cloud Node Account and return any pending compliance scans
         from console
@@ -273,7 +273,7 @@ paths:
       summary: Register Cloud Node Account
       tags:
       - Cloud Nodes
-  /deepfence/cloud-node/account/delete:
+  /kengine/cloud-node/account/delete:
     patch:
       description: Delete Cloud Node Account and related resources
       operationId: deleteCloudNodeAccount
@@ -312,7 +312,7 @@ paths:
       summary: Delete Cloud Node Account
       tags:
       - Cloud Nodes
-  /deepfence/cloud-node/account/refresh:
+  /kengine/cloud-node/account/refresh:
     post:
       description: Refresh the cloud resources in a Cloud Account
       operationId: refreshCloudNodeAccount
@@ -351,7 +351,7 @@ paths:
       summary: Refresh Cloud Account
       tags:
       - Cloud Nodes
-  /deepfence/cloud-node/list/accounts:
+  /kengine/cloud-node/list/accounts:
     post:
       description: List Cloud Node Accounts registered with the console
       operationId: listCloudNodeAccount
@@ -394,7 +394,7 @@ paths:
       summary: List Cloud Node Accounts
       tags:
       - Cloud Nodes
-  /deepfence/cloud-node/list/providers:
+  /kengine/cloud-node/list/providers:
     get:
       description: List Cloud Node Providers registered with the console
       operationId: listCloudProviders
@@ -432,7 +432,7 @@ paths:
       summary: List Cloud Node Providers
       tags:
       - Cloud Nodes
-  /deepfence/complete/cloud-compliance:
+  /kengine/complete/cloud-compliance:
     post:
       description: Complete cloud compliance info
       operationId: completeCloudCompliance
@@ -475,7 +475,7 @@ paths:
       summary: Get Completion for cloud compliance fields
       tags:
       - Completion
-  /deepfence/complete/compliance:
+  /kengine/complete/compliance:
     post:
       description: Complete compliance info
       operationId: completeComplianceInfo
@@ -518,7 +518,7 @@ paths:
       summary: Get Completion for compliance fields
       tags:
       - Completion
-  /deepfence/complete/host:
+  /kengine/complete/host:
     post:
       description: Complete host info
       operationId: completeHostInfo
@@ -561,7 +561,7 @@ paths:
       summary: Get Completion for host fields
       tags:
       - Completion
-  /deepfence/complete/process:
+  /kengine/complete/process:
     post:
       description: Complete process info
       operationId: completeProcessInfo
@@ -604,7 +604,7 @@ paths:
       summary: Get Completion for process fields
       tags:
       - Completion
-  /deepfence/complete/vulnerability:
+  /kengine/complete/vulnerability:
     post:
       description: Complete vulnerability info
       operationId: completeVulnerabilityInfo
@@ -647,7 +647,7 @@ paths:
       summary: Get Completion for vulnerability fields
       tags:
       - Completion
-  /deepfence/controls/agent:
+  /kengine/controls/agent:
     post:
       description: Fetch actions for a given agent
       operationId: getAgentControls
@@ -690,7 +690,7 @@ paths:
       summary: Fetch Agent Actions
       tags:
       - Controls
-  /deepfence/controls/agent-init:
+  /kengine/controls/agent-init:
     post:
       description: Fetch initial actions for a given agent after it started
       operationId: getAgentInitControls
@@ -733,7 +733,7 @@ paths:
       summary: Fetch Agent Init Actions
       tags:
       - Controls
-  /deepfence/controls/agent-plugins/disable:
+  /kengine/controls/agent-plugins/disable:
     post:
       description: Schedule agent plugin disable
       operationId: disableAgentPlugin
@@ -772,7 +772,7 @@ paths:
       summary: Schedule new agent plugin version disabling
       tags:
       - Controls
-  /deepfence/controls/agent-plugins/enable:
+  /kengine/controls/agent-plugins/enable:
     post:
       description: Schedule agent plugin enable
       operationId: enableAgentPlugin
@@ -811,7 +811,7 @@ paths:
       summary: Schedule new agent plugin version enabling
       tags:
       - Controls
-  /deepfence/controls/agent-upgrade:
+  /kengine/controls/agent-upgrade:
     post:
       description: Schedule new agent version upgrade
       operationId: upgradeAgentVersion
@@ -850,7 +850,7 @@ paths:
       summary: Schedule new agent version upgrade
       tags:
       - Controls
-  /deepfence/controls/cloud-node:
+  /kengine/controls/cloud-node:
     post:
       description: Fetch controls for a cloud node
       operationId: getCloudNodeControls
@@ -893,7 +893,7 @@ paths:
       summary: Fetch Cloud Node Controls
       tags:
       - Controls
-  /deepfence/controls/cloud-node/disable:
+  /kengine/controls/cloud-node/disable:
     post:
       description: Disable controls for a cloud node
       operationId: disableCloudNodeControls
@@ -932,7 +932,7 @@ paths:
       summary: Disable Cloud Node Controls
       tags:
       - Controls
-  /deepfence/controls/cloud-node/enable:
+  /kengine/controls/cloud-node/enable:
     post:
       description: Enable controls for a cloud node
       operationId: enableCloudNodeControls
@@ -971,7 +971,7 @@ paths:
       summary: Enable Cloud Node Controls
       tags:
       - Controls
-  /deepfence/controls/kubernetes-cluster:
+  /kengine/controls/kubernetes-cluster:
     post:
       description: Fetch actions for a given Kubernetes Cluster
       operationId: getKubernetesClusterControls
@@ -1014,7 +1014,7 @@ paths:
       summary: Fetch Kubernetes Cluster Actions
       tags:
       - Controls
-  /deepfence/database/malware:
+  /kengine/database/malware:
     put:
       description: Upload malware rules for use in malware scans
       operationId: uploadMalwareRules
@@ -1057,7 +1057,7 @@ paths:
       summary: Upload Malware Rules
       tags:
       - Settings
-  /deepfence/database/posture:
+  /kengine/database/posture:
     put:
       description: Upload posture controls for use in posture scans
       operationId: uploadPostureControls
@@ -1100,7 +1100,7 @@ paths:
       summary: Upload Posture Controls
       tags:
       - Settings
-  /deepfence/database/secret:
+  /kengine/database/secret:
     put:
       description: Upload secrets rules for use in secrets scans
       operationId: uploadSecretsRules
@@ -1143,7 +1143,7 @@ paths:
       summary: Upload Secrets Rules
       tags:
       - Settings
-  /deepfence/database/vulnerability:
+  /kengine/database/vulnerability:
     put:
       description: Upload Vulnerability Database for use in vulnerability scans
       operationId: uploadVulnerabilityDatabase
@@ -1186,7 +1186,7 @@ paths:
       summary: Upload Vulnerability Database
       tags:
       - Settings
-  /deepfence/diagnosis/agent-logs:
+  /kengine/diagnosis/agent-logs:
     post:
       description: Generate Agent Diagnostic Logs
       operationId: generateAgentDiagnosticLogs
@@ -1225,7 +1225,7 @@ paths:
       summary: Generate Agent Diagnostic Logs
       tags:
       - Diagnosis
-  /deepfence/diagnosis/agent-logs/status/{node_id}:
+  /kengine/diagnosis/agent-logs/status/{node_id}:
     put:
       description: Update agent diagnostic logs status
       operationId: updateAgentDiagnosticLogsStatus
@@ -1272,7 +1272,7 @@ paths:
       summary: Update Agent Diagnostic Logs Status
       tags:
       - Diagnosis
-  /deepfence/diagnosis/cloud-scanner-logs:
+  /kengine/diagnosis/cloud-scanner-logs:
     post:
       description: Generate Cloud Scanner Diagnostic Logs
       operationId: generateCloudScannerDiagnosticLogs
@@ -1311,7 +1311,7 @@ paths:
       summary: Generate Cloud Scanner Diagnostic Logs
       tags:
       - Diagnosis
-  /deepfence/diagnosis/cloud-scanner-logs/status/{node_id}:
+  /kengine/diagnosis/cloud-scanner-logs/status/{node_id}:
     put:
       description: Update cloud scanner diagnostic logs status
       operationId: updateCloudScannerDiagnosticLogsStatus
@@ -1358,7 +1358,7 @@ paths:
       summary: Update Cloud Scanner Diagnostic Logs Status
       tags:
       - Diagnosis
-  /deepfence/diagnosis/console-logs:
+  /kengine/diagnosis/console-logs:
     post:
       description: Generate Console Diagnostic Logs
       operationId: generateConsoleDiagnosticLogs
@@ -1397,7 +1397,7 @@ paths:
       summary: Generate Console Diagnostic Logs
       tags:
       - Diagnosis
-  /deepfence/diagnosis/diagnostic-logs:
+  /kengine/diagnosis/diagnostic-logs:
     get:
       description: Get diagnostic logs download url links
       operationId: getDiagnosticLogs
@@ -1435,7 +1435,7 @@ paths:
       summary: Get Diagnostic Logs
       tags:
       - Diagnosis
-  /deepfence/diagnosis/notification:
+  /kengine/diagnosis/notification:
     get:
       description: Get Diagnostic Notification
       operationId: diagnosticNotification
@@ -1475,7 +1475,7 @@ paths:
       summary: Get Diagnostic Notification
       tags:
       - Diagnosis
-  /deepfence/diff-add/cloud-compliance:
+  /kengine/diff-add/cloud-compliance:
     post:
       description: Get Cloud Compliance Diff between two scans
       operationId: diffAddCloudCompliance
@@ -1489,7 +1489,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance'
           description: OK
         "400":
           content:
@@ -1518,7 +1518,7 @@ paths:
       summary: Get Cloud Compliance Diff
       tags:
       - Diff Add
-  /deepfence/diff-add/compliance:
+  /kengine/diff-add/compliance:
     post:
       description: Get Compliance Diff between two scans
       operationId: diffAddCompliance
@@ -1532,7 +1532,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance'
           description: OK
         "400":
           content:
@@ -1561,7 +1561,7 @@ paths:
       summary: Get Compliance Diff
       tags:
       - Diff Add
-  /deepfence/diff-add/malware:
+  /kengine/diff-add/malware:
     post:
       description: Get Malware Diff between two scans
       operationId: diffAddMalware
@@ -1575,7 +1575,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelMalware'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware'
           description: OK
         "400":
           content:
@@ -1604,7 +1604,7 @@ paths:
       summary: Get Malware Diff
       tags:
       - Diff Add
-  /deepfence/diff-add/secret:
+  /kengine/diff-add/secret:
     post:
       description: Get Secret Diff between two scans
       operationId: diffAddSecret
@@ -1618,7 +1618,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelSecret'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret'
           description: OK
         "400":
           content:
@@ -1647,7 +1647,7 @@ paths:
       summary: Get Secret Diff
       tags:
       - Diff Add
-  /deepfence/diff-add/vulnerability:
+  /kengine/diff-add/vulnerability:
     post:
       description: Get Vulnerability Diff between two scans
       operationId: diffAddVulnerability
@@ -1661,7 +1661,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelVulnerability'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability'
           description: OK
         "400":
           content:
@@ -1690,7 +1690,7 @@ paths:
       summary: Get Vulnerability Diff
       tags:
       - Diff Add
-  /deepfence/end-user-license-agreement:
+  /kengine/end-user-license-agreement:
     get:
       description: Get End User License Agreement
       operationId: eula
@@ -1726,7 +1726,7 @@ paths:
       summary: Get End User License Agreement
       tags:
       - Common
-  /deepfence/filters/cloud-compliance:
+  /kengine/filters/cloud-compliance:
     post:
       description: Get all applicable filter values for cloud compliance
       operationId: getCloudComplianceFilters
@@ -1769,7 +1769,7 @@ paths:
       summary: Get Cloud Compliance Filters
       tags:
       - Search
-  /deepfence/filters/compliance:
+  /kengine/filters/compliance:
     post:
       description: Get all applicable filter values for compliance
       operationId: getComplianceFilters
@@ -1812,7 +1812,7 @@ paths:
       summary: Get Compliance Filters
       tags:
       - Search
-  /deepfence/generative-ai-integration:
+  /kengine/generative-ai-integration:
     get:
       description: List all the added Generative AI Integrations
       operationId: listGenerativeAiIntegration
@@ -1863,7 +1863,7 @@ paths:
       summary: List Generative AI Integrations
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/{integration_id}:
+  /kengine/generative-ai-integration/{integration_id}:
     delete:
       description: Delete Generative AI integration
       operationId: deleteGenerativeAiIntegration
@@ -1905,7 +1905,7 @@ paths:
       summary: Delete Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/{integration_id}/default:
+  /kengine/generative-ai-integration/{integration_id}/default:
     put:
       description: Set Default Generative AI integration
       operationId: setDefaultGenerativeAiIntegration
@@ -1947,7 +1947,7 @@ paths:
       summary: Set Default Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/auto-add:
+  /kengine/generative-ai-integration/auto-add:
     post:
       description: Automatically add Generative AI Integrations using IAM role
       operationId: autoAddGenerativeAiIntegration
@@ -1981,7 +1981,7 @@ paths:
       summary: Automatically add Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/bedrock:
+  /kengine/generative-ai-integration/bedrock:
     post:
       description: Add a new AWS Bedrock Generative AI Integration
       operationId: addGenerativeAiIntegrationBedrock
@@ -2024,7 +2024,7 @@ paths:
       summary: Add AWS Bedrock Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/openai:
+  /kengine/generative-ai-integration/openai:
     post:
       description: Add a new OpenAI Generative AI Integration
       operationId: addGenerativeAiIntegrationOpenAI
@@ -2067,7 +2067,7 @@ paths:
       summary: Add OpenAI Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/query/cloud-posture:
+  /kengine/generative-ai-integration/query/cloud-posture:
     post:
       description: Send Cloud Posture query to Generative AI Integration
       operationId: generativeAiIntegrationCloudPostureQuery
@@ -2110,7 +2110,7 @@ paths:
       summary: Send Cloud Posture query to Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/query/kubernetes-posture:
+  /kengine/generative-ai-integration/query/kubernetes-posture:
     post:
       description: Send Kubernetes Posture query to Generative AI Integration
       operationId: generativeAiIntegrationKubernetesPostureQuery
@@ -2153,7 +2153,7 @@ paths:
       summary: Send Kubernetes Posture query to Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/query/linux-posture:
+  /kengine/generative-ai-integration/query/linux-posture:
     post:
       description: Send Linux Posture query to Generative AI Integration
       operationId: generativeAiIntegrationLinuxPostureQuery
@@ -2196,7 +2196,7 @@ paths:
       summary: Send Linux Posture query to Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/query/malware:
+  /kengine/generative-ai-integration/query/malware:
     post:
       description: Send Malware query to Generative AI Integration
       operationId: generativeAiIntegrationMalwareQuery
@@ -2239,7 +2239,7 @@ paths:
       summary: Send Malware query to Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/query/secret:
+  /kengine/generative-ai-integration/query/secret:
     post:
       description: Send Secret query to Generative AI Integration
       operationId: generativeAiIntegrationSecretQuery
@@ -2282,7 +2282,7 @@ paths:
       summary: Send Secret query to Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/generative-ai-integration/query/vulnerability:
+  /kengine/generative-ai-integration/query/vulnerability:
     post:
       description: Send Vulnerability query to Generative AI Integration
       operationId: generativeAiIntegrationVulnerabilityQuery
@@ -2325,7 +2325,7 @@ paths:
       summary: Send Vulnerability query to Generative AI Integration
       tags:
       - Generative AI
-  /deepfence/graph/threat:
+  /kengine/graph/threat:
     post:
       description: Retrieve the full threat graph associated with the account
       operationId: getThreatGraph
@@ -2368,7 +2368,7 @@ paths:
       summary: Get Threat Graph
       tags:
       - Threat
-  /deepfence/graph/threat/individual:
+  /kengine/graph/threat/individual:
     post:
       description: Retrieve threat graph associated with vulnerabilities
       operationId: getIndividualThreatGraph
@@ -2413,7 +2413,7 @@ paths:
       summary: Get Vulnerability Threat Graph
       tags:
       - Threat
-  /deepfence/graph/topology/:
+  /kengine/graph/topology/:
     post:
       description: Retrieve the full topology graph associated with the account
       operationId: getTopologyGraph
@@ -2456,7 +2456,7 @@ paths:
       summary: Get Topology Graph
       tags:
       - Topology
-  /deepfence/graph/topology/containers:
+  /kengine/graph/topology/containers:
     post:
       description: Retrieve the full topology graph associated with the account from
         Containers
@@ -2500,7 +2500,7 @@ paths:
       summary: Get Containers Topology Graph
       tags:
       - Topology
-  /deepfence/graph/topology/delta:
+  /kengine/graph/topology/delta:
     post:
       description: Retrieve addition or deletion toplogy deltas
       operationId: getTopologyDelta
@@ -2543,7 +2543,7 @@ paths:
       summary: Get Topology Delta
       tags:
       - Topology
-  /deepfence/graph/topology/hosts:
+  /kengine/graph/topology/hosts:
     post:
       description: Retrieve the full topology graph associated with the account from
         Hosts
@@ -2587,7 +2587,7 @@ paths:
       summary: Get Hosts Topology Graph
       tags:
       - Topology
-  /deepfence/graph/topology/kubernetes:
+  /kengine/graph/topology/kubernetes:
     post:
       description: Retrieve the full topology graph associated with the account from
         Kubernetes
@@ -2631,7 +2631,7 @@ paths:
       summary: Get Kubernetes Topology Graph
       tags:
       - Topology
-  /deepfence/graph/topology/pods:
+  /kengine/graph/topology/pods:
     post:
       description: Retrieve the full topology graph associated with the account from
         Pods
@@ -2675,7 +2675,7 @@ paths:
       summary: Get Pods Topology Graph
       tags:
       - Topology
-  /deepfence/ingest/cloud-compliance:
+  /kengine/ingest/cloud-compliance:
     post:
       description: Ingest Cloud compliances found while scanning cloud provider
       operationId: ingestCloudCompliances
@@ -2717,7 +2717,7 @@ paths:
       summary: Ingest Cloud Compliances
       tags:
       - Cloud Scanner
-  /deepfence/ingest/cloud-compliance-status:
+  /kengine/ingest/cloud-compliance-status:
     post:
       description: Ingest Cloud compliances found while scanning cloud provider
       operationId: ingestCloudComplianceScanStatus
@@ -2759,7 +2759,7 @@ paths:
       summary: Ingest Cloud Compliances scan status
       tags:
       - Cloud Scanner
-  /deepfence/ingest/cloud-resources:
+  /kengine/ingest/cloud-resources:
     post:
       description: Ingest Clouds Resources found while scanning cloud provider
       operationId: ingestCloudResources
@@ -2801,7 +2801,7 @@ paths:
       summary: Ingest Cloud resources
       tags:
       - Cloud Resources
-  /deepfence/ingest/compliance:
+  /kengine/ingest/compliance:
     post:
       description: Ingest compliance issues found while scanning the agent
       operationId: ingestCompliances
@@ -2843,7 +2843,7 @@ paths:
       summary: Ingest Compliances
       tags:
       - Compliance
-  /deepfence/ingest/compliance-scan-logs:
+  /kengine/ingest/compliance-scan-logs:
     post:
       description: Ingest compliance issues found while scanning the agent
       operationId: ingestComplianceScanStatus
@@ -2885,7 +2885,7 @@ paths:
       summary: Ingest Compliance Scan Status
       tags:
       - Compliance
-  /deepfence/ingest/malware:
+  /kengine/ingest/malware:
     post:
       description: Ingest malware found while scanning the agent
       operationId: ingestMalware
@@ -2927,7 +2927,7 @@ paths:
       summary: Ingest Malware
       tags:
       - Malware Scan
-  /deepfence/ingest/malware-scan-logs:
+  /kengine/ingest/malware-scan-logs:
     post:
       description: Ingest malware scan status from the agent
       operationId: ingestMalwareScanStatus
@@ -2969,7 +2969,7 @@ paths:
       summary: Ingest Malware Scan Status
       tags:
       - Malware Scan
-  /deepfence/ingest/report:
+  /kengine/ingest/report:
     post:
       description: Ingest data reported by one Agent
       operationId: ingestAgentReport
@@ -3012,7 +3012,7 @@ paths:
       summary: Ingest Topology Data
       tags:
       - Topology
-  /deepfence/ingest/sbom:
+  /kengine/ingest/sbom:
     post:
       description: Ingest SBOM from Scan
       operationId: ingestSbom
@@ -3051,7 +3051,7 @@ paths:
       summary: Ingest SBOM from Scan
       tags:
       - Vulnerability
-  /deepfence/ingest/secret-scan-logs:
+  /kengine/ingest/secret-scan-logs:
     post:
       description: Ingest secrets scan status from the agent
       operationId: ingestSecretScanStatus
@@ -3093,7 +3093,7 @@ paths:
       summary: Ingest Secrets Scan Status
       tags:
       - Secret Scan
-  /deepfence/ingest/secrets:
+  /kengine/ingest/secrets:
     post:
       description: Ingest secrets found while scanning the agent
       operationId: ingestSecrets
@@ -3135,7 +3135,7 @@ paths:
       summary: Ingest Secrets
       tags:
       - Secret Scan
-  /deepfence/ingest/sync-report:
+  /kengine/ingest/sync-report:
     post:
       description: Ingest data reported by one Agent
       operationId: ingestSyncAgentReport
@@ -3174,7 +3174,7 @@ paths:
       summary: Ingest Topology Data
       tags:
       - Topology
-  /deepfence/ingest/vulnerabilities:
+  /kengine/ingest/vulnerabilities:
     post:
       description: Ingest vulnerabilities found while scanning the agent host or containers
       operationId: ingestVulnerabilities
@@ -3216,7 +3216,7 @@ paths:
       summary: Ingest Vulnerabilities
       tags:
       - Vulnerability
-  /deepfence/ingest/vulnerabilities-scan-logs:
+  /kengine/ingest/vulnerabilities-scan-logs:
     post:
       description: Ingest vulnerabilities scan status from agent
       operationId: ingestVulnerabilitiesScanStatus
@@ -3258,7 +3258,7 @@ paths:
       summary: Ingest Vulnerabilities Scan Status
       tags:
       - Vulnerability
-  /deepfence/integration:
+  /kengine/integration:
     get:
       description: List all the added Integrations
       operationId: listIntegration
@@ -3340,7 +3340,7 @@ paths:
       summary: Add Integration
       tags:
       - Integration
-  /deepfence/integration/{integration_id}:
+  /kengine/integration/{integration_id}:
     delete:
       description: Delete single integration
       operationId: deleteIntegration
@@ -3432,7 +3432,7 @@ paths:
       summary: Update Integration
       tags:
       - Integration
-  /deepfence/integration/delete:
+  /kengine/integration/delete:
     patch:
       description: Delete integrations
       operationId: deleteIntegrations
@@ -3471,7 +3471,7 @@ paths:
       summary: Delete Integrations
       tags:
       - Integration
-  /deepfence/internal/console-api-token:
+  /kengine/internal/console-api-token:
     get:
       description: Get api-token for console agent
       operationId: getConsoleApiToken
@@ -3507,7 +3507,7 @@ paths:
       summary: Get api-token for console agent
       tags:
       - Internal
-  /deepfence/license:
+  /kengine/license:
     delete:
       description: Delete license from the console database
       operationId: deleteLicense
@@ -3620,7 +3620,7 @@ paths:
       summary: Register License
       tags:
       - Settings
-  /deepfence/license/generate:
+  /kengine/license/generate:
     post:
       description: Generate a new ThreatMapper license key
       operationId: generateLicense
@@ -3663,7 +3663,7 @@ paths:
       summary: Generate License Key
       tags:
       - Settings
-  /deepfence/lookup/cloud-compliances:
+  /kengine/lookup/cloud-compliances:
     post:
       description: Retrieve all the data associated with cloud-compliances
       operationId: getCloudCompliances
@@ -3708,7 +3708,7 @@ paths:
       summary: Retrieve Cloud Compliances data
       tags:
       - Lookup
-  /deepfence/lookup/cloud-resources:
+  /kengine/lookup/cloud-resources:
     post:
       description: Retrieve the cloud resources
       operationId: getCloudResources
@@ -3753,7 +3753,7 @@ paths:
       summary: Get Cloud Resources
       tags:
       - Lookup
-  /deepfence/lookup/compliances:
+  /kengine/lookup/compliances:
     post:
       description: Retrieve all the data associated with compliances
       operationId: getCompliances
@@ -3798,7 +3798,7 @@ paths:
       summary: Retrieve Compliances data
       tags:
       - Lookup
-  /deepfence/lookup/containerimages:
+  /kengine/lookup/containerimages:
     post:
       description: Retrieve all the data associated with images
       operationId: getContainerImages
@@ -3843,7 +3843,7 @@ paths:
       summary: Retrieve Container Images data
       tags:
       - Lookup
-  /deepfence/lookup/containers:
+  /kengine/lookup/containers:
     post:
       description: Retrieve all the data associated with containers
       operationId: getContainers
@@ -3888,7 +3888,7 @@ paths:
       summary: Retrieve Containers data
       tags:
       - Lookup
-  /deepfence/lookup/hosts:
+  /kengine/lookup/hosts:
     post:
       description: Retrieve all the data associated with hosts
       operationId: getHosts
@@ -3933,7 +3933,7 @@ paths:
       summary: Retrieve Hosts data
       tags:
       - Lookup
-  /deepfence/lookup/kubernetesclusters:
+  /kengine/lookup/kubernetesclusters:
     post:
       description: Retrieve all the data associated with k8s clusters
       operationId: getKubernetesClusters
@@ -3978,7 +3978,7 @@ paths:
       summary: Retrieve K8s data
       tags:
       - Lookup
-  /deepfence/lookup/malwares:
+  /kengine/lookup/malwares:
     post:
       description: Retrieve all the data associated with malwares
       operationId: getMalwares
@@ -4023,7 +4023,7 @@ paths:
       summary: Retrieve Malwares data
       tags:
       - Lookup
-  /deepfence/lookup/pods:
+  /kengine/lookup/pods:
     post:
       description: Retrieve all the data associated with pods
       operationId: getPods
@@ -4068,7 +4068,7 @@ paths:
       summary: Retrieve Pods data
       tags:
       - Lookup
-  /deepfence/lookup/processes:
+  /kengine/lookup/processes:
     post:
       description: Retrieve all the data associated with processes
       operationId: getProcesses
@@ -4113,7 +4113,7 @@ paths:
       summary: Retrieve Processes data
       tags:
       - Lookup
-  /deepfence/lookup/registryaccount:
+  /kengine/lookup/registryaccount:
     post:
       description: List all the images present in the given registry
       operationId: getRegistryAccount
@@ -4158,7 +4158,7 @@ paths:
       summary: Get Images in Registry
       tags:
       - Lookup
-  /deepfence/lookup/secrets:
+  /kengine/lookup/secrets:
     post:
       description: Retrieve all the data associated with secrets
       operationId: getSecrets
@@ -4203,7 +4203,7 @@ paths:
       summary: Retrieve Secrets data
       tags:
       - Lookup
-  /deepfence/lookup/vulnerabilities:
+  /kengine/lookup/vulnerabilities:
     post:
       description: Retrieve all the data associated with vulnerabilities
       operationId: getVulnerabilities
@@ -4248,7 +4248,7 @@ paths:
       summary: Retrieve Vulnerabilities data
       tags:
       - Lookup
-  /deepfence/registryaccount:
+  /kengine/registryaccount:
     get:
       description: List all the added Registries
       operationId: listRegistry
@@ -4330,7 +4330,7 @@ paths:
       summary: Add Registry
       tags:
       - Registry
-  /deepfence/registryaccount/{registry_id}:
+  /kengine/registryaccount/{registry_id}:
     delete:
       description: Delete registry
       operationId: deleteRegistry
@@ -4422,7 +4422,7 @@ paths:
       summary: Update Registry
       tags:
       - Registry
-  /deepfence/registryaccount/{registry_id}/summary:
+  /kengine/registryaccount/{registry_id}/summary:
     get:
       description: "get summary of registry scans, images and tags"
       operationId: getRegistrySummary
@@ -4468,7 +4468,7 @@ paths:
       summary: Get Registry Summary
       tags:
       - Registry
-  /deepfence/registryaccount/{registry_id}/sync:
+  /kengine/registryaccount/{registry_id}/sync:
     post:
       description: synchronize registry images
       operationId: syncRegistry
@@ -4514,7 +4514,7 @@ paths:
       summary: Sync Registry
       tags:
       - Registry
-  /deepfence/registryaccount/{registry_type}/summary-by-type:
+  /kengine/registryaccount/{registry_type}/summary-by-type:
     get:
       description: "get summary of registries scans, images and tags by registry type"
       operationId: getSummaryByType
@@ -4560,7 +4560,7 @@ paths:
       summary: Get Registry Summary By Type
       tags:
       - Registry
-  /deepfence/registryaccount/count/images:
+  /kengine/registryaccount/count/images:
     post:
       description: count of images from a given registry
       operationId: CountImages
@@ -4603,7 +4603,7 @@ paths:
       summary: Count Registry Images
       tags:
       - Registry
-  /deepfence/registryaccount/count/stubs:
+  /kengine/registryaccount/count/stubs:
     post:
       description: count of image tags for a given image and registry
       operationId: CountImageStubs
@@ -4646,7 +4646,7 @@ paths:
       summary: Count Image Stubs
       tags:
       - Registry
-  /deepfence/registryaccount/delete:
+  /kengine/registryaccount/delete:
     patch:
       description: Batch Delete registry
       operationId: deleteRegistryBulk
@@ -4685,7 +4685,7 @@ paths:
       summary: Batch Delete Registry
       tags:
       - Registry
-  /deepfence/registryaccount/gcr:
+  /kengine/registryaccount/gcr:
     post:
       description: Add a Google Container registry
       operationId: addRegistryGCR
@@ -4728,7 +4728,7 @@ paths:
       summary: Add Google Container Registry
       tags:
       - Registry
-  /deepfence/registryaccount/images:
+  /kengine/registryaccount/images:
     post:
       description: list images from a given registry
       operationId: listImages
@@ -4773,7 +4773,7 @@ paths:
       summary: List Registry Images
       tags:
       - Registry
-  /deepfence/registryaccount/stubs:
+  /kengine/registryaccount/stubs:
     post:
       description: list image tags for a given image and registry
       operationId: listImageStubs
@@ -4818,7 +4818,7 @@ paths:
       summary: List Image Stubs
       tags:
       - Registry
-  /deepfence/registryaccount/summary:
+  /kengine/registryaccount/summary:
     get:
       description: "get summary of all registries scans, images and tags by registry\
         \ type"
@@ -4857,7 +4857,7 @@ paths:
       summary: Get All Registries Summary By Type
       tags:
       - Registry
-  /deepfence/reports:
+  /kengine/reports:
     get:
       description: List all the available reports
       operationId: listReports
@@ -4939,7 +4939,7 @@ paths:
       summary: Generate Report
       tags:
       - Reports
-  /deepfence/reports/{report_id}:
+  /kengine/reports/{report_id}:
     delete:
       description: delete report for given report_id
       operationId: deleteReport
@@ -5026,7 +5026,7 @@ paths:
       summary: Get Report
       tags:
       - Reports
-  /deepfence/reports/delete:
+  /kengine/reports/delete:
     patch:
       description: Bulk Delete reports
       operationId: bulkDeleteReports
@@ -5065,7 +5065,7 @@ paths:
       summary: Bulk Delete Reports
       tags:
       - Reports
-  /deepfence/scan/{scan_type}/{scan_id}:
+  /kengine/scan/{scan_type}/{scan_id}:
     delete:
       description: Delete all scan results for a scan id
       operationId: deleteScanResultsForScanID
@@ -5120,7 +5120,7 @@ paths:
       summary: Delete all scan results for a scan id
       tags:
       - Scan Results
-  /deepfence/scan/{scan_type}/{scan_id}/download:
+  /kengine/scan/{scan_type}/{scan_id}/download:
     get:
       description: Download scan results
       operationId: downloadScanResults
@@ -5179,7 +5179,7 @@ paths:
       summary: Download Scans Results
       tags:
       - Scan Results
-  /deepfence/scan/list/cloud-compliance:
+  /kengine/scan/list/cloud-compliance:
     post:
       description: Get Cloud Compliance Scans list for cloud node
       operationId: listCloudComplianceScan
@@ -5222,7 +5222,7 @@ paths:
       summary: Get Cloud Compliance Scans List
       tags:
       - Cloud Scanner
-  /deepfence/scan/list/compliance:
+  /kengine/scan/list/compliance:
     post:
       description: Get Compliance Scans list on agent or registry
       operationId: listComplianceScan
@@ -5265,7 +5265,7 @@ paths:
       summary: Get Compliance Scans List
       tags:
       - Compliance
-  /deepfence/scan/list/malware:
+  /kengine/scan/list/malware:
     post:
       description: Get Malware Scans list on agent or registry
       operationId: listMalwareScan
@@ -5308,7 +5308,7 @@ paths:
       summary: Get Malware Scans List
       tags:
       - Malware Scan
-  /deepfence/scan/list/secret:
+  /kengine/scan/list/secret:
     post:
       description: Get Secret Scans list on agent or registry
       operationId: listSecretScan
@@ -5351,7 +5351,7 @@ paths:
       summary: Get Secret Scans List
       tags:
       - Secret Scan
-  /deepfence/scan/list/vulnerability:
+  /kengine/scan/list/vulnerability:
     post:
       description: Get Vulnerability Scan list on agent or registry
       operationId: listVulnerabilityScans
@@ -5394,7 +5394,7 @@ paths:
       summary: Get Vulnerability Scans List
       tags:
       - Vulnerability
-  /deepfence/scan/nodes-in-result:
+  /kengine/scan/nodes-in-result:
     post:
       description: Get all nodes in given scan result ids
       operationId: getAllNodesInScanResults
@@ -5439,7 +5439,7 @@ paths:
       summary: Get all nodes in given scan result ids
       tags:
       - Scan Results
-  /deepfence/scan/results/action/delete:
+  /kengine/scan/results/action/delete:
     patch:
       description: Delete selected scan results
       operationId: deleteScanResult
@@ -5478,7 +5478,7 @@ paths:
       summary: Delete selected scan results
       tags:
       - Scan Results
-  /deepfence/scan/results/action/mask:
+  /kengine/scan/results/action/mask:
     post:
       description: Mask scan results
       operationId: maskScanResult
@@ -5517,7 +5517,7 @@ paths:
       summary: Mask Scans Results
       tags:
       - Scan Results
-  /deepfence/scan/results/action/notify:
+  /kengine/scan/results/action/notify:
     post:
       description: Notify scan results in connected integration channels
       operationId: notifyScanResult
@@ -5556,7 +5556,7 @@ paths:
       summary: Notify Scans Results
       tags:
       - Scan Results
-  /deepfence/scan/results/action/unmask:
+  /kengine/scan/results/action/unmask:
     post:
       description: Unmask scan results
       operationId: unmaskScanResult
@@ -5595,7 +5595,7 @@ paths:
       summary: Unmask Scans Results
       tags:
       - Scan Results
-  /deepfence/scan/results/cloud-compliance:
+  /kengine/scan/results/cloud-compliance:
     post:
       description: Get Cloud Compliance Scan results for cloud node
       operationId: resultsCloudComplianceScan
@@ -5638,7 +5638,7 @@ paths:
       summary: Get Cloud Compliance Scan Results
       tags:
       - Cloud Scanner
-  /deepfence/scan/results/compliance:
+  /kengine/scan/results/compliance:
     post:
       description: Get Compliance Scans results on agent or registry
       operationId: resultsComplianceScan
@@ -5681,7 +5681,7 @@ paths:
       summary: Get Compliance Scans Results
       tags:
       - Compliance
-  /deepfence/scan/results/count/cloud-compliance:
+  /kengine/scan/results/count/cloud-compliance:
     post:
       description: Get Cloud Compliance Scan results for cloud node
       operationId: countResultsCloudComplianceScan
@@ -5724,7 +5724,7 @@ paths:
       summary: Get Cloud Compliance Scan Results
       tags:
       - Cloud Scanner
-  /deepfence/scan/results/count/compliance:
+  /kengine/scan/results/count/compliance:
     post:
       description: Get Compliance Scans results on agent or registry
       operationId: countResultsComplianceScan
@@ -5767,7 +5767,7 @@ paths:
       summary: Get Compliance Scans Results
       tags:
       - Compliance
-  /deepfence/scan/results/count/group/malware:
+  /kengine/scan/results/count/group/malware:
     get:
       description: Group Malware Scans results by severity/rule
       operationId: groupResultsMalwares
@@ -5805,7 +5805,7 @@ paths:
       summary: Group Malware Results
       tags:
       - Malware Scan
-  /deepfence/scan/results/count/group/malware/class:
+  /kengine/scan/results/count/group/malware/class:
     get:
       description: Group Malware Scans results by severity/class
       operationId: groupResultsMalwaresClass
@@ -5843,7 +5843,7 @@ paths:
       summary: Group Malware Results By Class
       tags:
       - Malware Scan
-  /deepfence/scan/results/count/group/secret:
+  /kengine/scan/results/count/group/secret:
     get:
       description: Group Secret Scans results by severity/rule
       operationId: groupResultsSecrets
@@ -5881,7 +5881,7 @@ paths:
       summary: Group Secret Results
       tags:
       - Secret Scan
-  /deepfence/scan/results/count/malware:
+  /kengine/scan/results/count/malware:
     post:
       description: Get Malware Scans results on agent or registry
       operationId: countResultsMalwareScan
@@ -5924,7 +5924,7 @@ paths:
       summary: Get Malware Scans Results
       tags:
       - Malware Scan
-  /deepfence/scan/results/count/secret:
+  /kengine/scan/results/count/secret:
     post:
       description: Get Secret Scans results on agent or registry
       operationId: countResultsSecretScan
@@ -5967,7 +5967,7 @@ paths:
       summary: Get Secret Scans Results
       tags:
       - Secret Scan
-  /deepfence/scan/results/count/vulnerability:
+  /kengine/scan/results/count/vulnerability:
     post:
       description: Get Vulnerability Scan results on agent or registry
       operationId: countResultsVulnerabilityScans
@@ -6010,7 +6010,7 @@ paths:
       summary: Get Vulnerability Scans Results
       tags:
       - Vulnerability
-  /deepfence/scan/results/fields:
+  /kengine/scan/results/fields:
     get:
       description: Get all the fields available in all the scan reports
       operationId: getScanReportFields
@@ -6048,7 +6048,7 @@ paths:
       summary: Get Scan Report Fields
       tags:
       - Common
-  /deepfence/scan/results/malware:
+  /kengine/scan/results/malware:
     post:
       description: Get Malware Scans results on agent or registry
       operationId: resultsMalwareScan
@@ -6091,7 +6091,7 @@ paths:
       summary: Get Malware Scans Results
       tags:
       - Malware Scan
-  /deepfence/scan/results/malware/class:
+  /kengine/scan/results/malware/class:
     post:
       description: Get Malware Scans detected class names
       operationId: resultsClassMalwareScan
@@ -6134,7 +6134,7 @@ paths:
       summary: Get Malware Scans Results
       tags:
       - Malware Scan
-  /deepfence/scan/results/malware/rules:
+  /kengine/scan/results/malware/rules:
     post:
       description: Get Malware Scans detected rules names
       operationId: resultsRulesMalwareScan
@@ -6177,7 +6177,7 @@ paths:
       summary: Get Malware Scans Result Rules
       tags:
       - Malware Scan
-  /deepfence/scan/results/secret:
+  /kengine/scan/results/secret:
     post:
       description: Get Secret Scans results on agent or registry
       operationId: resultsSecretScan
@@ -6220,7 +6220,7 @@ paths:
       summary: Get Secret Scans Results
       tags:
       - Secret Scan
-  /deepfence/scan/results/secret/rules:
+  /kengine/scan/results/secret/rules:
     post:
       description: Get Secret Scans detected rules names
       operationId: resultsRulesSecretScan
@@ -6263,7 +6263,7 @@ paths:
       summary: Get Secret Scans Result Rules
       tags:
       - Secret Scan
-  /deepfence/scan/results/vulnerability:
+  /kengine/scan/results/vulnerability:
     post:
       description: Get Vulnerability Scan results on agent or registry
       operationId: resultsVulnerabilityScans
@@ -6306,7 +6306,7 @@ paths:
       summary: Get Vulnerability Scans Results
       tags:
       - Vulnerability
-  /deepfence/scan/sbom:
+  /kengine/scan/sbom:
     post:
       description: Get SBOM for a node or scan id
       operationId: getSBOM
@@ -6351,7 +6351,7 @@ paths:
       summary: Get SBOM for a node or scan id
       tags:
       - Vulnerability
-  /deepfence/scan/sbom/download:
+  /kengine/scan/sbom/download:
     post:
       description: Download SBOM for a node or scan id
       operationId: downloadSBOM
@@ -6394,7 +6394,7 @@ paths:
       summary: Download SBOM for a node or scan id
       tags:
       - Vulnerability
-  /deepfence/scan/start/compliance:
+  /kengine/scan/start/compliance:
     post:
       description: Start Compliance Scan on agent or registry
       operationId: startComplianceScan
@@ -6437,7 +6437,7 @@ paths:
       summary: Start Compliance Scan
       tags:
       - Compliance
-  /deepfence/scan/start/malware:
+  /kengine/scan/start/malware:
     post:
       description: Start Malware Scan on agent or registry
       operationId: startMalwareScan
@@ -6480,7 +6480,7 @@ paths:
       summary: Start Malware Scan
       tags:
       - Malware Scan
-  /deepfence/scan/start/secret:
+  /kengine/scan/start/secret:
     post:
       description: Start Secret Scan on agent or registry
       operationId: startSecretScan
@@ -6523,7 +6523,7 @@ paths:
       summary: Start Secret Scan
       tags:
       - Secret Scan
-  /deepfence/scan/start/vulnerability:
+  /kengine/scan/start/vulnerability:
     post:
       description: Start Vulnerability Scan on agent or registry
       operationId: startVulnerabilityScan
@@ -6566,7 +6566,7 @@ paths:
       summary: Start Vulnerability Scan
       tags:
       - Vulnerability
-  /deepfence/scan/status/cloud-compliance:
+  /kengine/scan/status/cloud-compliance:
     post:
       description: Get Cloud Compliance Scan Status on cloud node
       operationId: statusCloudComplianceScan
@@ -6609,7 +6609,7 @@ paths:
       summary: Get Cloud Compliance Scan Status
       tags:
       - Cloud Scanner
-  /deepfence/scan/status/compliance:
+  /kengine/scan/status/compliance:
     post:
       description: Get Compliance Scan Status on agent or registry
       operationId: statusComplianceScan
@@ -6652,7 +6652,7 @@ paths:
       summary: Get Compliance Scan Status
       tags:
       - Compliance
-  /deepfence/scan/status/malware:
+  /kengine/scan/status/malware:
     post:
       description: Get Malware Scan status on agent or registry
       operationId: statusMalwareScan
@@ -6695,7 +6695,7 @@ paths:
       summary: Get Malware Scan Status
       tags:
       - Malware Scan
-  /deepfence/scan/status/secret:
+  /kengine/scan/status/secret:
     post:
       description: Get Secret Scan Status on agent or registry
       operationId: statusSecretScan
@@ -6738,7 +6738,7 @@ paths:
       summary: Get Secret Scan Status
       tags:
       - Secret Scan
-  /deepfence/scan/status/vulnerability:
+  /kengine/scan/status/vulnerability:
     post:
       description: Get Vulnerability Scan Status on agent or registry
       operationId: statusVulnerabilityScan
@@ -6781,7 +6781,7 @@ paths:
       summary: Get Vulnerability Scan Status
       tags:
       - Vulnerability
-  /deepfence/scan/stop/compliance:
+  /kengine/scan/stop/compliance:
     post:
       description: Stop Compliance Scan on agent or registry
       operationId: stopComplianceScan
@@ -6820,7 +6820,7 @@ paths:
       summary: Stop Compliance Scan
       tags:
       - Compliance
-  /deepfence/scan/stop/malware:
+  /kengine/scan/stop/malware:
     post:
       description: Stop Malware Scan on agent or registry
       operationId: stopMalwareScan
@@ -6859,7 +6859,7 @@ paths:
       summary: Stop Malware Scan
       tags:
       - Malware Scan
-  /deepfence/scan/stop/secret:
+  /kengine/scan/stop/secret:
     post:
       description: Stop Secret Scan on agent or registry
       operationId: stopSecretScan
@@ -6898,7 +6898,7 @@ paths:
       summary: Stop Secret Scan
       tags:
       - Secret Scan
-  /deepfence/scan/stop/vulnerability:
+  /kengine/scan/stop/vulnerability:
     post:
       description: Stop Vulnerability Scan on agent or registry
       operationId: stopVulnerabilityScan
@@ -6937,7 +6937,7 @@ paths:
       summary: Stop Vulnerability Scan
       tags:
       - Vulnerability
-  /deepfence/scans/bulk/delete:
+  /kengine/scans/bulk/delete:
     post:
       description: Bulk delete scans along with their results for a particular scan
         type
@@ -6977,7 +6977,7 @@ paths:
       summary: Bulk Delete Scans
       tags:
       - Scan Results
-  /deepfence/scheduled-task:
+  /kengine/scheduled-task:
     get:
       description: Get scheduled tasks
       operationId: getScheduledTasks
@@ -7055,7 +7055,7 @@ paths:
       summary: Add scheduled task
       tags:
       - Settings
-  /deepfence/scheduled-task/{id}:
+  /kengine/scheduled-task/{id}:
     delete:
       description: Delete Custom Schedule task
       operationId: deleteCustomScheduledTask
@@ -7143,7 +7143,7 @@ paths:
       summary: Update scheduled task
       tags:
       - Settings
-  /deepfence/search/cloud-accounts:
+  /kengine/search/cloud-accounts:
     post:
       description: Search across all the data associated with cloud nodes
       operationId: searchCloudAccounts
@@ -7188,7 +7188,7 @@ paths:
       summary: Search Cloud Nodes
       tags:
       - Search
-  /deepfence/search/cloud-compliance/scans:
+  /kengine/search/cloud-compliance/scans:
     post:
       description: Search across all the data associated with cloud-compliance scan
       operationId: searchCloudComplianceScans
@@ -7233,7 +7233,7 @@ paths:
       summary: Search Cloud Compliance Scan results
       tags:
       - Search
-  /deepfence/search/cloud-compliances:
+  /kengine/search/cloud-compliances:
     post:
       description: Search across all the data associated with cloud-compliances
       operationId: searchCloudCompliances
@@ -7278,7 +7278,7 @@ paths:
       summary: Search Cloud compliances
       tags:
       - Search
-  /deepfence/search/cloud-resources:
+  /kengine/search/cloud-resources:
     post:
       description: Search across all data associated with CloudResources
       operationId: searchCloudResources
@@ -7323,7 +7323,7 @@ paths:
       summary: Search Cloud Resources
       tags:
       - Search
-  /deepfence/search/compliance-rules:
+  /kengine/search/compliance-rules:
     post:
       description: Search across all the data associated with compliance rules
       operationId: searchComplianceRules
@@ -7368,7 +7368,7 @@ paths:
       summary: Search Compliance Rules
       tags:
       - Search
-  /deepfence/search/compliance/scans:
+  /kengine/search/compliance/scans:
     post:
       description: Search across all the data associated with compliance scan
       operationId: searchComplianceScans
@@ -7413,7 +7413,7 @@ paths:
       summary: Search Compliance Scan results
       tags:
       - Search
-  /deepfence/search/compliances:
+  /kengine/search/compliances:
     post:
       description: Search across all the data associated with compliances
       operationId: searchCompliances
@@ -7458,7 +7458,7 @@ paths:
       summary: Search Compliances
       tags:
       - Search
-  /deepfence/search/containers:
+  /kengine/search/containers:
     post:
       description: Search across all data associated with containers
       operationId: searchContainers
@@ -7503,7 +7503,7 @@ paths:
       summary: Search Containers data
       tags:
       - Search
-  /deepfence/search/count/cloud-accounts:
+  /kengine/search/count/cloud-accounts:
     post:
       description: Search across all the data associated with cloud nodes
       operationId: countCloudAccounts
@@ -7546,7 +7546,7 @@ paths:
       summary: Count Cloud Nodes
       tags:
       - Search
-  /deepfence/search/count/cloud-compliance/scans:
+  /kengine/search/count/cloud-compliance/scans:
     post:
       description: Count across all the data associated with cloud-compliance scans
       operationId: countCloudComplianceScans
@@ -7589,7 +7589,7 @@ paths:
       summary: Count Cloud Compliance Scan results
       tags:
       - Search
-  /deepfence/search/count/cloud-compliances:
+  /kengine/search/count/cloud-compliances:
     post:
       description: Count across all the data ssociated with cloud compliances
       operationId: countCloudCompliances
@@ -7632,7 +7632,7 @@ paths:
       summary: Count Cloud compliances
       tags:
       - Search
-  /deepfence/search/count/cloud-resources:
+  /kengine/search/count/cloud-resources:
     post:
       description: Count across all the data ssociated with cloud resources
       operationId: countCloudResources
@@ -7675,7 +7675,7 @@ paths:
       summary: Count Cloud resources
       tags:
       - Search
-  /deepfence/search/count/compliance-rules:
+  /kengine/search/count/compliance-rules:
     post:
       description: Count across all the data associated with compliance rules
       operationId: countComplianceRules
@@ -7718,7 +7718,7 @@ paths:
       summary: Count Compliance Rules
       tags:
       - Search
-  /deepfence/search/count/compliance/scans:
+  /kengine/search/count/compliance/scans:
     post:
       description: Count across all the data associated with compliance scans
       operationId: countComplianceScans
@@ -7761,7 +7761,7 @@ paths:
       summary: Count Compliance Scan results
       tags:
       - Search
-  /deepfence/search/count/compliances:
+  /kengine/search/count/compliances:
     post:
       description: Count across all the data associated with compliances
       operationId: countCompliances
@@ -7804,7 +7804,7 @@ paths:
       summary: Count Compliances
       tags:
       - Search
-  /deepfence/search/count/containers:
+  /kengine/search/count/containers:
     post:
       description: Count across all the data associated with containers
       operationId: countContainers
@@ -7847,7 +7847,7 @@ paths:
       summary: Count Containers data
       tags:
       - Search
-  /deepfence/search/count/hosts:
+  /kengine/search/count/hosts:
     post:
       description: Count across all the data associated with hosts
       operationId: countHosts
@@ -7890,7 +7890,7 @@ paths:
       summary: Count hosts
       tags:
       - Search
-  /deepfence/search/count/images:
+  /kengine/search/count/images:
     post:
       description: Count across all the data associated with container images
       operationId: countContainerImages
@@ -7933,7 +7933,7 @@ paths:
       summary: Count Container images
       tags:
       - Search
-  /deepfence/search/count/kubernetes-clusters:
+  /kengine/search/count/kubernetes-clusters:
     post:
       description: Count across all the data ssociated with kubernetes clusters
       operationId: countKubernetesClusters
@@ -7976,7 +7976,7 @@ paths:
       summary: Count Kubernetes clusters
       tags:
       - Search
-  /deepfence/search/count/malware-rules:
+  /kengine/search/count/malware-rules:
     post:
       description: Count across all the data associated with malware rules
       operationId: countMalwareRules
@@ -8019,7 +8019,7 @@ paths:
       summary: Count Malware Rules
       tags:
       - Search
-  /deepfence/search/count/malware/scans:
+  /kengine/search/count/malware/scans:
     post:
       description: Count across all the data associated with malware scans
       operationId: countMalwareScans
@@ -8062,7 +8062,7 @@ paths:
       summary: Count Malware Scan results
       tags:
       - Search
-  /deepfence/search/count/malwares:
+  /kengine/search/count/malwares:
     post:
       description: Count across all the data associated with malwares
       operationId: countMalwares
@@ -8105,7 +8105,7 @@ paths:
       summary: Count Malwares
       tags:
       - Search
-  /deepfence/search/count/nodes:
+  /kengine/search/count/nodes:
     get:
       description: "Count hosts, containers, pods, k8s clusters, images"
       operationId: countNodes
@@ -8143,7 +8143,7 @@ paths:
       summary: Count nodes
       tags:
       - Search
-  /deepfence/search/count/pods:
+  /kengine/search/count/pods:
     post:
       description: Count across all the data associated with pods
       operationId: countPods
@@ -8186,7 +8186,7 @@ paths:
       summary: Count Pods
       tags:
       - Search
-  /deepfence/search/count/registry-accounts:
+  /kengine/search/count/registry-accounts:
     post:
       description: Search across all the data associated with registry account
       operationId: countRegistryAccounts
@@ -8229,7 +8229,7 @@ paths:
       summary: Count Registry Accounts
       tags:
       - Search
-  /deepfence/search/count/secret-rules:
+  /kengine/search/count/secret-rules:
     post:
       description: Count across all the data associated with secret rules
       operationId: countSecretRules
@@ -8272,7 +8272,7 @@ paths:
       summary: Count Secret Rules
       tags:
       - Search
-  /deepfence/search/count/secret/scans:
+  /kengine/search/count/secret/scans:
     post:
       description: Count across all the data associated with secret scans
       operationId: countSecretsScans
@@ -8315,7 +8315,7 @@ paths:
       summary: Count Secret Scan results
       tags:
       - Search
-  /deepfence/search/count/secrets:
+  /kengine/search/count/secrets:
     post:
       description: Count across all the data associated with secrets
       operationId: countSecrets
@@ -8358,7 +8358,7 @@ paths:
       summary: Count Secrets
       tags:
       - Search
-  /deepfence/search/count/vulnerabilities:
+  /kengine/search/count/vulnerabilities:
     post:
       description: Search across all the data associated with vulnerabilities
       operationId: countVulnerabilities
@@ -8401,7 +8401,7 @@ paths:
       summary: Count Vulnerabilities
       tags:
       - Search
-  /deepfence/search/count/vulnerability-rules:
+  /kengine/search/count/vulnerability-rules:
     post:
       description: Count across all the data associated with vulnerability rules
       operationId: countVulnerabilityRules
@@ -8444,7 +8444,7 @@ paths:
       summary: Count Vulnerability Rules
       tags:
       - Search
-  /deepfence/search/count/vulnerability/scans:
+  /kengine/search/count/vulnerability/scans:
     post:
       description: Count across all the data associated with vulnerability scans
       operationId: countVulnerabilityScans
@@ -8487,7 +8487,7 @@ paths:
       summary: Count Vulnerability Scan results
       tags:
       - Search
-  /deepfence/search/hosts:
+  /kengine/search/hosts:
     post:
       description: Search across all data associated with hosts
       operationId: searchHosts
@@ -8532,7 +8532,7 @@ paths:
       summary: Search hosts
       tags:
       - Search
-  /deepfence/search/images:
+  /kengine/search/images:
     post:
       description: Search across all the data associated with container images
       operationId: searchContainerImages
@@ -8577,7 +8577,7 @@ paths:
       summary: Search Container images
       tags:
       - Search
-  /deepfence/search/kubernetes-clusters:
+  /kengine/search/kubernetes-clusters:
     post:
       description: Search across all data associated with kuberentes clusters
       operationId: searchKubernetesClusters
@@ -8622,7 +8622,7 @@ paths:
       summary: Search Kuberenetes Clusters
       tags:
       - Search
-  /deepfence/search/malware-rules:
+  /kengine/search/malware-rules:
     post:
       description: Search across all the data associated with malware rules
       operationId: searchMalwareRules
@@ -8667,7 +8667,7 @@ paths:
       summary: Search Malware Rules
       tags:
       - Search
-  /deepfence/search/malware/scans:
+  /kengine/search/malware/scans:
     post:
       description: Search across all the data associated with malwares scan
       operationId: searchMalwareScans
@@ -8712,7 +8712,7 @@ paths:
       summary: Search Malware Scan results
       tags:
       - Search
-  /deepfence/search/malwares:
+  /kengine/search/malwares:
     post:
       description: Search across all the data associated with malwares
       operationId: searchMalwares
@@ -8757,7 +8757,7 @@ paths:
       summary: Search Malwares
       tags:
       - Search
-  /deepfence/search/pods:
+  /kengine/search/pods:
     post:
       description: Search across all the data associated with pods
       operationId: searchPods
@@ -8802,7 +8802,7 @@ paths:
       summary: Search Pods
       tags:
       - Search
-  /deepfence/search/registry-accounts:
+  /kengine/search/registry-accounts:
     post:
       description: Search across all the data associated with registry account
       operationId: searchRegistryAccounts
@@ -8847,7 +8847,7 @@ paths:
       summary: Search Registry Accounts
       tags:
       - Search
-  /deepfence/search/secret-rules:
+  /kengine/search/secret-rules:
     post:
       description: Search across all the data associated with secret ruless
       operationId: searchSecretRules
@@ -8892,7 +8892,7 @@ paths:
       summary: Search Secret Rules
       tags:
       - Search
-  /deepfence/search/secret/scans:
+  /kengine/search/secret/scans:
     post:
       description: Search across all the data associated with secrets scan
       operationId: searchSecretsScans
@@ -8937,7 +8937,7 @@ paths:
       summary: Search Secrets Scan results
       tags:
       - Search
-  /deepfence/search/secrets:
+  /kengine/search/secrets:
     post:
       description: Search across all the data associated with secrets
       operationId: searchSecrets
@@ -8982,7 +8982,7 @@ paths:
       summary: Search Secrets
       tags:
       - Search
-  /deepfence/search/vulnerabilities:
+  /kengine/search/vulnerabilities:
     post:
       description: Search across all the data associated with vulnerabilities
       operationId: searchVulnerabilities
@@ -9027,7 +9027,7 @@ paths:
       summary: Search Vulnerabilities
       tags:
       - Search
-  /deepfence/search/vulnerability-rules:
+  /kengine/search/vulnerability-rules:
     post:
       description: Search across all the data associated with vulnerability rules
       operationId: searchVulerabilityRules
@@ -9072,7 +9072,7 @@ paths:
       summary: Search Vulnerability Rules
       tags:
       - Search
-  /deepfence/search/vulnerability/scans:
+  /kengine/search/vulnerability/scans:
     post:
       description: Search across all the data associated with vulnerability scan
       operationId: searchVulnerabilityScans
@@ -9117,7 +9117,7 @@ paths:
       summary: Search Vulnerability Scan results
       tags:
       - Search
-  /deepfence/settings/agent/version:
+  /kengine/settings/agent/version:
     put:
       description: Upload Agent version
       operationId: uploadAgentVersion
@@ -9156,7 +9156,7 @@ paths:
       summary: Upload New agent version
       tags:
       - Settings
-  /deepfence/settings/agent/versions:
+  /kengine/settings/agent/versions:
     get:
       description: Get available agent versions
       operationId: getAgentVersions
@@ -9194,7 +9194,7 @@ paths:
       summary: Get available agent versions
       tags:
       - Settings
-  /deepfence/settings/email:
+  /kengine/settings/email:
     get:
       description: Get Email Smtp / ses Configurations in system
       operationId: getEmailConfiguration
@@ -9276,7 +9276,7 @@ paths:
       summary: Add Email Configuration
       tags:
       - Settings
-  /deepfence/settings/email/{config_id}:
+  /kengine/settings/email/{config_id}:
     delete:
       description: Delete Email Smtp / ses Configurations in system
       operationId: deleteEmailConfiguration
@@ -9318,7 +9318,7 @@ paths:
       summary: Delete Email Configurations
       tags:
       - Settings
-  /deepfence/settings/email/test:
+  /kengine/settings/email/test:
     post:
       description: Test Configured Email
       operationId: testConfiguredEmail
@@ -9356,7 +9356,7 @@ paths:
       summary: Test Configured Email
       tags:
       - Settings
-  /deepfence/settings/email/test-unconfigured:
+  /kengine/settings/email/test-unconfigured:
     post:
       description: Test Unconfigured Email
       operationId: testUnconfiguredEmail
@@ -9399,7 +9399,7 @@ paths:
       summary: Test Unconfigured Email
       tags:
       - Settings
-  /deepfence/settings/global-settings:
+  /kengine/settings/global-settings:
     get:
       description: Get all settings
       operationId: getSettings
@@ -9439,7 +9439,7 @@ paths:
       summary: Get settings
       tags:
       - Settings
-  /deepfence/settings/global-settings/{id}:
+  /kengine/settings/global-settings/{id}:
     patch:
       description: Update setting
       operationId: updateSetting
@@ -9486,7 +9486,7 @@ paths:
       summary: Update setting
       tags:
       - Settings
-  /deepfence/settings/user-audit-log:
+  /kengine/settings/user-audit-log:
     post:
       description: Get audit logs for all users
       operationId: getUserAuditLogs
@@ -9531,7 +9531,7 @@ paths:
       summary: Get user audit logs
       tags:
       - Settings
-  /deepfence/settings/user-audit-log/count:
+  /kengine/settings/user-audit-log/count:
     get:
       description: Get user audit logs count
       operationId: getUserAuditLogsCount
@@ -9569,7 +9569,7 @@ paths:
       summary: Get user audit logs count
       tags:
       - Settings
-  /deepfence/user:
+  /kengine/user:
     delete:
       description: Delete logged in user
       operationId: deleteCurrentUser
@@ -9682,7 +9682,7 @@ paths:
       summary: Update Current User
       tags:
       - User
-  /deepfence/user/invite:
+  /kengine/user/invite:
     post:
       description: Invite a user
       operationId: inviteUser
@@ -9725,7 +9725,7 @@ paths:
       summary: Invite User
       tags:
       - User
-  /deepfence/user/invite/register:
+  /kengine/user/invite/register:
     post:
       description: Register invited user
       operationId: registerInvitedUser
@@ -9766,7 +9766,7 @@ paths:
       summary: Register Invited User
       tags:
       - User
-  /deepfence/user/login:
+  /kengine/user/login:
     post:
       description: Login API
       operationId: login
@@ -9807,7 +9807,7 @@ paths:
       summary: Login API
       tags:
       - Authentication
-  /deepfence/user/logout:
+  /kengine/user/logout:
     post:
       description: Logout API
       operationId: logout
@@ -9841,7 +9841,7 @@ paths:
       summary: Logout API
       tags:
       - Authentication
-  /deepfence/user/password:
+  /kengine/user/password:
     put:
       description: Update current user's password
       operationId: updatePassword
@@ -9880,7 +9880,7 @@ paths:
       summary: Update Password
       tags:
       - User
-  /deepfence/user/register:
+  /kengine/user/register:
     post:
       description: First user registration. Further users needs to be invited.
       operationId: registerUser
@@ -9921,7 +9921,7 @@ paths:
       summary: Register User
       tags:
       - User
-  /deepfence/user/reset-password/request:
+  /kengine/user/reset-password/request:
     post:
       description: Request for resetting the password
       operationId: resetPasswordRequest
@@ -9962,7 +9962,7 @@ paths:
       summary: Reset Password Request
       tags:
       - User
-  /deepfence/user/reset-password/verify:
+  /kengine/user/reset-password/verify:
     post:
       description: Verify code and reset the password
       operationId: verifyResetPasswordRequest
@@ -9999,7 +9999,7 @@ paths:
       summary: Verify and Reset Password
       tags:
       - User
-  /deepfence/users:
+  /kengine/users:
     get:
       description: Get all users
       operationId: getUsers
@@ -10039,7 +10039,7 @@ paths:
       summary: Get all users
       tags:
       - User
-  /deepfence/users/{id}:
+  /kengine/users/{id}:
     delete:
       description: Delete User by User ID
       operationId: deleteUser
@@ -17264,7 +17264,7 @@ components:
         no_of_hosts: 1
         no_of_images_in_registry: 5
         message: message
-        deepfence_support_email: deepfence_support_email
+        kengine_support_email: kengine_support_email
         license_email: license_email
         no_of_cloud_accounts: 6
         license_email_domain: license_email_domain
@@ -17273,7 +17273,7 @@ components:
       properties:
         current_hosts:
           type: integer
-        deepfence_support_email:
+        kengine_support_email:
           type: string
         description:
           type: string
@@ -18820,7 +18820,7 @@ components:
       - to_scan_id
       - window
       type: object
-    ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCloudCompliance:
+    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance:
       example:
         new:
         - severity: severity
@@ -18888,7 +18888,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelCompliance:
+    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance:
       example:
         new:
         - resource: resource
@@ -18952,7 +18952,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelMalware:
+    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware:
       example:
         new:
         - date: date
@@ -19022,7 +19022,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelSecret:
+    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret:
       example:
         new:
         - full_filename: full_filename
@@ -19080,7 +19080,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComDeepfenceThreatMapperDeepfenceServerModelVulnerability:
+    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability:
       example:
         new:
         - parsed_attack_vector: parsed_attack_vector

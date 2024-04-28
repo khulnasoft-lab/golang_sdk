@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AuthToken**](AuthenticationAPI.md#AuthToken) | **Post** /deepfence/auth/token | Get Access Token for API Token
-[**AuthTokenRefresh**](AuthenticationAPI.md#AuthTokenRefresh) | **Post** /deepfence/auth/token/refresh | Refresh access token
-[**Login**](AuthenticationAPI.md#Login) | **Post** /deepfence/user/login | Login API
-[**Logout**](AuthenticationAPI.md#Logout) | **Post** /deepfence/user/logout | Logout API
+[**AuthToken**](AuthenticationAPI.md#AuthToken) | **Post** /kengine/auth/token | Get Access Token for API Token
+[**AuthTokenRefresh**](AuthenticationAPI.md#AuthTokenRefresh) | **Post** /kengine/auth/token/refresh | Refresh access token
+[**Login**](AuthenticationAPI.md#Login) | **Post** /kengine/user/login | Login API
+[**Logout**](AuthenticationAPI.md#Logout) | **Post** /kengine/user/logout | Logout API
 
 
 
