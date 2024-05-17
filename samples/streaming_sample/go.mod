@@ -3,7 +3,7 @@ module streaming_sample
 go 1.20
 
 require (
-	github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240428004228-6f10c0fe088a
+	github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240428004714-8cdaf7b37dfc
 	github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240428004349-67ccd6315805
 	github.com/rs/zerolog v1.32.0
 )
