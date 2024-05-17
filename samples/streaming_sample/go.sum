@@ -13,6 +13,8 @@ github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240428004714-8cdaf7b37dfc h
 github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240428004714-8cdaf7b37dfc/go.mod h1:L2E+zDeBZofLoEsyBxfUEs5X1kfiRaZ7f2TiC4/7gnA=
 github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240428004349-67ccd6315805 h1:YtdWdkOSS+qwqaRQAqH4Vx63fooX4FMBGjv/Ejmw61k=
 github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240428004349-67ccd6315805/go.mod h1:OgA1MaX1GLzzHfL8BHD7wBIs8LmWKfeXOsrUyVQS6eg=
+github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240428004714-8cdaf7b37dfc h1:yEU1AZ4VJDDNals5EyOfytAqoZO9gz4dzJK+hOBJlo0=
+github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240428004714-8cdaf7b37dfc/go.mod h1:OgA1MaX1GLzzHfL8BHD7wBIs8LmWKfeXOsrUyVQS6eg=
 github.com/mattn/go-colorable v0.1.13 h1:fFA4WZxdEF4tXPZVKMLwD8oUnCTTo08duU7wxecdEvA=
 github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBDR4GtXTXX8a3vIGJpMovkB8vQcUbaXHg=
 github.com/mattn/go-isatty v0.0.16/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
