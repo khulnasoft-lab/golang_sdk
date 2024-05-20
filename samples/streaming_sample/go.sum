@@ -8,6 +8,8 @@ github.com/hashicorp/go-retryablehttp v0.7.6 h1:TwRYfx2z2C4cLbXmT8I5PgP/xmuqASDy
 github.com/hashicorp/go-retryablehttp v0.7.6/go.mod h1:pkQpWZeYWskR+D1tR2O5OcBFOxfA7DoAO6xtkuQnHTk=
 github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240517042822-c98d5dfb7872 h1:2UpeLeP94XBwW6VM6yMg06qnwUIKDNsRMxvp7s6MgtM=
 github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240517042822-c98d5dfb7872/go.mod h1:L2E+zDeBZofLoEsyBxfUEs5X1kfiRaZ7f2TiC4/7gnA=
+github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240520211941-631130bcd09e h1:Zeifd51Rk8HJG1Ys8sLr8QX0JKNYJhESZYR9acxBmEQ=
+github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240520211941-631130bcd09e/go.mod h1:L2E+zDeBZofLoEsyBxfUEs5X1kfiRaZ7f2TiC4/7gnA=
 github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240517042822-c98d5dfb7872 h1:QPrJxchfjeaELU0mmbLtp+5EWJLxjyhjR1HoL0PdQII=
 github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240517042822-c98d5dfb7872/go.mod h1:5S0Ohnvj+9LgDfPr+mzHQrwtOtWHx8wFmLHzZy9Y9l0=
 github.com/mattn/go-colorable v0.1.13 h1:fFA4WZxdEF4tXPZVKMLwD8oUnCTTo08duU7wxecdEvA=
