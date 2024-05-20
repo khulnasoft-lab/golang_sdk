@@ -9,12 +9,12 @@ import (
 	"os"
 	"time"
 
-	rhttp "github.com/hashicorp/go-retryablehttp"
 	openapi "github.com/khulnasoft-lab/golang_sdk/client"
+	rhttp "github.com/hashicorp/go-retryablehttp"
 )
 
 func IsConsoleAgent(url string) bool {
-	return len(os.Getenv("KENGINE_CONSOLE_AGENT")) > 0
+	return len(os.Getenv("KHULNASOFT_CONSOLE_AGENT")) > 0
 }
 
 func GetConsoleApiToken(console, port string) (string, error) {
@@ -37,7 +37,7 @@ func GetConsoleApiToken(console, port string) (string, error) {
 	servers := openapi.ServerConfigurations{
 		{
 			URL:         fmt.Sprintf("http://%s:%s", console, port),
-			Description: "kengine_server_internal",
+			Description: "khulnasoft_server_internal",
 		},
 	}
 

@@ -1,3 +1,3 @@
-# Kengine Utils
+# Khulnasoft Utils
 
-Internal library used across kengine projects
+Internal library used across khulnasoft projects

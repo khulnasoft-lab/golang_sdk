@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	rhttp "github.com/hashicorp/go-retryablehttp"
 	openapi "github.com/khulnasoft-lab/golang_sdk/client"
+	rhttp "github.com/hashicorp/go-retryablehttp"
 )
 
 const (
@@ -153,7 +153,7 @@ func NewHttpsConsoleClient(url, port string) *OpenapiHttpClient {
 	servers := openapi.ServerConfigurations{
 		{
 			URL:         fmt.Sprintf("https://%s:%s", url, port),
-			Description: "kengine_server",
+			Description: "khulnasoft_server",
 		},
 	}
 
