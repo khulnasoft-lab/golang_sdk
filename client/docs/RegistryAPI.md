@@ -4,20 +4,20 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddRegistry**](RegistryAPI.md#AddRegistry) | **Post** /kengine/registryaccount | Add Registry
-[**AddRegistryGCR**](RegistryAPI.md#AddRegistryGCR) | **Post** /kengine/registryaccount/gcr | Add Google Container Registry
-[**CountImageStubs**](RegistryAPI.md#CountImageStubs) | **Post** /kengine/registryaccount/count/stubs | Count Image Stubs
-[**CountImages**](RegistryAPI.md#CountImages) | **Post** /kengine/registryaccount/count/images | Count Registry Images
-[**DeleteRegistry**](RegistryAPI.md#DeleteRegistry) | **Delete** /kengine/registryaccount/{registry_id} | Delete Registry
-[**DeleteRegistryBulk**](RegistryAPI.md#DeleteRegistryBulk) | **Patch** /kengine/registryaccount/delete | Batch Delete Registry
-[**GetRegistrySummary**](RegistryAPI.md#GetRegistrySummary) | **Get** /kengine/registryaccount/{registry_id}/summary | Get Registry Summary
-[**GetSummaryAll**](RegistryAPI.md#GetSummaryAll) | **Get** /kengine/registryaccount/summary | Get All Registries Summary By Type
-[**GetSummaryByType**](RegistryAPI.md#GetSummaryByType) | **Get** /kengine/registryaccount/{registry_type}/summary-by-type | Get Registry Summary By Type
-[**ListImageStubs**](RegistryAPI.md#ListImageStubs) | **Post** /kengine/registryaccount/stubs | List Image Stubs
-[**ListImages**](RegistryAPI.md#ListImages) | **Post** /kengine/registryaccount/images | List Registry Images
-[**ListRegistry**](RegistryAPI.md#ListRegistry) | **Get** /kengine/registryaccount | List Registries
-[**SyncRegistry**](RegistryAPI.md#SyncRegistry) | **Post** /kengine/registryaccount/{registry_id}/sync | Sync Registry
-[**UpdateRegistry**](RegistryAPI.md#UpdateRegistry) | **Put** /kengine/registryaccount/{registry_id} | Update Registry
+[**AddRegistry**](RegistryAPI.md#AddRegistry) | **Post** /khulnasoft/registryaccount | Add Registry
+[**AddRegistryGCR**](RegistryAPI.md#AddRegistryGCR) | **Post** /khulnasoft/registryaccount/gcr | Add Google Container Registry
+[**CountImageStubs**](RegistryAPI.md#CountImageStubs) | **Post** /khulnasoft/registryaccount/count/stubs | Count Image Stubs
+[**CountImages**](RegistryAPI.md#CountImages) | **Post** /khulnasoft/registryaccount/count/images | Count Registry Images
+[**DeleteRegistry**](RegistryAPI.md#DeleteRegistry) | **Delete** /khulnasoft/registryaccount/{registry_id} | Delete Registry
+[**DeleteRegistryBulk**](RegistryAPI.md#DeleteRegistryBulk) | **Patch** /khulnasoft/registryaccount/delete | Batch Delete Registry
+[**GetRegistrySummary**](RegistryAPI.md#GetRegistrySummary) | **Get** /khulnasoft/registryaccount/{registry_id}/summary | Get Registry Summary
+[**GetSummaryAll**](RegistryAPI.md#GetSummaryAll) | **Get** /khulnasoft/registryaccount/summary | Get All Registries Summary By Type
+[**GetSummaryByType**](RegistryAPI.md#GetSummaryByType) | **Get** /khulnasoft/registryaccount/{registry_type}/summary-by-type | Get Registry Summary By Type
+[**ListImageStubs**](RegistryAPI.md#ListImageStubs) | **Post** /khulnasoft/registryaccount/stubs | List Image Stubs
+[**ListImages**](RegistryAPI.md#ListImages) | **Post** /khulnasoft/registryaccount/images | List Registry Images
+[**ListRegistry**](RegistryAPI.md#ListRegistry) | **Get** /khulnasoft/registryaccount | List Registries
+[**SyncRegistry**](RegistryAPI.md#SyncRegistry) | **Post** /khulnasoft/registryaccount/{registry_id}/sync | Sync Registry
+[**UpdateRegistry**](RegistryAPI.md#UpdateRegistry) | **Put** /khulnasoft/registryaccount/{registry_id} | Update Registry
 
 
 

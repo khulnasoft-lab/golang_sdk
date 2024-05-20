@@ -18,6 +18,10 @@ Name | Type | Description | Notes
 **DockerLabels** | **map[string]interface{}** |  | 
 **HostName** | **string** |  | 
 **Image** | [**ModelContainerImage**](ModelContainerImage.md) |  | 
+**IsKhulnasoftSystem** | **bool** |  | 
+**KubernetesClusterId** | **string** |  | 
+**KubernetesClusterName** | **string** |  | 
+**KubernetesNamespace** | **string** |  | 
 **MalwareLatestScanId** | **string** |  | 
 **MalwareScanStatus** | **string** |  | 
 **MalwaresCount** | **int32** |  | 
@@ -38,7 +42,7 @@ Name | Type | Description | Notes
 
 ### NewModelContainer
 
-`func NewModelContainer(cpuMax float32, cpuUsage float32, dockerContainerCommand string, dockerContainerCreated string, dockerContainerIps []interface{}, dockerContainerName string, dockerContainerNetworkMode string, dockerContainerNetworks string, dockerContainerPorts string, dockerContainerState string, dockerContainerStateHuman string, dockerLabels map[string]interface{}, hostName string, image ModelContainerImage, malwareLatestScanId string, malwareScanStatus string, malwaresCount int32, memoryMax int32, memoryUsage int32, nodeId string, nodeName string, processes []ModelProcess, secretLatestScanId string, secretScanStatus string, secretsCount int32, uptime int32, vulnerabilitiesCount int32, vulnerabilityLatestScanId string, vulnerabilityScanStatus string, ) *ModelContainer`
+`func NewModelContainer(cpuMax float32, cpuUsage float32, dockerContainerCommand string, dockerContainerCreated string, dockerContainerIps []interface{}, dockerContainerName string, dockerContainerNetworkMode string, dockerContainerNetworks string, dockerContainerPorts string, dockerContainerState string, dockerContainerStateHuman string, dockerLabels map[string]interface{}, hostName string, image ModelContainerImage, isKhulnasoftSystem bool, kubernetesClusterId string, kubernetesClusterName string, kubernetesNamespace string, malwareLatestScanId string, malwareScanStatus string, malwaresCount int32, memoryMax int32, memoryUsage int32, nodeId string, nodeName string, processes []ModelProcess, secretLatestScanId string, secretScanStatus string, secretsCount int32, uptime int32, vulnerabilitiesCount int32, vulnerabilityLatestScanId string, vulnerabilityScanStatus string, ) *ModelContainer`
 
 NewModelContainer instantiates a new ModelContainer object
 This constructor will assign default values to properties that have it defined,
@@ -351,6 +355,86 @@ and a boolean to check if the value has been set.
 `func (o *ModelContainer) SetImage(v ModelContainerImage)`
 
 SetImage sets Image field to given value.
+
+
+### GetIsKhulnasoftSystem
+
+`func (o *ModelContainer) GetIsKhulnasoftSystem() bool`
+
+GetIsKhulnasoftSystem returns the IsKhulnasoftSystem field if non-nil, zero value otherwise.
+
+### GetIsKhulnasoftSystemOk
+
+`func (o *ModelContainer) GetIsKhulnasoftSystemOk() (*bool, bool)`
+
+GetIsKhulnasoftSystemOk returns a tuple with the IsKhulnasoftSystem field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsKhulnasoftSystem
+
+`func (o *ModelContainer) SetIsKhulnasoftSystem(v bool)`
+
+SetIsKhulnasoftSystem sets IsKhulnasoftSystem field to given value.
+
+
+### GetKubernetesClusterId
+
+`func (o *ModelContainer) GetKubernetesClusterId() string`
+
+GetKubernetesClusterId returns the KubernetesClusterId field if non-nil, zero value otherwise.
+
+### GetKubernetesClusterIdOk
+
+`func (o *ModelContainer) GetKubernetesClusterIdOk() (*string, bool)`
+
+GetKubernetesClusterIdOk returns a tuple with the KubernetesClusterId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKubernetesClusterId
+
+`func (o *ModelContainer) SetKubernetesClusterId(v string)`
+
+SetKubernetesClusterId sets KubernetesClusterId field to given value.
+
+
+### GetKubernetesClusterName
+
+`func (o *ModelContainer) GetKubernetesClusterName() string`
+
+GetKubernetesClusterName returns the KubernetesClusterName field if non-nil, zero value otherwise.
+
+### GetKubernetesClusterNameOk
+
+`func (o *ModelContainer) GetKubernetesClusterNameOk() (*string, bool)`
+
+GetKubernetesClusterNameOk returns a tuple with the KubernetesClusterName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKubernetesClusterName
+
+`func (o *ModelContainer) SetKubernetesClusterName(v string)`
+
+SetKubernetesClusterName sets KubernetesClusterName field to given value.
+
+
+### GetKubernetesNamespace
+
+`func (o *ModelContainer) GetKubernetesNamespace() string`
+
+GetKubernetesNamespace returns the KubernetesNamespace field if non-nil, zero value otherwise.
+
+### GetKubernetesNamespaceOk
+
+`func (o *ModelContainer) GetKubernetesNamespaceOk() (*string, bool)`
+
+GetKubernetesNamespaceOk returns a tuple with the KubernetesNamespace field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKubernetesNamespace
+
+`func (o *ModelContainer) SetKubernetesNamespace(v string)`
+
+SetKubernetesNamespace sets KubernetesNamespace field to given value.
 
 
 ### GetMalwareLatestScanId

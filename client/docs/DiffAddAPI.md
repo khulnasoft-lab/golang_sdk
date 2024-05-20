@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DiffAddCloudCompliance**](DiffAddAPI.md#DiffAddCloudCompliance) | **Post** /kengine/diff-add/cloud-compliance | Get Cloud Compliance Diff
-[**DiffAddCompliance**](DiffAddAPI.md#DiffAddCompliance) | **Post** /kengine/diff-add/compliance | Get Compliance Diff
-[**DiffAddMalware**](DiffAddAPI.md#DiffAddMalware) | **Post** /kengine/diff-add/malware | Get Malware Diff
-[**DiffAddSecret**](DiffAddAPI.md#DiffAddSecret) | **Post** /kengine/diff-add/secret | Get Secret Diff
-[**DiffAddVulnerability**](DiffAddAPI.md#DiffAddVulnerability) | **Post** /kengine/diff-add/vulnerability | Get Vulnerability Diff
+[**DiffAddCloudCompliance**](DiffAddAPI.md#DiffAddCloudCompliance) | **Post** /khulnasoft/diff-add/cloud-compliance | Get Cloud Compliance Diff
+[**DiffAddCompliance**](DiffAddAPI.md#DiffAddCompliance) | **Post** /khulnasoft/diff-add/compliance | Get Compliance Diff
+[**DiffAddMalware**](DiffAddAPI.md#DiffAddMalware) | **Post** /khulnasoft/diff-add/malware | Get Malware Diff
+[**DiffAddSecret**](DiffAddAPI.md#DiffAddSecret) | **Post** /khulnasoft/diff-add/secret | Get Secret Diff
+[**DiffAddVulnerability**](DiffAddAPI.md#DiffAddVulnerability) | **Post** /khulnasoft/diff-add/vulnerability | Get Vulnerability Diff
 
 
 
 ## DiffAddCloudCompliance
 
-> ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance DiffAddCloudCompliance(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
+> ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCloudCompliance DiffAddCloudCompliance(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
 
 Get Cloud Compliance Diff
 
@@ -42,7 +42,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DiffAddAPI.DiffAddCloudCompliance``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DiffAddCloudCompliance`: ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance
+	// response from `DiffAddCloudCompliance`: ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCloudCompliance
 	fmt.Fprintf(os.Stdout, "Response from `DiffAddAPI.DiffAddCloudCompliance`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance**](ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance.md)
+[**ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCloudCompliance**](ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCloudCompliance.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## DiffAddCompliance
 
-> ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance DiffAddCompliance(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
+> ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCompliance DiffAddCompliance(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
 
 Get Compliance Diff
 
@@ -108,7 +108,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DiffAddAPI.DiffAddCompliance``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DiffAddCompliance`: ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance
+	// response from `DiffAddCompliance`: ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCompliance
 	fmt.Fprintf(os.Stdout, "Response from `DiffAddAPI.DiffAddCompliance`: %v\n", resp)
 }
 ```
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance**](ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance.md)
+[**ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCompliance**](ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCompliance.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ## DiffAddMalware
 
-> ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware DiffAddMalware(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
+> ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelMalware DiffAddMalware(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
 
 Get Malware Diff
 
@@ -174,7 +174,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DiffAddAPI.DiffAddMalware``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DiffAddMalware`: ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware
+	// response from `DiffAddMalware`: ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelMalware
 	fmt.Fprintf(os.Stdout, "Response from `DiffAddAPI.DiffAddMalware`: %v\n", resp)
 }
 ```
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware**](ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware.md)
+[**ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelMalware**](ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelMalware.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ## DiffAddSecret
 
-> ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret DiffAddSecret(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
+> ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelSecret DiffAddSecret(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
 
 Get Secret Diff
 
@@ -240,7 +240,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DiffAddAPI.DiffAddSecret``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DiffAddSecret`: ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret
+	// response from `DiffAddSecret`: ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelSecret
 	fmt.Fprintf(os.Stdout, "Response from `DiffAddAPI.DiffAddSecret`: %v\n", resp)
 }
 ```
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret**](ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret.md)
+[**ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelSecret**](ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelSecret.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ## DiffAddVulnerability
 
-> ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability DiffAddVulnerability(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
+> ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelVulnerability DiffAddVulnerability(ctx).ModelScanCompareReq(modelScanCompareReq).Execute()
 
 Get Vulnerability Diff
 
@@ -306,7 +306,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `DiffAddAPI.DiffAddVulnerability``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DiffAddVulnerability`: ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability
+	// response from `DiffAddVulnerability`: ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelVulnerability
 	fmt.Fprintf(os.Stdout, "Response from `DiffAddAPI.DiffAddVulnerability`: %v\n", resp)
 }
 ```
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability**](ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability.md)
+[**ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelVulnerability**](ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelVulnerability.md)
 
 ### Authorization
 

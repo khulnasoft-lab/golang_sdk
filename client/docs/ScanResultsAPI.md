@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BulkDeleteScans**](ScanResultsAPI.md#BulkDeleteScans) | **Post** /kengine/scans/bulk/delete | Bulk Delete Scans
-[**DeleteScanResult**](ScanResultsAPI.md#DeleteScanResult) | **Patch** /kengine/scan/results/action/delete | Delete selected scan results
-[**DeleteScanResultsForScanID**](ScanResultsAPI.md#DeleteScanResultsForScanID) | **Delete** /kengine/scan/{scan_type}/{scan_id} | Delete all scan results for a scan id
-[**DownloadScanResults**](ScanResultsAPI.md#DownloadScanResults) | **Get** /kengine/scan/{scan_type}/{scan_id}/download | Download Scans Results
-[**GetAllNodesInScanResults**](ScanResultsAPI.md#GetAllNodesInScanResults) | **Post** /kengine/scan/nodes-in-result | Get all nodes in given scan result ids
-[**MaskScanResult**](ScanResultsAPI.md#MaskScanResult) | **Post** /kengine/scan/results/action/mask | Mask Scans Results
-[**NotifyScanResult**](ScanResultsAPI.md#NotifyScanResult) | **Post** /kengine/scan/results/action/notify | Notify Scans Results
-[**UnmaskScanResult**](ScanResultsAPI.md#UnmaskScanResult) | **Post** /kengine/scan/results/action/unmask | Unmask Scans Results
+[**BulkDeleteScans**](ScanResultsAPI.md#BulkDeleteScans) | **Post** /khulnasoft/scans/bulk/delete | Bulk Delete Scans
+[**DeleteScanResult**](ScanResultsAPI.md#DeleteScanResult) | **Patch** /khulnasoft/scan/results/action/delete | Delete selected scan results
+[**DeleteScanResultsForScanID**](ScanResultsAPI.md#DeleteScanResultsForScanID) | **Delete** /khulnasoft/scan/{scan_type}/{scan_id} | Delete all scan results for a scan id
+[**DownloadScanResults**](ScanResultsAPI.md#DownloadScanResults) | **Get** /khulnasoft/scan/{scan_type}/{scan_id}/download | Download Scans Results
+[**GetAllNodesInScanResults**](ScanResultsAPI.md#GetAllNodesInScanResults) | **Post** /khulnasoft/scan/nodes-in-result | Get all nodes in given scan result ids
+[**MaskScanResult**](ScanResultsAPI.md#MaskScanResult) | **Post** /khulnasoft/scan/results/action/mask | Mask Scans Results
+[**NotifyScanResult**](ScanResultsAPI.md#NotifyScanResult) | **Post** /khulnasoft/scan/results/action/notify | Notify Scans Results
+[**UnmaskScanResult**](ScanResultsAPI.md#UnmaskScanResult) | **Post** /khulnasoft/scan/results/action/unmask | Unmask Scans Results
 
 
 

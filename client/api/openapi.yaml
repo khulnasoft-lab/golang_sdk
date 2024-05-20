@@ -1,10 +1,10 @@
 openapi: 3.0.3
 info:
   contact:
-    email: community@kengine.io
-    name: Kengine Support
-    url: https://kengine.io
-  description: "Kengine Runtime API provides programmatic control over Kengine\
+    email: community@khulnasoft.com
+    name: Khulnasoft Support
+    url: https://khulnasoft.com
+  description: "Khulnasoft Runtime API provides programmatic control over Khulnasoft\
     \ microservice securing your container, kubernetes and cloud deployments. The\
     \ API abstracts away underlying infrastructure details like cloud provider, \n\
     container distros, container orchestrator and type of deployment. This is one\
@@ -15,11 +15,11 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
   termsOfService: /tos
-  title: Kengine ThreatMapper
-  version: 2.2.0
+  title: Khulnasoft Kengine
+  version: v2.2.1
 externalDocs:
-  description: Kengine Community
-  url: https://community.kengine.io
+  description: Khulnasoft Community
+  url: https://community.khulnasoft.com
 servers:
 - url: /
 tags:
@@ -31,7 +31,7 @@ tags:
 - name: Malware Scan
 - name: Vulnerability
 paths:
-  /kengine/agent-deployment/binary/download-url:
+  /khulnasoft/agent-deployment/binary/download-url:
     get:
       description: Get agent binary download url
       operationId: getAgentBinaryDownloadURL
@@ -69,7 +69,7 @@ paths:
       summary: Get agent binary download url
       tags:
       - Settings
-  /kengine/api-token:
+  /khulnasoft/api-token:
     get:
       description: Get logged in user's API Tokens
       operationId: getApiTokens
@@ -109,7 +109,7 @@ paths:
       summary: Get User's API Tokens
       tags:
       - User
-  /kengine/api-token/reset:
+  /khulnasoft/api-token/reset:
     post:
       description: Reset user's API Tokens
       operationId: resetApiTokens
@@ -149,7 +149,7 @@ paths:
       summary: Reset User's API Tokens
       tags:
       - User
-  /kengine/auth/token:
+  /khulnasoft/auth/token:
     post:
       description: "Get access token for programmatic API access, by providing API\
         \ Token"
@@ -191,7 +191,7 @@ paths:
       summary: Get Access Token for API Token
       tags:
       - Authentication
-  /kengine/auth/token/refresh:
+  /khulnasoft/auth/token/refresh:
     post:
       description: Reissue access token using refresh token
       operationId: authTokenRefresh
@@ -229,7 +229,7 @@ paths:
       summary: Refresh access token
       tags:
       - Authentication
-  /kengine/cloud-node/account:
+  /khulnasoft/cloud-node/account:
     post:
       description: Register Cloud Node Account and return any pending compliance scans
         from console
@@ -273,7 +273,7 @@ paths:
       summary: Register Cloud Node Account
       tags:
       - Cloud Nodes
-  /kengine/cloud-node/account/delete:
+  /khulnasoft/cloud-node/account/delete:
     patch:
       description: Delete Cloud Node Account and related resources
       operationId: deleteCloudNodeAccount
@@ -312,7 +312,7 @@ paths:
       summary: Delete Cloud Node Account
       tags:
       - Cloud Nodes
-  /kengine/cloud-node/account/refresh:
+  /khulnasoft/cloud-node/account/refresh:
     post:
       description: Refresh the cloud resources in a Cloud Account
       operationId: refreshCloudNodeAccount
@@ -351,7 +351,7 @@ paths:
       summary: Refresh Cloud Account
       tags:
       - Cloud Nodes
-  /kengine/cloud-node/list/accounts:
+  /khulnasoft/cloud-node/list/accounts:
     post:
       description: List Cloud Node Accounts registered with the console
       operationId: listCloudNodeAccount
@@ -394,7 +394,7 @@ paths:
       summary: List Cloud Node Accounts
       tags:
       - Cloud Nodes
-  /kengine/cloud-node/list/providers:
+  /khulnasoft/cloud-node/list/providers:
     get:
       description: List Cloud Node Providers registered with the console
       operationId: listCloudProviders
@@ -432,7 +432,7 @@ paths:
       summary: List Cloud Node Providers
       tags:
       - Cloud Nodes
-  /kengine/complete/cloud-compliance:
+  /khulnasoft/complete/cloud-compliance:
     post:
       description: Complete cloud compliance info
       operationId: completeCloudCompliance
@@ -475,7 +475,7 @@ paths:
       summary: Get Completion for cloud compliance fields
       tags:
       - Completion
-  /kengine/complete/compliance:
+  /khulnasoft/complete/compliance:
     post:
       description: Complete compliance info
       operationId: completeComplianceInfo
@@ -518,7 +518,50 @@ paths:
       summary: Get Completion for compliance fields
       tags:
       - Completion
-  /kengine/complete/host:
+  /khulnasoft/complete/container:
+    post:
+      description: Complete Container info
+      operationId: completeContainerInfo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompletionCompletionNodeFieldReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompletionCompletionNodeFieldRes'
+          description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiDocsBadRequestResponse'
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiDocsFailureResponse'
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiDocsFailureResponse'
+          description: Internal Server Error
+      security:
+      - bearer_token: []
+      summary: Get Completion for Container fields
+      tags:
+      - Completion
+  /khulnasoft/complete/host:
     post:
       description: Complete host info
       operationId: completeHostInfo
@@ -561,7 +604,50 @@ paths:
       summary: Get Completion for host fields
       tags:
       - Completion
-  /kengine/complete/process:
+  /khulnasoft/complete/pod:
+    post:
+      description: Complete Pod info
+      operationId: completePodInfo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompletionCompletionNodeFieldReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompletionCompletionNodeFieldRes'
+          description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiDocsBadRequestResponse'
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiDocsFailureResponse'
+          description: Not Found
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiDocsFailureResponse'
+          description: Internal Server Error
+      security:
+      - bearer_token: []
+      summary: Get Completion for Pod fields
+      tags:
+      - Completion
+  /khulnasoft/complete/process:
     post:
       description: Complete process info
       operationId: completeProcessInfo
@@ -604,7 +690,7 @@ paths:
       summary: Get Completion for process fields
       tags:
       - Completion
-  /kengine/complete/vulnerability:
+  /khulnasoft/complete/vulnerability:
     post:
       description: Complete vulnerability info
       operationId: completeVulnerabilityInfo
@@ -647,7 +733,7 @@ paths:
       summary: Get Completion for vulnerability fields
       tags:
       - Completion
-  /kengine/controls/agent:
+  /khulnasoft/controls/agent:
     post:
       description: Fetch actions for a given agent
       operationId: getAgentControls
@@ -690,7 +776,7 @@ paths:
       summary: Fetch Agent Actions
       tags:
       - Controls
-  /kengine/controls/agent-init:
+  /khulnasoft/controls/agent-init:
     post:
       description: Fetch initial actions for a given agent after it started
       operationId: getAgentInitControls
@@ -733,7 +819,7 @@ paths:
       summary: Fetch Agent Init Actions
       tags:
       - Controls
-  /kengine/controls/agent-plugins/disable:
+  /khulnasoft/controls/agent-plugins/disable:
     post:
       description: Schedule agent plugin disable
       operationId: disableAgentPlugin
@@ -772,7 +858,7 @@ paths:
       summary: Schedule new agent plugin version disabling
       tags:
       - Controls
-  /kengine/controls/agent-plugins/enable:
+  /khulnasoft/controls/agent-plugins/enable:
     post:
       description: Schedule agent plugin enable
       operationId: enableAgentPlugin
@@ -811,7 +897,7 @@ paths:
       summary: Schedule new agent plugin version enabling
       tags:
       - Controls
-  /kengine/controls/agent-upgrade:
+  /khulnasoft/controls/agent-upgrade:
     post:
       description: Schedule new agent version upgrade
       operationId: upgradeAgentVersion
@@ -850,7 +936,7 @@ paths:
       summary: Schedule new agent version upgrade
       tags:
       - Controls
-  /kengine/controls/cloud-node:
+  /khulnasoft/controls/cloud-node:
     post:
       description: Fetch controls for a cloud node
       operationId: getCloudNodeControls
@@ -893,7 +979,7 @@ paths:
       summary: Fetch Cloud Node Controls
       tags:
       - Controls
-  /kengine/controls/cloud-node/disable:
+  /khulnasoft/controls/cloud-node/disable:
     post:
       description: Disable controls for a cloud node
       operationId: disableCloudNodeControls
@@ -932,7 +1018,7 @@ paths:
       summary: Disable Cloud Node Controls
       tags:
       - Controls
-  /kengine/controls/cloud-node/enable:
+  /khulnasoft/controls/cloud-node/enable:
     post:
       description: Enable controls for a cloud node
       operationId: enableCloudNodeControls
@@ -971,7 +1057,7 @@ paths:
       summary: Enable Cloud Node Controls
       tags:
       - Controls
-  /kengine/controls/kubernetes-cluster:
+  /khulnasoft/controls/kubernetes-cluster:
     post:
       description: Fetch actions for a given Kubernetes Cluster
       operationId: getKubernetesClusterControls
@@ -1014,7 +1100,7 @@ paths:
       summary: Fetch Kubernetes Cluster Actions
       tags:
       - Controls
-  /kengine/database/malware:
+  /khulnasoft/database/malware:
     put:
       description: Upload malware rules for use in malware scans
       operationId: uploadMalwareRules
@@ -1057,7 +1143,7 @@ paths:
       summary: Upload Malware Rules
       tags:
       - Settings
-  /kengine/database/posture:
+  /khulnasoft/database/posture:
     put:
       description: Upload posture controls for use in posture scans
       operationId: uploadPostureControls
@@ -1100,7 +1186,7 @@ paths:
       summary: Upload Posture Controls
       tags:
       - Settings
-  /kengine/database/secret:
+  /khulnasoft/database/secret:
     put:
       description: Upload secrets rules for use in secrets scans
       operationId: uploadSecretsRules
@@ -1143,7 +1229,7 @@ paths:
       summary: Upload Secrets Rules
       tags:
       - Settings
-  /kengine/database/vulnerability:
+  /khulnasoft/database/vulnerability:
     put:
       description: Upload Vulnerability Database for use in vulnerability scans
       operationId: uploadVulnerabilityDatabase
@@ -1186,7 +1272,7 @@ paths:
       summary: Upload Vulnerability Database
       tags:
       - Settings
-  /kengine/diagnosis/agent-logs:
+  /khulnasoft/diagnosis/agent-logs:
     post:
       description: Generate Agent Diagnostic Logs
       operationId: generateAgentDiagnosticLogs
@@ -1225,7 +1311,7 @@ paths:
       summary: Generate Agent Diagnostic Logs
       tags:
       - Diagnosis
-  /kengine/diagnosis/agent-logs/status/{node_id}:
+  /khulnasoft/diagnosis/agent-logs/status/{node_id}:
     put:
       description: Update agent diagnostic logs status
       operationId: updateAgentDiagnosticLogsStatus
@@ -1272,7 +1358,7 @@ paths:
       summary: Update Agent Diagnostic Logs Status
       tags:
       - Diagnosis
-  /kengine/diagnosis/cloud-scanner-logs:
+  /khulnasoft/diagnosis/cloud-scanner-logs:
     post:
       description: Generate Cloud Scanner Diagnostic Logs
       operationId: generateCloudScannerDiagnosticLogs
@@ -1311,7 +1397,7 @@ paths:
       summary: Generate Cloud Scanner Diagnostic Logs
       tags:
       - Diagnosis
-  /kengine/diagnosis/cloud-scanner-logs/status/{node_id}:
+  /khulnasoft/diagnosis/cloud-scanner-logs/status/{node_id}:
     put:
       description: Update cloud scanner diagnostic logs status
       operationId: updateCloudScannerDiagnosticLogsStatus
@@ -1358,7 +1444,7 @@ paths:
       summary: Update Cloud Scanner Diagnostic Logs Status
       tags:
       - Diagnosis
-  /kengine/diagnosis/console-logs:
+  /khulnasoft/diagnosis/console-logs:
     post:
       description: Generate Console Diagnostic Logs
       operationId: generateConsoleDiagnosticLogs
@@ -1397,7 +1483,7 @@ paths:
       summary: Generate Console Diagnostic Logs
       tags:
       - Diagnosis
-  /kengine/diagnosis/diagnostic-logs:
+  /khulnasoft/diagnosis/diagnostic-logs:
     get:
       description: Get diagnostic logs download url links
       operationId: getDiagnosticLogs
@@ -1435,7 +1521,7 @@ paths:
       summary: Get Diagnostic Logs
       tags:
       - Diagnosis
-  /kengine/diagnosis/notification:
+  /khulnasoft/diagnosis/notification:
     get:
       description: Get Diagnostic Notification
       operationId: diagnosticNotification
@@ -1475,7 +1561,7 @@ paths:
       summary: Get Diagnostic Notification
       tags:
       - Diagnosis
-  /kengine/diff-add/cloud-compliance:
+  /khulnasoft/diff-add/cloud-compliance:
     post:
       description: Get Cloud Compliance Diff between two scans
       operationId: diffAddCloudCompliance
@@ -1489,7 +1575,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCloudCompliance'
           description: OK
         "400":
           content:
@@ -1518,7 +1604,7 @@ paths:
       summary: Get Cloud Compliance Diff
       tags:
       - Diff Add
-  /kengine/diff-add/compliance:
+  /khulnasoft/diff-add/compliance:
     post:
       description: Get Compliance Diff between two scans
       operationId: diffAddCompliance
@@ -1532,7 +1618,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCompliance'
           description: OK
         "400":
           content:
@@ -1561,7 +1647,7 @@ paths:
       summary: Get Compliance Diff
       tags:
       - Diff Add
-  /kengine/diff-add/malware:
+  /khulnasoft/diff-add/malware:
     post:
       description: Get Malware Diff between two scans
       operationId: diffAddMalware
@@ -1575,7 +1661,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelMalware'
           description: OK
         "400":
           content:
@@ -1604,7 +1690,7 @@ paths:
       summary: Get Malware Diff
       tags:
       - Diff Add
-  /kengine/diff-add/secret:
+  /khulnasoft/diff-add/secret:
     post:
       description: Get Secret Diff between two scans
       operationId: diffAddSecret
@@ -1618,7 +1704,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelSecret'
           description: OK
         "400":
           content:
@@ -1647,7 +1733,7 @@ paths:
       summary: Get Secret Diff
       tags:
       - Diff Add
-  /kengine/diff-add/vulnerability:
+  /khulnasoft/diff-add/vulnerability:
     post:
       description: Get Vulnerability Diff between two scans
       operationId: diffAddVulnerability
@@ -1661,7 +1747,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability'
+                $ref: '#/components/schemas/ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelVulnerability'
           description: OK
         "400":
           content:
@@ -1690,7 +1776,7 @@ paths:
       summary: Get Vulnerability Diff
       tags:
       - Diff Add
-  /kengine/end-user-license-agreement:
+  /khulnasoft/end-user-license-agreement:
     get:
       description: Get End User License Agreement
       operationId: eula
@@ -1726,7 +1812,7 @@ paths:
       summary: Get End User License Agreement
       tags:
       - Common
-  /kengine/filters/cloud-compliance:
+  /khulnasoft/filters/cloud-compliance:
     post:
       description: Get all applicable filter values for cloud compliance
       operationId: getCloudComplianceFilters
@@ -1769,7 +1855,7 @@ paths:
       summary: Get Cloud Compliance Filters
       tags:
       - Search
-  /kengine/filters/compliance:
+  /khulnasoft/filters/compliance:
     post:
       description: Get all applicable filter values for compliance
       operationId: getComplianceFilters
@@ -1812,7 +1898,7 @@ paths:
       summary: Get Compliance Filters
       tags:
       - Search
-  /kengine/generative-ai-integration:
+  /khulnasoft/generative-ai-integration:
     get:
       description: List all the added Generative AI Integrations
       operationId: listGenerativeAiIntegration
@@ -1863,7 +1949,7 @@ paths:
       summary: List Generative AI Integrations
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/{integration_id}:
+  /khulnasoft/generative-ai-integration/{integration_id}:
     delete:
       description: Delete Generative AI integration
       operationId: deleteGenerativeAiIntegration
@@ -1905,7 +1991,7 @@ paths:
       summary: Delete Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/{integration_id}/default:
+  /khulnasoft/generative-ai-integration/{integration_id}/default:
     put:
       description: Set Default Generative AI integration
       operationId: setDefaultGenerativeAiIntegration
@@ -1947,7 +2033,7 @@ paths:
       summary: Set Default Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/auto-add:
+  /khulnasoft/generative-ai-integration/auto-add:
     post:
       description: Automatically add Generative AI Integrations using IAM role
       operationId: autoAddGenerativeAiIntegration
@@ -1981,7 +2067,7 @@ paths:
       summary: Automatically add Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/bedrock:
+  /khulnasoft/generative-ai-integration/bedrock:
     post:
       description: Add a new AWS Bedrock Generative AI Integration
       operationId: addGenerativeAiIntegrationBedrock
@@ -2024,7 +2110,7 @@ paths:
       summary: Add AWS Bedrock Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/openai:
+  /khulnasoft/generative-ai-integration/openai:
     post:
       description: Add a new OpenAI Generative AI Integration
       operationId: addGenerativeAiIntegrationOpenAI
@@ -2067,7 +2153,7 @@ paths:
       summary: Add OpenAI Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/query/cloud-posture:
+  /khulnasoft/generative-ai-integration/query/cloud-posture:
     post:
       description: Send Cloud Posture query to Generative AI Integration
       operationId: generativeAiIntegrationCloudPostureQuery
@@ -2110,7 +2196,7 @@ paths:
       summary: Send Cloud Posture query to Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/query/kubernetes-posture:
+  /khulnasoft/generative-ai-integration/query/kubernetes-posture:
     post:
       description: Send Kubernetes Posture query to Generative AI Integration
       operationId: generativeAiIntegrationKubernetesPostureQuery
@@ -2153,7 +2239,7 @@ paths:
       summary: Send Kubernetes Posture query to Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/query/linux-posture:
+  /khulnasoft/generative-ai-integration/query/linux-posture:
     post:
       description: Send Linux Posture query to Generative AI Integration
       operationId: generativeAiIntegrationLinuxPostureQuery
@@ -2196,7 +2282,7 @@ paths:
       summary: Send Linux Posture query to Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/query/malware:
+  /khulnasoft/generative-ai-integration/query/malware:
     post:
       description: Send Malware query to Generative AI Integration
       operationId: generativeAiIntegrationMalwareQuery
@@ -2239,7 +2325,7 @@ paths:
       summary: Send Malware query to Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/query/secret:
+  /khulnasoft/generative-ai-integration/query/secret:
     post:
       description: Send Secret query to Generative AI Integration
       operationId: generativeAiIntegrationSecretQuery
@@ -2282,7 +2368,7 @@ paths:
       summary: Send Secret query to Generative AI Integration
       tags:
       - Generative AI
-  /kengine/generative-ai-integration/query/vulnerability:
+  /khulnasoft/generative-ai-integration/query/vulnerability:
     post:
       description: Send Vulnerability query to Generative AI Integration
       operationId: generativeAiIntegrationVulnerabilityQuery
@@ -2325,7 +2411,7 @@ paths:
       summary: Send Vulnerability query to Generative AI Integration
       tags:
       - Generative AI
-  /kengine/graph/threat:
+  /khulnasoft/graph/threat:
     post:
       description: Retrieve the full threat graph associated with the account
       operationId: getThreatGraph
@@ -2368,7 +2454,7 @@ paths:
       summary: Get Threat Graph
       tags:
       - Threat
-  /kengine/graph/threat/individual:
+  /khulnasoft/graph/threat/individual:
     post:
       description: Retrieve threat graph associated with vulnerabilities
       operationId: getIndividualThreatGraph
@@ -2413,7 +2499,7 @@ paths:
       summary: Get Vulnerability Threat Graph
       tags:
       - Threat
-  /kengine/graph/topology/:
+  /khulnasoft/graph/topology/:
     post:
       description: Retrieve the full topology graph associated with the account
       operationId: getTopologyGraph
@@ -2456,7 +2542,7 @@ paths:
       summary: Get Topology Graph
       tags:
       - Topology
-  /kengine/graph/topology/containers:
+  /khulnasoft/graph/topology/containers:
     post:
       description: Retrieve the full topology graph associated with the account from
         Containers
@@ -2500,7 +2586,7 @@ paths:
       summary: Get Containers Topology Graph
       tags:
       - Topology
-  /kengine/graph/topology/delta:
+  /khulnasoft/graph/topology/delta:
     post:
       description: Retrieve addition or deletion toplogy deltas
       operationId: getTopologyDelta
@@ -2543,7 +2629,7 @@ paths:
       summary: Get Topology Delta
       tags:
       - Topology
-  /kengine/graph/topology/hosts:
+  /khulnasoft/graph/topology/hosts:
     post:
       description: Retrieve the full topology graph associated with the account from
         Hosts
@@ -2587,7 +2673,7 @@ paths:
       summary: Get Hosts Topology Graph
       tags:
       - Topology
-  /kengine/graph/topology/kubernetes:
+  /khulnasoft/graph/topology/kubernetes:
     post:
       description: Retrieve the full topology graph associated with the account from
         Kubernetes
@@ -2631,7 +2717,7 @@ paths:
       summary: Get Kubernetes Topology Graph
       tags:
       - Topology
-  /kengine/graph/topology/pods:
+  /khulnasoft/graph/topology/pods:
     post:
       description: Retrieve the full topology graph associated with the account from
         Pods
@@ -2675,7 +2761,7 @@ paths:
       summary: Get Pods Topology Graph
       tags:
       - Topology
-  /kengine/ingest/cloud-compliance:
+  /khulnasoft/ingest/cloud-compliance:
     post:
       description: Ingest Cloud compliances found while scanning cloud provider
       operationId: ingestCloudCompliances
@@ -2717,7 +2803,7 @@ paths:
       summary: Ingest Cloud Compliances
       tags:
       - Cloud Scanner
-  /kengine/ingest/cloud-compliance-status:
+  /khulnasoft/ingest/cloud-compliance-status:
     post:
       description: Ingest Cloud compliances found while scanning cloud provider
       operationId: ingestCloudComplianceScanStatus
@@ -2759,7 +2845,7 @@ paths:
       summary: Ingest Cloud Compliances scan status
       tags:
       - Cloud Scanner
-  /kengine/ingest/cloud-resources:
+  /khulnasoft/ingest/cloud-resources:
     post:
       description: Ingest Clouds Resources found while scanning cloud provider
       operationId: ingestCloudResources
@@ -2801,7 +2887,7 @@ paths:
       summary: Ingest Cloud resources
       tags:
       - Cloud Resources
-  /kengine/ingest/compliance:
+  /khulnasoft/ingest/compliance:
     post:
       description: Ingest compliance issues found while scanning the agent
       operationId: ingestCompliances
@@ -2843,7 +2929,7 @@ paths:
       summary: Ingest Compliances
       tags:
       - Compliance
-  /kengine/ingest/compliance-scan-logs:
+  /khulnasoft/ingest/compliance-scan-logs:
     post:
       description: Ingest compliance issues found while scanning the agent
       operationId: ingestComplianceScanStatus
@@ -2885,7 +2971,7 @@ paths:
       summary: Ingest Compliance Scan Status
       tags:
       - Compliance
-  /kengine/ingest/malware:
+  /khulnasoft/ingest/malware:
     post:
       description: Ingest malware found while scanning the agent
       operationId: ingestMalware
@@ -2927,7 +3013,7 @@ paths:
       summary: Ingest Malware
       tags:
       - Malware Scan
-  /kengine/ingest/malware-scan-logs:
+  /khulnasoft/ingest/malware-scan-logs:
     post:
       description: Ingest malware scan status from the agent
       operationId: ingestMalwareScanStatus
@@ -2969,7 +3055,7 @@ paths:
       summary: Ingest Malware Scan Status
       tags:
       - Malware Scan
-  /kengine/ingest/report:
+  /khulnasoft/ingest/report:
     post:
       description: Ingest data reported by one Agent
       operationId: ingestAgentReport
@@ -3012,7 +3098,7 @@ paths:
       summary: Ingest Topology Data
       tags:
       - Topology
-  /kengine/ingest/sbom:
+  /khulnasoft/ingest/sbom:
     post:
       description: Ingest SBOM from Scan
       operationId: ingestSbom
@@ -3051,7 +3137,7 @@ paths:
       summary: Ingest SBOM from Scan
       tags:
       - Vulnerability
-  /kengine/ingest/secret-scan-logs:
+  /khulnasoft/ingest/secret-scan-logs:
     post:
       description: Ingest secrets scan status from the agent
       operationId: ingestSecretScanStatus
@@ -3093,7 +3179,7 @@ paths:
       summary: Ingest Secrets Scan Status
       tags:
       - Secret Scan
-  /kengine/ingest/secrets:
+  /khulnasoft/ingest/secrets:
     post:
       description: Ingest secrets found while scanning the agent
       operationId: ingestSecrets
@@ -3135,7 +3221,7 @@ paths:
       summary: Ingest Secrets
       tags:
       - Secret Scan
-  /kengine/ingest/sync-report:
+  /khulnasoft/ingest/sync-report:
     post:
       description: Ingest data reported by one Agent
       operationId: ingestSyncAgentReport
@@ -3174,7 +3260,7 @@ paths:
       summary: Ingest Topology Data
       tags:
       - Topology
-  /kengine/ingest/vulnerabilities:
+  /khulnasoft/ingest/vulnerabilities:
     post:
       description: Ingest vulnerabilities found while scanning the agent host or containers
       operationId: ingestVulnerabilities
@@ -3216,7 +3302,7 @@ paths:
       summary: Ingest Vulnerabilities
       tags:
       - Vulnerability
-  /kengine/ingest/vulnerabilities-scan-logs:
+  /khulnasoft/ingest/vulnerabilities-scan-logs:
     post:
       description: Ingest vulnerabilities scan status from agent
       operationId: ingestVulnerabilitiesScanStatus
@@ -3258,7 +3344,7 @@ paths:
       summary: Ingest Vulnerabilities Scan Status
       tags:
       - Vulnerability
-  /kengine/integration:
+  /khulnasoft/integration:
     get:
       description: List all the added Integrations
       operationId: listIntegration
@@ -3340,7 +3426,7 @@ paths:
       summary: Add Integration
       tags:
       - Integration
-  /kengine/integration/{integration_id}:
+  /khulnasoft/integration/{integration_id}:
     delete:
       description: Delete single integration
       operationId: deleteIntegration
@@ -3432,7 +3518,7 @@ paths:
       summary: Update Integration
       tags:
       - Integration
-  /kengine/integration/delete:
+  /khulnasoft/integration/delete:
     patch:
       description: Delete integrations
       operationId: deleteIntegrations
@@ -3471,7 +3557,7 @@ paths:
       summary: Delete Integrations
       tags:
       - Integration
-  /kengine/internal/console-api-token:
+  /khulnasoft/internal/console-api-token:
     get:
       description: Get api-token for console agent
       operationId: getConsoleApiToken
@@ -3507,7 +3593,7 @@ paths:
       summary: Get api-token for console agent
       tags:
       - Internal
-  /kengine/license:
+  /khulnasoft/license:
     delete:
       description: Delete license from the console database
       operationId: deleteLicense
@@ -3620,9 +3706,9 @@ paths:
       summary: Register License
       tags:
       - Settings
-  /kengine/license/generate:
+  /khulnasoft/license/generate:
     post:
-      description: Generate a new ThreatMapper license key
+      description: Generate a new Kengine license key
       operationId: generateLicense
       requestBody:
         content:
@@ -3663,7 +3749,7 @@ paths:
       summary: Generate License Key
       tags:
       - Settings
-  /kengine/lookup/cloud-compliances:
+  /khulnasoft/lookup/cloud-compliances:
     post:
       description: Retrieve all the data associated with cloud-compliances
       operationId: getCloudCompliances
@@ -3708,7 +3794,7 @@ paths:
       summary: Retrieve Cloud Compliances data
       tags:
       - Lookup
-  /kengine/lookup/cloud-resources:
+  /khulnasoft/lookup/cloud-resources:
     post:
       description: Retrieve the cloud resources
       operationId: getCloudResources
@@ -3753,7 +3839,7 @@ paths:
       summary: Get Cloud Resources
       tags:
       - Lookup
-  /kengine/lookup/compliances:
+  /khulnasoft/lookup/compliances:
     post:
       description: Retrieve all the data associated with compliances
       operationId: getCompliances
@@ -3798,7 +3884,7 @@ paths:
       summary: Retrieve Compliances data
       tags:
       - Lookup
-  /kengine/lookup/containerimages:
+  /khulnasoft/lookup/containerimages:
     post:
       description: Retrieve all the data associated with images
       operationId: getContainerImages
@@ -3843,7 +3929,7 @@ paths:
       summary: Retrieve Container Images data
       tags:
       - Lookup
-  /kengine/lookup/containers:
+  /khulnasoft/lookup/containers:
     post:
       description: Retrieve all the data associated with containers
       operationId: getContainers
@@ -3888,7 +3974,7 @@ paths:
       summary: Retrieve Containers data
       tags:
       - Lookup
-  /kengine/lookup/hosts:
+  /khulnasoft/lookup/hosts:
     post:
       description: Retrieve all the data associated with hosts
       operationId: getHosts
@@ -3933,7 +4019,7 @@ paths:
       summary: Retrieve Hosts data
       tags:
       - Lookup
-  /kengine/lookup/kubernetesclusters:
+  /khulnasoft/lookup/kubernetesclusters:
     post:
       description: Retrieve all the data associated with k8s clusters
       operationId: getKubernetesClusters
@@ -3978,7 +4064,7 @@ paths:
       summary: Retrieve K8s data
       tags:
       - Lookup
-  /kengine/lookup/malwares:
+  /khulnasoft/lookup/malwares:
     post:
       description: Retrieve all the data associated with malwares
       operationId: getMalwares
@@ -4023,7 +4109,7 @@ paths:
       summary: Retrieve Malwares data
       tags:
       - Lookup
-  /kengine/lookup/pods:
+  /khulnasoft/lookup/pods:
     post:
       description: Retrieve all the data associated with pods
       operationId: getPods
@@ -4068,7 +4154,7 @@ paths:
       summary: Retrieve Pods data
       tags:
       - Lookup
-  /kengine/lookup/processes:
+  /khulnasoft/lookup/processes:
     post:
       description: Retrieve all the data associated with processes
       operationId: getProcesses
@@ -4113,7 +4199,7 @@ paths:
       summary: Retrieve Processes data
       tags:
       - Lookup
-  /kengine/lookup/registryaccount:
+  /khulnasoft/lookup/registryaccount:
     post:
       description: List all the images present in the given registry
       operationId: getRegistryAccount
@@ -4158,7 +4244,7 @@ paths:
       summary: Get Images in Registry
       tags:
       - Lookup
-  /kengine/lookup/secrets:
+  /khulnasoft/lookup/secrets:
     post:
       description: Retrieve all the data associated with secrets
       operationId: getSecrets
@@ -4203,7 +4289,7 @@ paths:
       summary: Retrieve Secrets data
       tags:
       - Lookup
-  /kengine/lookup/vulnerabilities:
+  /khulnasoft/lookup/vulnerabilities:
     post:
       description: Retrieve all the data associated with vulnerabilities
       operationId: getVulnerabilities
@@ -4248,7 +4334,7 @@ paths:
       summary: Retrieve Vulnerabilities data
       tags:
       - Lookup
-  /kengine/registryaccount:
+  /khulnasoft/registryaccount:
     get:
       description: List all the added Registries
       operationId: listRegistry
@@ -4330,7 +4416,7 @@ paths:
       summary: Add Registry
       tags:
       - Registry
-  /kengine/registryaccount/{registry_id}:
+  /khulnasoft/registryaccount/{registry_id}:
     delete:
       description: Delete registry
       operationId: deleteRegistry
@@ -4422,7 +4508,7 @@ paths:
       summary: Update Registry
       tags:
       - Registry
-  /kengine/registryaccount/{registry_id}/summary:
+  /khulnasoft/registryaccount/{registry_id}/summary:
     get:
       description: "get summary of registry scans, images and tags"
       operationId: getRegistrySummary
@@ -4468,7 +4554,7 @@ paths:
       summary: Get Registry Summary
       tags:
       - Registry
-  /kengine/registryaccount/{registry_id}/sync:
+  /khulnasoft/registryaccount/{registry_id}/sync:
     post:
       description: synchronize registry images
       operationId: syncRegistry
@@ -4514,7 +4600,7 @@ paths:
       summary: Sync Registry
       tags:
       - Registry
-  /kengine/registryaccount/{registry_type}/summary-by-type:
+  /khulnasoft/registryaccount/{registry_type}/summary-by-type:
     get:
       description: "get summary of registries scans, images and tags by registry type"
       operationId: getSummaryByType
@@ -4560,7 +4646,7 @@ paths:
       summary: Get Registry Summary By Type
       tags:
       - Registry
-  /kengine/registryaccount/count/images:
+  /khulnasoft/registryaccount/count/images:
     post:
       description: count of images from a given registry
       operationId: CountImages
@@ -4603,7 +4689,7 @@ paths:
       summary: Count Registry Images
       tags:
       - Registry
-  /kengine/registryaccount/count/stubs:
+  /khulnasoft/registryaccount/count/stubs:
     post:
       description: count of image tags for a given image and registry
       operationId: CountImageStubs
@@ -4646,7 +4732,7 @@ paths:
       summary: Count Image Stubs
       tags:
       - Registry
-  /kengine/registryaccount/delete:
+  /khulnasoft/registryaccount/delete:
     patch:
       description: Batch Delete registry
       operationId: deleteRegistryBulk
@@ -4685,7 +4771,7 @@ paths:
       summary: Batch Delete Registry
       tags:
       - Registry
-  /kengine/registryaccount/gcr:
+  /khulnasoft/registryaccount/gcr:
     post:
       description: Add a Google Container registry
       operationId: addRegistryGCR
@@ -4728,7 +4814,7 @@ paths:
       summary: Add Google Container Registry
       tags:
       - Registry
-  /kengine/registryaccount/images:
+  /khulnasoft/registryaccount/images:
     post:
       description: list images from a given registry
       operationId: listImages
@@ -4773,7 +4859,7 @@ paths:
       summary: List Registry Images
       tags:
       - Registry
-  /kengine/registryaccount/stubs:
+  /khulnasoft/registryaccount/stubs:
     post:
       description: list image tags for a given image and registry
       operationId: listImageStubs
@@ -4818,7 +4904,7 @@ paths:
       summary: List Image Stubs
       tags:
       - Registry
-  /kengine/registryaccount/summary:
+  /khulnasoft/registryaccount/summary:
     get:
       description: "get summary of all registries scans, images and tags by registry\
         \ type"
@@ -4857,7 +4943,7 @@ paths:
       summary: Get All Registries Summary By Type
       tags:
       - Registry
-  /kengine/reports:
+  /khulnasoft/reports:
     get:
       description: List all the available reports
       operationId: listReports
@@ -4939,7 +5025,7 @@ paths:
       summary: Generate Report
       tags:
       - Reports
-  /kengine/reports/{report_id}:
+  /khulnasoft/reports/{report_id}:
     delete:
       description: delete report for given report_id
       operationId: deleteReport
@@ -5026,7 +5112,7 @@ paths:
       summary: Get Report
       tags:
       - Reports
-  /kengine/reports/delete:
+  /khulnasoft/reports/delete:
     patch:
       description: Bulk Delete reports
       operationId: bulkDeleteReports
@@ -5065,7 +5151,7 @@ paths:
       summary: Bulk Delete Reports
       tags:
       - Reports
-  /kengine/scan/{scan_type}/{scan_id}:
+  /khulnasoft/scan/{scan_type}/{scan_id}:
     delete:
       description: Delete all scan results for a scan id
       operationId: deleteScanResultsForScanID
@@ -5120,7 +5206,7 @@ paths:
       summary: Delete all scan results for a scan id
       tags:
       - Scan Results
-  /kengine/scan/{scan_type}/{scan_id}/download:
+  /khulnasoft/scan/{scan_type}/{scan_id}/download:
     get:
       description: Download scan results
       operationId: downloadScanResults
@@ -5179,7 +5265,7 @@ paths:
       summary: Download Scans Results
       tags:
       - Scan Results
-  /kengine/scan/list/cloud-compliance:
+  /khulnasoft/scan/list/cloud-compliance:
     post:
       description: Get Cloud Compliance Scans list for cloud node
       operationId: listCloudComplianceScan
@@ -5222,7 +5308,7 @@ paths:
       summary: Get Cloud Compliance Scans List
       tags:
       - Cloud Scanner
-  /kengine/scan/list/compliance:
+  /khulnasoft/scan/list/compliance:
     post:
       description: Get Compliance Scans list on agent or registry
       operationId: listComplianceScan
@@ -5265,7 +5351,7 @@ paths:
       summary: Get Compliance Scans List
       tags:
       - Compliance
-  /kengine/scan/list/malware:
+  /khulnasoft/scan/list/malware:
     post:
       description: Get Malware Scans list on agent or registry
       operationId: listMalwareScan
@@ -5308,7 +5394,7 @@ paths:
       summary: Get Malware Scans List
       tags:
       - Malware Scan
-  /kengine/scan/list/secret:
+  /khulnasoft/scan/list/secret:
     post:
       description: Get Secret Scans list on agent or registry
       operationId: listSecretScan
@@ -5351,7 +5437,7 @@ paths:
       summary: Get Secret Scans List
       tags:
       - Secret Scan
-  /kengine/scan/list/vulnerability:
+  /khulnasoft/scan/list/vulnerability:
     post:
       description: Get Vulnerability Scan list on agent or registry
       operationId: listVulnerabilityScans
@@ -5394,7 +5480,7 @@ paths:
       summary: Get Vulnerability Scans List
       tags:
       - Vulnerability
-  /kengine/scan/nodes-in-result:
+  /khulnasoft/scan/nodes-in-result:
     post:
       description: Get all nodes in given scan result ids
       operationId: getAllNodesInScanResults
@@ -5439,7 +5525,7 @@ paths:
       summary: Get all nodes in given scan result ids
       tags:
       - Scan Results
-  /kengine/scan/results/action/delete:
+  /khulnasoft/scan/results/action/delete:
     patch:
       description: Delete selected scan results
       operationId: deleteScanResult
@@ -5478,7 +5564,7 @@ paths:
       summary: Delete selected scan results
       tags:
       - Scan Results
-  /kengine/scan/results/action/mask:
+  /khulnasoft/scan/results/action/mask:
     post:
       description: Mask scan results
       operationId: maskScanResult
@@ -5517,7 +5603,7 @@ paths:
       summary: Mask Scans Results
       tags:
       - Scan Results
-  /kengine/scan/results/action/notify:
+  /khulnasoft/scan/results/action/notify:
     post:
       description: Notify scan results in connected integration channels
       operationId: notifyScanResult
@@ -5556,7 +5642,7 @@ paths:
       summary: Notify Scans Results
       tags:
       - Scan Results
-  /kengine/scan/results/action/unmask:
+  /khulnasoft/scan/results/action/unmask:
     post:
       description: Unmask scan results
       operationId: unmaskScanResult
@@ -5595,7 +5681,7 @@ paths:
       summary: Unmask Scans Results
       tags:
       - Scan Results
-  /kengine/scan/results/cloud-compliance:
+  /khulnasoft/scan/results/cloud-compliance:
     post:
       description: Get Cloud Compliance Scan results for cloud node
       operationId: resultsCloudComplianceScan
@@ -5638,7 +5724,7 @@ paths:
       summary: Get Cloud Compliance Scan Results
       tags:
       - Cloud Scanner
-  /kengine/scan/results/compliance:
+  /khulnasoft/scan/results/compliance:
     post:
       description: Get Compliance Scans results on agent or registry
       operationId: resultsComplianceScan
@@ -5681,7 +5767,7 @@ paths:
       summary: Get Compliance Scans Results
       tags:
       - Compliance
-  /kengine/scan/results/count/cloud-compliance:
+  /khulnasoft/scan/results/count/cloud-compliance:
     post:
       description: Get Cloud Compliance Scan results for cloud node
       operationId: countResultsCloudComplianceScan
@@ -5724,7 +5810,7 @@ paths:
       summary: Get Cloud Compliance Scan Results
       tags:
       - Cloud Scanner
-  /kengine/scan/results/count/compliance:
+  /khulnasoft/scan/results/count/compliance:
     post:
       description: Get Compliance Scans results on agent or registry
       operationId: countResultsComplianceScan
@@ -5767,7 +5853,7 @@ paths:
       summary: Get Compliance Scans Results
       tags:
       - Compliance
-  /kengine/scan/results/count/group/malware:
+  /khulnasoft/scan/results/count/group/malware:
     get:
       description: Group Malware Scans results by severity/rule
       operationId: groupResultsMalwares
@@ -5805,7 +5891,7 @@ paths:
       summary: Group Malware Results
       tags:
       - Malware Scan
-  /kengine/scan/results/count/group/malware/class:
+  /khulnasoft/scan/results/count/group/malware/class:
     get:
       description: Group Malware Scans results by severity/class
       operationId: groupResultsMalwaresClass
@@ -5843,7 +5929,7 @@ paths:
       summary: Group Malware Results By Class
       tags:
       - Malware Scan
-  /kengine/scan/results/count/group/secret:
+  /khulnasoft/scan/results/count/group/secret:
     get:
       description: Group Secret Scans results by severity/rule
       operationId: groupResultsSecrets
@@ -5881,7 +5967,7 @@ paths:
       summary: Group Secret Results
       tags:
       - Secret Scan
-  /kengine/scan/results/count/malware:
+  /khulnasoft/scan/results/count/malware:
     post:
       description: Get Malware Scans results on agent or registry
       operationId: countResultsMalwareScan
@@ -5924,7 +6010,7 @@ paths:
       summary: Get Malware Scans Results
       tags:
       - Malware Scan
-  /kengine/scan/results/count/secret:
+  /khulnasoft/scan/results/count/secret:
     post:
       description: Get Secret Scans results on agent or registry
       operationId: countResultsSecretScan
@@ -5967,7 +6053,7 @@ paths:
       summary: Get Secret Scans Results
       tags:
       - Secret Scan
-  /kengine/scan/results/count/vulnerability:
+  /khulnasoft/scan/results/count/vulnerability:
     post:
       description: Get Vulnerability Scan results on agent or registry
       operationId: countResultsVulnerabilityScans
@@ -6010,7 +6096,7 @@ paths:
       summary: Get Vulnerability Scans Results
       tags:
       - Vulnerability
-  /kengine/scan/results/fields:
+  /khulnasoft/scan/results/fields:
     get:
       description: Get all the fields available in all the scan reports
       operationId: getScanReportFields
@@ -6048,7 +6134,7 @@ paths:
       summary: Get Scan Report Fields
       tags:
       - Common
-  /kengine/scan/results/malware:
+  /khulnasoft/scan/results/malware:
     post:
       description: Get Malware Scans results on agent or registry
       operationId: resultsMalwareScan
@@ -6091,7 +6177,7 @@ paths:
       summary: Get Malware Scans Results
       tags:
       - Malware Scan
-  /kengine/scan/results/malware/class:
+  /khulnasoft/scan/results/malware/class:
     post:
       description: Get Malware Scans detected class names
       operationId: resultsClassMalwareScan
@@ -6134,7 +6220,7 @@ paths:
       summary: Get Malware Scans Results
       tags:
       - Malware Scan
-  /kengine/scan/results/malware/rules:
+  /khulnasoft/scan/results/malware/rules:
     post:
       description: Get Malware Scans detected rules names
       operationId: resultsRulesMalwareScan
@@ -6177,7 +6263,7 @@ paths:
       summary: Get Malware Scans Result Rules
       tags:
       - Malware Scan
-  /kengine/scan/results/secret:
+  /khulnasoft/scan/results/secret:
     post:
       description: Get Secret Scans results on agent or registry
       operationId: resultsSecretScan
@@ -6220,7 +6306,7 @@ paths:
       summary: Get Secret Scans Results
       tags:
       - Secret Scan
-  /kengine/scan/results/secret/rules:
+  /khulnasoft/scan/results/secret/rules:
     post:
       description: Get Secret Scans detected rules names
       operationId: resultsRulesSecretScan
@@ -6263,7 +6349,7 @@ paths:
       summary: Get Secret Scans Result Rules
       tags:
       - Secret Scan
-  /kengine/scan/results/vulnerability:
+  /khulnasoft/scan/results/vulnerability:
     post:
       description: Get Vulnerability Scan results on agent or registry
       operationId: resultsVulnerabilityScans
@@ -6306,7 +6392,7 @@ paths:
       summary: Get Vulnerability Scans Results
       tags:
       - Vulnerability
-  /kengine/scan/sbom:
+  /khulnasoft/scan/sbom:
     post:
       description: Get SBOM for a node or scan id
       operationId: getSBOM
@@ -6351,7 +6437,7 @@ paths:
       summary: Get SBOM for a node or scan id
       tags:
       - Vulnerability
-  /kengine/scan/sbom/download:
+  /khulnasoft/scan/sbom/download:
     post:
       description: Download SBOM for a node or scan id
       operationId: downloadSBOM
@@ -6394,7 +6480,7 @@ paths:
       summary: Download SBOM for a node or scan id
       tags:
       - Vulnerability
-  /kengine/scan/start/compliance:
+  /khulnasoft/scan/start/compliance:
     post:
       description: Start Compliance Scan on agent or registry
       operationId: startComplianceScan
@@ -6437,7 +6523,7 @@ paths:
       summary: Start Compliance Scan
       tags:
       - Compliance
-  /kengine/scan/start/malware:
+  /khulnasoft/scan/start/malware:
     post:
       description: Start Malware Scan on agent or registry
       operationId: startMalwareScan
@@ -6480,7 +6566,7 @@ paths:
       summary: Start Malware Scan
       tags:
       - Malware Scan
-  /kengine/scan/start/secret:
+  /khulnasoft/scan/start/secret:
     post:
       description: Start Secret Scan on agent or registry
       operationId: startSecretScan
@@ -6523,7 +6609,7 @@ paths:
       summary: Start Secret Scan
       tags:
       - Secret Scan
-  /kengine/scan/start/vulnerability:
+  /khulnasoft/scan/start/vulnerability:
     post:
       description: Start Vulnerability Scan on agent or registry
       operationId: startVulnerabilityScan
@@ -6566,7 +6652,7 @@ paths:
       summary: Start Vulnerability Scan
       tags:
       - Vulnerability
-  /kengine/scan/status/cloud-compliance:
+  /khulnasoft/scan/status/cloud-compliance:
     post:
       description: Get Cloud Compliance Scan Status on cloud node
       operationId: statusCloudComplianceScan
@@ -6609,7 +6695,7 @@ paths:
       summary: Get Cloud Compliance Scan Status
       tags:
       - Cloud Scanner
-  /kengine/scan/status/compliance:
+  /khulnasoft/scan/status/compliance:
     post:
       description: Get Compliance Scan Status on agent or registry
       operationId: statusComplianceScan
@@ -6652,7 +6738,7 @@ paths:
       summary: Get Compliance Scan Status
       tags:
       - Compliance
-  /kengine/scan/status/malware:
+  /khulnasoft/scan/status/malware:
     post:
       description: Get Malware Scan status on agent or registry
       operationId: statusMalwareScan
@@ -6695,7 +6781,7 @@ paths:
       summary: Get Malware Scan Status
       tags:
       - Malware Scan
-  /kengine/scan/status/secret:
+  /khulnasoft/scan/status/secret:
     post:
       description: Get Secret Scan Status on agent or registry
       operationId: statusSecretScan
@@ -6738,7 +6824,7 @@ paths:
       summary: Get Secret Scan Status
       tags:
       - Secret Scan
-  /kengine/scan/status/vulnerability:
+  /khulnasoft/scan/status/vulnerability:
     post:
       description: Get Vulnerability Scan Status on agent or registry
       operationId: statusVulnerabilityScan
@@ -6781,7 +6867,7 @@ paths:
       summary: Get Vulnerability Scan Status
       tags:
       - Vulnerability
-  /kengine/scan/stop/compliance:
+  /khulnasoft/scan/stop/compliance:
     post:
       description: Stop Compliance Scan on agent or registry
       operationId: stopComplianceScan
@@ -6820,7 +6906,7 @@ paths:
       summary: Stop Compliance Scan
       tags:
       - Compliance
-  /kengine/scan/stop/malware:
+  /khulnasoft/scan/stop/malware:
     post:
       description: Stop Malware Scan on agent or registry
       operationId: stopMalwareScan
@@ -6859,7 +6945,7 @@ paths:
       summary: Stop Malware Scan
       tags:
       - Malware Scan
-  /kengine/scan/stop/secret:
+  /khulnasoft/scan/stop/secret:
     post:
       description: Stop Secret Scan on agent or registry
       operationId: stopSecretScan
@@ -6898,7 +6984,7 @@ paths:
       summary: Stop Secret Scan
       tags:
       - Secret Scan
-  /kengine/scan/stop/vulnerability:
+  /khulnasoft/scan/stop/vulnerability:
     post:
       description: Stop Vulnerability Scan on agent or registry
       operationId: stopVulnerabilityScan
@@ -6937,7 +7023,7 @@ paths:
       summary: Stop Vulnerability Scan
       tags:
       - Vulnerability
-  /kengine/scans/bulk/delete:
+  /khulnasoft/scans/bulk/delete:
     post:
       description: Bulk delete scans along with their results for a particular scan
         type
@@ -6977,7 +7063,7 @@ paths:
       summary: Bulk Delete Scans
       tags:
       - Scan Results
-  /kengine/scheduled-task:
+  /khulnasoft/scheduled-task:
     get:
       description: Get scheduled tasks
       operationId: getScheduledTasks
@@ -7055,7 +7141,7 @@ paths:
       summary: Add scheduled task
       tags:
       - Settings
-  /kengine/scheduled-task/{id}:
+  /khulnasoft/scheduled-task/{id}:
     delete:
       description: Delete Custom Schedule task
       operationId: deleteCustomScheduledTask
@@ -7143,7 +7229,7 @@ paths:
       summary: Update scheduled task
       tags:
       - Settings
-  /kengine/search/cloud-accounts:
+  /khulnasoft/search/cloud-accounts:
     post:
       description: Search across all the data associated with cloud nodes
       operationId: searchCloudAccounts
@@ -7188,7 +7274,7 @@ paths:
       summary: Search Cloud Nodes
       tags:
       - Search
-  /kengine/search/cloud-compliance/scans:
+  /khulnasoft/search/cloud-compliance/scans:
     post:
       description: Search across all the data associated with cloud-compliance scan
       operationId: searchCloudComplianceScans
@@ -7233,7 +7319,7 @@ paths:
       summary: Search Cloud Compliance Scan results
       tags:
       - Search
-  /kengine/search/cloud-compliances:
+  /khulnasoft/search/cloud-compliances:
     post:
       description: Search across all the data associated with cloud-compliances
       operationId: searchCloudCompliances
@@ -7278,7 +7364,7 @@ paths:
       summary: Search Cloud compliances
       tags:
       - Search
-  /kengine/search/cloud-resources:
+  /khulnasoft/search/cloud-resources:
     post:
       description: Search across all data associated with CloudResources
       operationId: searchCloudResources
@@ -7323,7 +7409,7 @@ paths:
       summary: Search Cloud Resources
       tags:
       - Search
-  /kengine/search/compliance-rules:
+  /khulnasoft/search/compliance-rules:
     post:
       description: Search across all the data associated with compliance rules
       operationId: searchComplianceRules
@@ -7368,7 +7454,7 @@ paths:
       summary: Search Compliance Rules
       tags:
       - Search
-  /kengine/search/compliance/scans:
+  /khulnasoft/search/compliance/scans:
     post:
       description: Search across all the data associated with compliance scan
       operationId: searchComplianceScans
@@ -7413,7 +7499,7 @@ paths:
       summary: Search Compliance Scan results
       tags:
       - Search
-  /kengine/search/compliances:
+  /khulnasoft/search/compliances:
     post:
       description: Search across all the data associated with compliances
       operationId: searchCompliances
@@ -7458,7 +7544,7 @@ paths:
       summary: Search Compliances
       tags:
       - Search
-  /kengine/search/containers:
+  /khulnasoft/search/containers:
     post:
       description: Search across all data associated with containers
       operationId: searchContainers
@@ -7503,7 +7589,7 @@ paths:
       summary: Search Containers data
       tags:
       - Search
-  /kengine/search/count/cloud-accounts:
+  /khulnasoft/search/count/cloud-accounts:
     post:
       description: Search across all the data associated with cloud nodes
       operationId: countCloudAccounts
@@ -7546,7 +7632,7 @@ paths:
       summary: Count Cloud Nodes
       tags:
       - Search
-  /kengine/search/count/cloud-compliance/scans:
+  /khulnasoft/search/count/cloud-compliance/scans:
     post:
       description: Count across all the data associated with cloud-compliance scans
       operationId: countCloudComplianceScans
@@ -7589,7 +7675,7 @@ paths:
       summary: Count Cloud Compliance Scan results
       tags:
       - Search
-  /kengine/search/count/cloud-compliances:
+  /khulnasoft/search/count/cloud-compliances:
     post:
       description: Count across all the data ssociated with cloud compliances
       operationId: countCloudCompliances
@@ -7632,7 +7718,7 @@ paths:
       summary: Count Cloud compliances
       tags:
       - Search
-  /kengine/search/count/cloud-resources:
+  /khulnasoft/search/count/cloud-resources:
     post:
       description: Count across all the data ssociated with cloud resources
       operationId: countCloudResources
@@ -7675,7 +7761,7 @@ paths:
       summary: Count Cloud resources
       tags:
       - Search
-  /kengine/search/count/compliance-rules:
+  /khulnasoft/search/count/compliance-rules:
     post:
       description: Count across all the data associated with compliance rules
       operationId: countComplianceRules
@@ -7718,7 +7804,7 @@ paths:
       summary: Count Compliance Rules
       tags:
       - Search
-  /kengine/search/count/compliance/scans:
+  /khulnasoft/search/count/compliance/scans:
     post:
       description: Count across all the data associated with compliance scans
       operationId: countComplianceScans
@@ -7761,7 +7847,7 @@ paths:
       summary: Count Compliance Scan results
       tags:
       - Search
-  /kengine/search/count/compliances:
+  /khulnasoft/search/count/compliances:
     post:
       description: Count across all the data associated with compliances
       operationId: countCompliances
@@ -7804,7 +7890,7 @@ paths:
       summary: Count Compliances
       tags:
       - Search
-  /kengine/search/count/containers:
+  /khulnasoft/search/count/containers:
     post:
       description: Count across all the data associated with containers
       operationId: countContainers
@@ -7847,7 +7933,7 @@ paths:
       summary: Count Containers data
       tags:
       - Search
-  /kengine/search/count/hosts:
+  /khulnasoft/search/count/hosts:
     post:
       description: Count across all the data associated with hosts
       operationId: countHosts
@@ -7890,7 +7976,7 @@ paths:
       summary: Count hosts
       tags:
       - Search
-  /kengine/search/count/images:
+  /khulnasoft/search/count/images:
     post:
       description: Count across all the data associated with container images
       operationId: countContainerImages
@@ -7933,7 +8019,7 @@ paths:
       summary: Count Container images
       tags:
       - Search
-  /kengine/search/count/kubernetes-clusters:
+  /khulnasoft/search/count/kubernetes-clusters:
     post:
       description: Count across all the data ssociated with kubernetes clusters
       operationId: countKubernetesClusters
@@ -7976,7 +8062,7 @@ paths:
       summary: Count Kubernetes clusters
       tags:
       - Search
-  /kengine/search/count/malware-rules:
+  /khulnasoft/search/count/malware-rules:
     post:
       description: Count across all the data associated with malware rules
       operationId: countMalwareRules
@@ -8019,7 +8105,7 @@ paths:
       summary: Count Malware Rules
       tags:
       - Search
-  /kengine/search/count/malware/scans:
+  /khulnasoft/search/count/malware/scans:
     post:
       description: Count across all the data associated with malware scans
       operationId: countMalwareScans
@@ -8062,7 +8148,7 @@ paths:
       summary: Count Malware Scan results
       tags:
       - Search
-  /kengine/search/count/malwares:
+  /khulnasoft/search/count/malwares:
     post:
       description: Count across all the data associated with malwares
       operationId: countMalwares
@@ -8105,7 +8191,7 @@ paths:
       summary: Count Malwares
       tags:
       - Search
-  /kengine/search/count/nodes:
+  /khulnasoft/search/count/nodes:
     get:
       description: "Count hosts, containers, pods, k8s clusters, images"
       operationId: countNodes
@@ -8143,7 +8229,7 @@ paths:
       summary: Count nodes
       tags:
       - Search
-  /kengine/search/count/pods:
+  /khulnasoft/search/count/pods:
     post:
       description: Count across all the data associated with pods
       operationId: countPods
@@ -8186,7 +8272,7 @@ paths:
       summary: Count Pods
       tags:
       - Search
-  /kengine/search/count/registry-accounts:
+  /khulnasoft/search/count/registry-accounts:
     post:
       description: Search across all the data associated with registry account
       operationId: countRegistryAccounts
@@ -8229,7 +8315,7 @@ paths:
       summary: Count Registry Accounts
       tags:
       - Search
-  /kengine/search/count/secret-rules:
+  /khulnasoft/search/count/secret-rules:
     post:
       description: Count across all the data associated with secret rules
       operationId: countSecretRules
@@ -8272,7 +8358,7 @@ paths:
       summary: Count Secret Rules
       tags:
       - Search
-  /kengine/search/count/secret/scans:
+  /khulnasoft/search/count/secret/scans:
     post:
       description: Count across all the data associated with secret scans
       operationId: countSecretsScans
@@ -8315,7 +8401,7 @@ paths:
       summary: Count Secret Scan results
       tags:
       - Search
-  /kengine/search/count/secrets:
+  /khulnasoft/search/count/secrets:
     post:
       description: Count across all the data associated with secrets
       operationId: countSecrets
@@ -8358,7 +8444,7 @@ paths:
       summary: Count Secrets
       tags:
       - Search
-  /kengine/search/count/vulnerabilities:
+  /khulnasoft/search/count/vulnerabilities:
     post:
       description: Search across all the data associated with vulnerabilities
       operationId: countVulnerabilities
@@ -8401,7 +8487,7 @@ paths:
       summary: Count Vulnerabilities
       tags:
       - Search
-  /kengine/search/count/vulnerability-rules:
+  /khulnasoft/search/count/vulnerability-rules:
     post:
       description: Count across all the data associated with vulnerability rules
       operationId: countVulnerabilityRules
@@ -8444,7 +8530,7 @@ paths:
       summary: Count Vulnerability Rules
       tags:
       - Search
-  /kengine/search/count/vulnerability/scans:
+  /khulnasoft/search/count/vulnerability/scans:
     post:
       description: Count across all the data associated with vulnerability scans
       operationId: countVulnerabilityScans
@@ -8487,7 +8573,7 @@ paths:
       summary: Count Vulnerability Scan results
       tags:
       - Search
-  /kengine/search/hosts:
+  /khulnasoft/search/hosts:
     post:
       description: Search across all data associated with hosts
       operationId: searchHosts
@@ -8532,7 +8618,7 @@ paths:
       summary: Search hosts
       tags:
       - Search
-  /kengine/search/images:
+  /khulnasoft/search/images:
     post:
       description: Search across all the data associated with container images
       operationId: searchContainerImages
@@ -8577,7 +8663,7 @@ paths:
       summary: Search Container images
       tags:
       - Search
-  /kengine/search/kubernetes-clusters:
+  /khulnasoft/search/kubernetes-clusters:
     post:
       description: Search across all data associated with kuberentes clusters
       operationId: searchKubernetesClusters
@@ -8622,7 +8708,7 @@ paths:
       summary: Search Kuberenetes Clusters
       tags:
       - Search
-  /kengine/search/malware-rules:
+  /khulnasoft/search/malware-rules:
     post:
       description: Search across all the data associated with malware rules
       operationId: searchMalwareRules
@@ -8667,7 +8753,7 @@ paths:
       summary: Search Malware Rules
       tags:
       - Search
-  /kengine/search/malware/scans:
+  /khulnasoft/search/malware/scans:
     post:
       description: Search across all the data associated with malwares scan
       operationId: searchMalwareScans
@@ -8712,7 +8798,7 @@ paths:
       summary: Search Malware Scan results
       tags:
       - Search
-  /kengine/search/malwares:
+  /khulnasoft/search/malwares:
     post:
       description: Search across all the data associated with malwares
       operationId: searchMalwares
@@ -8757,7 +8843,7 @@ paths:
       summary: Search Malwares
       tags:
       - Search
-  /kengine/search/pods:
+  /khulnasoft/search/pods:
     post:
       description: Search across all the data associated with pods
       operationId: searchPods
@@ -8802,7 +8888,7 @@ paths:
       summary: Search Pods
       tags:
       - Search
-  /kengine/search/registry-accounts:
+  /khulnasoft/search/registry-accounts:
     post:
       description: Search across all the data associated with registry account
       operationId: searchRegistryAccounts
@@ -8847,7 +8933,7 @@ paths:
       summary: Search Registry Accounts
       tags:
       - Search
-  /kengine/search/secret-rules:
+  /khulnasoft/search/secret-rules:
     post:
       description: Search across all the data associated with secret ruless
       operationId: searchSecretRules
@@ -8892,7 +8978,7 @@ paths:
       summary: Search Secret Rules
       tags:
       - Search
-  /kengine/search/secret/scans:
+  /khulnasoft/search/secret/scans:
     post:
       description: Search across all the data associated with secrets scan
       operationId: searchSecretsScans
@@ -8937,7 +9023,7 @@ paths:
       summary: Search Secrets Scan results
       tags:
       - Search
-  /kengine/search/secrets:
+  /khulnasoft/search/secrets:
     post:
       description: Search across all the data associated with secrets
       operationId: searchSecrets
@@ -8982,7 +9068,7 @@ paths:
       summary: Search Secrets
       tags:
       - Search
-  /kengine/search/vulnerabilities:
+  /khulnasoft/search/vulnerabilities:
     post:
       description: Search across all the data associated with vulnerabilities
       operationId: searchVulnerabilities
@@ -9027,7 +9113,7 @@ paths:
       summary: Search Vulnerabilities
       tags:
       - Search
-  /kengine/search/vulnerability-rules:
+  /khulnasoft/search/vulnerability-rules:
     post:
       description: Search across all the data associated with vulnerability rules
       operationId: searchVulerabilityRules
@@ -9072,7 +9158,7 @@ paths:
       summary: Search Vulnerability Rules
       tags:
       - Search
-  /kengine/search/vulnerability/scans:
+  /khulnasoft/search/vulnerability/scans:
     post:
       description: Search across all the data associated with vulnerability scan
       operationId: searchVulnerabilityScans
@@ -9117,7 +9203,7 @@ paths:
       summary: Search Vulnerability Scan results
       tags:
       - Search
-  /kengine/settings/agent/version:
+  /khulnasoft/settings/agent/version:
     put:
       description: Upload Agent version
       operationId: uploadAgentVersion
@@ -9156,7 +9242,7 @@ paths:
       summary: Upload New agent version
       tags:
       - Settings
-  /kengine/settings/agent/versions:
+  /khulnasoft/settings/agent/versions:
     get:
       description: Get available agent versions
       operationId: getAgentVersions
@@ -9194,7 +9280,7 @@ paths:
       summary: Get available agent versions
       tags:
       - Settings
-  /kengine/settings/email:
+  /khulnasoft/settings/email:
     get:
       description: Get Email Smtp / ses Configurations in system
       operationId: getEmailConfiguration
@@ -9276,7 +9362,7 @@ paths:
       summary: Add Email Configuration
       tags:
       - Settings
-  /kengine/settings/email/{config_id}:
+  /khulnasoft/settings/email/{config_id}:
     delete:
       description: Delete Email Smtp / ses Configurations in system
       operationId: deleteEmailConfiguration
@@ -9318,7 +9404,7 @@ paths:
       summary: Delete Email Configurations
       tags:
       - Settings
-  /kengine/settings/email/test:
+  /khulnasoft/settings/email/test:
     post:
       description: Test Configured Email
       operationId: testConfiguredEmail
@@ -9356,7 +9442,7 @@ paths:
       summary: Test Configured Email
       tags:
       - Settings
-  /kengine/settings/email/test-unconfigured:
+  /khulnasoft/settings/email/test-unconfigured:
     post:
       description: Test Unconfigured Email
       operationId: testUnconfiguredEmail
@@ -9399,7 +9485,7 @@ paths:
       summary: Test Unconfigured Email
       tags:
       - Settings
-  /kengine/settings/global-settings:
+  /khulnasoft/settings/global-settings:
     get:
       description: Get all settings
       operationId: getSettings
@@ -9439,7 +9525,7 @@ paths:
       summary: Get settings
       tags:
       - Settings
-  /kengine/settings/global-settings/{id}:
+  /khulnasoft/settings/global-settings/{id}:
     patch:
       description: Update setting
       operationId: updateSetting
@@ -9486,7 +9572,7 @@ paths:
       summary: Update setting
       tags:
       - Settings
-  /kengine/settings/user-audit-log:
+  /khulnasoft/settings/user-audit-log:
     post:
       description: Get audit logs for all users
       operationId: getUserAuditLogs
@@ -9531,7 +9617,7 @@ paths:
       summary: Get user audit logs
       tags:
       - Settings
-  /kengine/settings/user-audit-log/count:
+  /khulnasoft/settings/user-audit-log/count:
     get:
       description: Get user audit logs count
       operationId: getUserAuditLogsCount
@@ -9569,7 +9655,7 @@ paths:
       summary: Get user audit logs count
       tags:
       - Settings
-  /kengine/user:
+  /khulnasoft/user:
     delete:
       description: Delete logged in user
       operationId: deleteCurrentUser
@@ -9682,7 +9768,7 @@ paths:
       summary: Update Current User
       tags:
       - User
-  /kengine/user/invite:
+  /khulnasoft/user/invite:
     post:
       description: Invite a user
       operationId: inviteUser
@@ -9725,7 +9811,7 @@ paths:
       summary: Invite User
       tags:
       - User
-  /kengine/user/invite/register:
+  /khulnasoft/user/invite/register:
     post:
       description: Register invited user
       operationId: registerInvitedUser
@@ -9766,7 +9852,7 @@ paths:
       summary: Register Invited User
       tags:
       - User
-  /kengine/user/login:
+  /khulnasoft/user/login:
     post:
       description: Login API
       operationId: login
@@ -9807,7 +9893,7 @@ paths:
       summary: Login API
       tags:
       - Authentication
-  /kengine/user/logout:
+  /khulnasoft/user/logout:
     post:
       description: Logout API
       operationId: logout
@@ -9841,7 +9927,7 @@ paths:
       summary: Logout API
       tags:
       - Authentication
-  /kengine/user/password:
+  /khulnasoft/user/password:
     put:
       description: Update current user's password
       operationId: updatePassword
@@ -9880,7 +9966,7 @@ paths:
       summary: Update Password
       tags:
       - User
-  /kengine/user/register:
+  /khulnasoft/user/register:
     post:
       description: First user registration. Further users needs to be invited.
       operationId: registerUser
@@ -9921,7 +10007,7 @@ paths:
       summary: Register User
       tags:
       - User
-  /kengine/user/reset-password/request:
+  /khulnasoft/user/reset-password/request:
     post:
       description: Request for resetting the password
       operationId: resetPasswordRequest
@@ -9962,7 +10048,7 @@ paths:
       summary: Reset Password Request
       tags:
       - User
-  /kengine/user/reset-password/verify:
+  /khulnasoft/user/reset-password/verify:
     post:
       description: Verify code and reset the password
       operationId: verifyResetPasswordRequest
@@ -9999,7 +10085,7 @@ paths:
       summary: Verify and Reset Password
       tags:
       - User
-  /kengine/users:
+  /khulnasoft/users:
     get:
       description: Get all users
       operationId: getUsers
@@ -10039,7 +10125,7 @@ paths:
       summary: Get all users
       tags:
       - User
-  /kengine/users/{id}:
+  /khulnasoft/users/{id}:
     delete:
       description: Delete User by User ID
       operationId: deleteUser
@@ -10390,6 +10476,7 @@ components:
           interface_ips:
           - interface_ips
           - interface_ips
+          is_khulnasoft_system: true
           availability_zone: availability_zone
           is_console_vm: true
           os: os
@@ -11928,6 +12015,7 @@ components:
         cron_expr: cron_expr
         action: SecretScan
         description: description
+        khulnasoft_system_scan: true
         filters:
           container_scan_filter:
             filter_in:
@@ -11975,6 +12063,8 @@ components:
           type: array
         cron_expr:
           type: string
+        khulnasoft_system_scan:
+          type: boolean
         description:
           type: string
         filters:
@@ -12000,12 +12090,15 @@ components:
       type: object
     ModelAgentID:
       example:
+        node_type: node_type
         available_workload: 0
         node_id: node_id
       properties:
         available_workload:
           type: integer
         node_id:
+          type: string
+        node_type:
           type: string
       required:
       - available_workload
@@ -12276,61 +12369,6 @@ components:
       - type
       - updated_at
       type: object
-    ModelCloudComplianceBenchmark:
-      example:
-        controls:
-        - controls
-        - controls
-        compliance_type: compliance_type
-        id: id
-      properties:
-        compliance_type:
-          type: string
-        controls:
-          items:
-            type: string
-          nullable: true
-          type: array
-        id:
-          type: string
-      type: object
-    ModelCloudComplianceScanDetails:
-      example:
-        account_id: account_id
-        stop_requested: true
-        benchmarks:
-        - controls:
-          - controls
-          - controls
-          compliance_type: compliance_type
-          id: id
-        - controls:
-          - controls
-          - controls
-          compliance_type: compliance_type
-          id: id
-        scan_id: scan_id
-        scan_types:
-        - scan_types
-        - scan_types
-      properties:
-        account_id:
-          type: string
-        benchmarks:
-          items:
-            $ref: '#/components/schemas/ModelCloudComplianceBenchmark'
-          nullable: true
-          type: array
-        scan_id:
-          type: string
-        scan_types:
-          items:
-            type: string
-          nullable: true
-          type: array
-        stop_requested:
-          type: boolean
-      type: object
     ModelCloudComplianceScanResult:
       example:
         benchmark_type:
@@ -12511,6 +12549,7 @@ components:
           key: monitored_account_ids
         org_acc_id: org_acc_id
         cloud_provider: aws
+        host_node_id: host_node_id
         version: version
         node_id: node_id
       properties:
@@ -12521,6 +12560,8 @@ components:
           - aws
           - gcp
           - azure
+          type: string
+        host_node_id:
           type: string
         monitored_account_ids:
           additionalProperties:
@@ -12549,25 +12590,6 @@ components:
           log_action:
             id: 0
             request_payload: request_payload
-          scans:
-            key:
-              account_id: account_id
-              stop_requested: true
-              benchmarks:
-              - controls:
-                - controls
-                - controls
-                compliance_type: compliance_type
-                id: id
-              - controls:
-                - controls
-                - controls
-                compliance_type: compliance_type
-                id: id
-              scan_id: scan_id
-              scan_types:
-              - scan_types
-              - scan_types
           refresh: refresh
       properties:
         data:
@@ -12583,25 +12605,6 @@ components:
         log_action:
           id: 0
           request_payload: request_payload
-        scans:
-          key:
-            account_id: account_id
-            stop_requested: true
-            benchmarks:
-            - controls:
-              - controls
-              - controls
-              compliance_type: compliance_type
-              id: id
-            - controls:
-              - controls
-              - controls
-              compliance_type: compliance_type
-              id: id
-            scan_id: scan_id
-            scan_types:
-            - scan_types
-            - scan_types
         refresh: refresh
       properties:
         cloudtrail_trails:
@@ -12613,11 +12616,6 @@ components:
           $ref: '#/components/schemas/ControlsAction'
         refresh:
           type: string
-        scans:
-          additionalProperties:
-            $ref: '#/components/schemas/ModelCloudComplianceScanDetails'
-          nullable: true
-          type: object
       type: object
     ModelCloudNodeAccountsListReq:
       example:
@@ -12978,6 +12976,7 @@ components:
         updated_at: 1
         node_name: node_name
         created_at: 0
+        cloud_provider: cloud_provider
         scan_id: scan_id
         node_id: node_id
         status: status
@@ -12987,6 +12986,8 @@ components:
             type: string
           nullable: true
           type: array
+        cloud_provider:
+          type: string
         created_at:
           format: int64
           type: integer
@@ -13012,6 +13013,7 @@ components:
           type: integer
       required:
       - benchmark_types
+      - cloud_provider
       - created_at
       - node_id
       - node_name
@@ -13166,6 +13168,7 @@ components:
           updated_at: 1
           node_name: node_name
           created_at: 0
+          cloud_provider: cloud_provider
           scan_id: scan_id
           node_id: node_id
           status: status
@@ -13179,6 +13182,7 @@ components:
           updated_at: 1
           node_name: node_name
           created_at: 0
+          cloud_provider: cloud_provider
           scan_id: scan_id
           node_id: node_id
           status: status
@@ -13197,6 +13201,7 @@ components:
         benchmark_types:
         - benchmark_types
         - benchmark_types
+        khulnasoft_system_scan: true
         filters:
           container_scan_filter:
             filter_in:
@@ -13234,6 +13239,8 @@ components:
             type: string
           nullable: true
           type: array
+        khulnasoft_system_scan:
+          type: boolean
         filters:
           $ref: '#/components/schemas/ModelScanFilter'
         is_priority:
@@ -13272,18 +13279,21 @@ components:
       example:
         vulnerabilities_count: 6
         secrets_count: 1
+        kubernetes_cluster_name: kubernetes_cluster_name
         docker_container_state: docker_container_state
         cpu_max: 0.8008281904610115
         memory_usage: 5
         secret_latest_scan_id: secret_latest_scan_id
         docker_container_network_mode: docker_container_network_mode
         vulnerability_latest_scan_id: vulnerability_latest_scan_id
+        kubernetes_namespace: kubernetes_namespace
         malware_scan_status: malware_scan_status
         docker_container_ips:
         - ""
         - ""
         docker_labels:
           key: ""
+        is_khulnasoft_system: true
         image: null
         processes:
         - memory_max: 9
@@ -13314,6 +13324,7 @@ components:
         docker_container_name: docker_container_name
         docker_container_created: docker_container_created
         malware_latest_scan_id: malware_latest_scan_id
+        kubernetes_cluster_id: kubernetes_cluster_id
         malwares_count: 1
         node_name: node_name
         docker_container_networks: docker_container_networks
@@ -13359,6 +13370,14 @@ components:
           type: string
         image:
           $ref: '#/components/schemas/ModelContainerImage'
+        is_khulnasoft_system:
+          type: boolean
+        kubernetes_cluster_id:
+          type: string
+        kubernetes_cluster_name:
+          type: string
+        kubernetes_namespace:
+          type: string
         malware_latest_scan_id:
           type: string
         malware_scan_status:
@@ -13407,6 +13426,10 @@ components:
       - docker_labels
       - host_name
       - image
+      - is_khulnasoft_system
+      - kubernetes_cluster_id
+      - kubernetes_cluster_name
+      - kubernetes_namespace
       - malware_latest_scan_id
       - malware_scan_status
       - malwares_count
@@ -13425,6 +13448,7 @@ components:
       type: object
     ModelContainerImage:
       example:
+        is_khulnasoft_system: true
         metadata:
           key: ""
         secret_scan_status: secret_scan_status
@@ -13444,18 +13468,21 @@ components:
         containers:
         - vulnerabilities_count: 6
           secrets_count: 1
+          kubernetes_cluster_name: kubernetes_cluster_name
           docker_container_state: docker_container_state
           cpu_max: 0.8008281904610115
           memory_usage: 5
           secret_latest_scan_id: secret_latest_scan_id
           docker_container_network_mode: docker_container_network_mode
           vulnerability_latest_scan_id: vulnerability_latest_scan_id
+          kubernetes_namespace: kubernetes_namespace
           malware_scan_status: malware_scan_status
           docker_container_ips:
           - ""
           - ""
           docker_labels:
             key: ""
+          is_khulnasoft_system: true
           image: null
           processes:
           - memory_max: 9
@@ -13486,6 +13513,7 @@ components:
           docker_container_name: docker_container_name
           docker_container_created: docker_container_created
           malware_latest_scan_id: malware_latest_scan_id
+          kubernetes_cluster_id: kubernetes_cluster_id
           malwares_count: 1
           node_name: node_name
           docker_container_networks: docker_container_networks
@@ -13500,18 +13528,21 @@ components:
           node_id: node_id
         - vulnerabilities_count: 6
           secrets_count: 1
+          kubernetes_cluster_name: kubernetes_cluster_name
           docker_container_state: docker_container_state
           cpu_max: 0.8008281904610115
           memory_usage: 5
           secret_latest_scan_id: secret_latest_scan_id
           docker_container_network_mode: docker_container_network_mode
           vulnerability_latest_scan_id: vulnerability_latest_scan_id
+          kubernetes_namespace: kubernetes_namespace
           malware_scan_status: malware_scan_status
           docker_container_ips:
           - ""
           - ""
           docker_labels:
             key: ""
+          is_khulnasoft_system: true
           image: null
           processes:
           - memory_max: 9
@@ -13542,6 +13573,7 @@ components:
           docker_container_name: docker_container_name
           docker_container_created: docker_container_created
           malware_latest_scan_id: malware_latest_scan_id
+          kubernetes_cluster_id: kubernetes_cluster_id
           malwares_count: 1
           node_name: node_name
           docker_container_networks: docker_container_networks
@@ -13586,6 +13618,8 @@ components:
           type: string
         image_node_id:
           type: string
+        is_khulnasoft_system:
+          type: boolean
         malware_latest_scan_id:
           type: string
         malware_scan_status:
@@ -13622,6 +13656,7 @@ components:
       - docker_image_tag_list
       - docker_image_virtual_size
       - image_node_id
+      - is_khulnasoft_system
       - malware_latest_scan_id
       - malware_scan_status
       - malwares_count
@@ -13755,6 +13790,7 @@ components:
       type: object
     ModelExportReport:
       example:
+        status_message: status_message
         to_timestamp: 1
         updated_at: 5
         storage_path: storage_path
@@ -13775,6 +13811,8 @@ components:
         report_id:
           type: string
         status:
+          type: string
+        status_message:
           type: string
         storage_path:
           type: string
@@ -13882,7 +13920,7 @@ components:
       example:
         to_timestamp: 6
         options:
-          sbom_format: syft-json@11.0.1
+          sbom_format: syft-json
         from_timestamp: 0
         filters:
           include_dead_nodes: true
@@ -14254,6 +14292,7 @@ components:
               interface_ips:
               - interface_ips
               - interface_ips
+              is_khulnasoft_system: true
               availability_zone: availability_zone
               is_console_vm: true
               os: os
@@ -14311,7 +14350,8 @@ components:
         secrets_count: 7
         cloud_region: cloud_region
         container_images:
-        - metadata:
+        - is_khulnasoft_system: true
+          metadata:
             key: ""
           secret_scan_status: secret_scan_status
           vulnerabilities_count: 4
@@ -14330,18 +14370,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -14372,6 +14415,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -14386,18 +14430,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -14428,6 +14475,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -14447,7 +14495,8 @@ components:
           - docker_image_tag_list
           - docker_image_tag_list
           node_id: node_id
-        - metadata:
+        - is_khulnasoft_system: true
+          metadata:
             key: ""
           secret_scan_status: secret_scan_status
           vulnerabilities_count: 4
@@ -14466,18 +14515,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -14508,6 +14560,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -14522,18 +14575,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -14564,6 +14620,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -14673,18 +14730,21 @@ components:
         containers:
         - vulnerabilities_count: 6
           secrets_count: 1
+          kubernetes_cluster_name: kubernetes_cluster_name
           docker_container_state: docker_container_state
           cpu_max: 0.8008281904610115
           memory_usage: 5
           secret_latest_scan_id: secret_latest_scan_id
           docker_container_network_mode: docker_container_network_mode
           vulnerability_latest_scan_id: vulnerability_latest_scan_id
+          kubernetes_namespace: kubernetes_namespace
           malware_scan_status: malware_scan_status
           docker_container_ips:
           - ""
           - ""
           docker_labels:
             key: ""
+          is_khulnasoft_system: true
           image: null
           processes:
           - memory_max: 9
@@ -14715,6 +14775,7 @@ components:
           docker_container_name: docker_container_name
           docker_container_created: docker_container_created
           malware_latest_scan_id: malware_latest_scan_id
+          kubernetes_cluster_id: kubernetes_cluster_id
           malwares_count: 1
           node_name: node_name
           docker_container_networks: docker_container_networks
@@ -14729,18 +14790,21 @@ components:
           node_id: node_id
         - vulnerabilities_count: 6
           secrets_count: 1
+          kubernetes_cluster_name: kubernetes_cluster_name
           docker_container_state: docker_container_state
           cpu_max: 0.8008281904610115
           memory_usage: 5
           secret_latest_scan_id: secret_latest_scan_id
           docker_container_network_mode: docker_container_network_mode
           vulnerability_latest_scan_id: vulnerability_latest_scan_id
+          kubernetes_namespace: kubernetes_namespace
           malware_scan_status: malware_scan_status
           docker_container_ips:
           - ""
           - ""
           docker_labels:
             key: ""
+          is_khulnasoft_system: true
           image: null
           processes:
           - memory_max: 9
@@ -14771,6 +14835,7 @@ components:
           docker_container_name: docker_container_name
           docker_container_created: docker_container_created
           malware_latest_scan_id: malware_latest_scan_id
+          kubernetes_cluster_id: kubernetes_cluster_id
           malwares_count: 1
           node_name: node_name
           docker_container_networks: docker_container_networks
@@ -14784,7 +14849,8 @@ components:
           host_name: host_name
           node_id: node_id
         pods:
-        - kubernetes_ip: kubernetes_ip
+        - is_khulnasoft_system: true
+          kubernetes_ip: kubernetes_ip
           processes:
           - memory_max: 9
             cmdline: cmdline
@@ -14825,18 +14891,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -14867,6 +14936,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -14881,18 +14951,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -14923,6 +14996,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -14938,7 +15012,8 @@ components:
           vulnerability_scan_status: vulnerability_scan_status
           host_name: host_name
           node_id: node_id
-        - kubernetes_ip: kubernetes_ip
+        - is_khulnasoft_system: true
+          kubernetes_ip: kubernetes_ip
           processes:
           - memory_max: 9
             cmdline: cmdline
@@ -14979,18 +15054,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -15021,6 +15099,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -15035,18 +15114,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -15077,6 +15159,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -15296,6 +15379,7 @@ components:
       type: object
     ModelInitAgentReq:
       example:
+        node_type: node_type
         available_workload: 0
         version: version
         node_id: node_id
@@ -15304,11 +15388,14 @@ components:
           type: integer
         node_id:
           type: string
+        node_type:
+          type: string
         version:
           type: string
       required:
       - available_workload
       - node_id
+      - node_type
       - version
       type: object
     ModelIntegrationAddReq:
@@ -15641,7 +15728,8 @@ components:
           secrets_count: 7
           cloud_region: cloud_region
           container_images:
-          - metadata:
+          - is_khulnasoft_system: true
+            metadata:
               key: ""
             secret_scan_status: secret_scan_status
             vulnerabilities_count: 4
@@ -15660,18 +15748,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -15702,6 +15793,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -15716,18 +15808,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -15758,6 +15853,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -15777,7 +15873,8 @@ components:
             - docker_image_tag_list
             - docker_image_tag_list
             node_id: node_id
-          - metadata:
+          - is_khulnasoft_system: true
+            metadata:
               key: ""
             secret_scan_status: secret_scan_status
             vulnerabilities_count: 4
@@ -15796,18 +15893,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -15838,6 +15938,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -15852,18 +15953,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -15894,6 +15998,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16003,18 +16108,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -16045,6 +16153,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -16059,18 +16168,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -16101,6 +16213,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -16114,7 +16227,8 @@ components:
             host_name: host_name
             node_id: node_id
           pods:
-          - kubernetes_ip: kubernetes_ip
+          - is_khulnasoft_system: true
+            kubernetes_ip: kubernetes_ip
             processes:
             - memory_max: 9
               cmdline: cmdline
@@ -16155,18 +16269,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16197,6 +16314,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16211,18 +16329,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16253,6 +16374,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16268,7 +16390,8 @@ components:
             vulnerability_scan_status: vulnerability_scan_status
             host_name: host_name
             node_id: node_id
-          - kubernetes_ip: kubernetes_ip
+          - is_khulnasoft_system: true
+            kubernetes_ip: kubernetes_ip
             processes:
             - memory_max: 9
               cmdline: cmdline
@@ -16309,18 +16432,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16351,6 +16477,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16365,18 +16492,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16407,6 +16537,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16437,7 +16568,8 @@ components:
           secrets_count: 7
           cloud_region: cloud_region
           container_images:
-          - metadata:
+          - is_khulnasoft_system: true
+            metadata:
               key: ""
             secret_scan_status: secret_scan_status
             vulnerabilities_count: 4
@@ -16456,18 +16588,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16498,6 +16633,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16512,18 +16648,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16554,6 +16693,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16573,7 +16713,8 @@ components:
             - docker_image_tag_list
             - docker_image_tag_list
             node_id: node_id
-          - metadata:
+          - is_khulnasoft_system: true
+            metadata:
               key: ""
             secret_scan_status: secret_scan_status
             vulnerabilities_count: 4
@@ -16592,18 +16733,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16634,6 +16778,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16648,18 +16793,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16690,6 +16838,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -16799,18 +16948,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -16841,6 +16993,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -16855,18 +17008,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -16897,6 +17053,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -16910,7 +17067,8 @@ components:
             host_name: host_name
             node_id: node_id
           pods:
-          - kubernetes_ip: kubernetes_ip
+          - is_khulnasoft_system: true
+            kubernetes_ip: kubernetes_ip
             processes:
             - memory_max: 9
               cmdline: cmdline
@@ -16951,18 +17109,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -16993,6 +17154,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -17007,18 +17169,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -17049,6 +17214,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -17064,7 +17230,8 @@ components:
             vulnerability_scan_status: vulnerability_scan_status
             host_name: host_name
             node_id: node_id
-          - kubernetes_ip: kubernetes_ip
+          - is_khulnasoft_system: true
+            kubernetes_ip: kubernetes_ip
             processes:
             - memory_max: 9
               cmdline: cmdline
@@ -17105,18 +17272,21 @@ components:
             containers:
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -17147,6 +17317,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -17161,18 +17332,21 @@ components:
               node_id: node_id
             - vulnerabilities_count: 6
               secrets_count: 1
+              kubernetes_cluster_name: kubernetes_cluster_name
               docker_container_state: docker_container_state
               cpu_max: 0.8008281904610115
               memory_usage: 5
               secret_latest_scan_id: secret_latest_scan_id
               docker_container_network_mode: docker_container_network_mode
               vulnerability_latest_scan_id: vulnerability_latest_scan_id
+              kubernetes_namespace: kubernetes_namespace
               malware_scan_status: malware_scan_status
               docker_container_ips:
               - ""
               - ""
               docker_labels:
                 key: ""
+              is_khulnasoft_system: true
               image: null
               processes:
               - memory_max: 9
@@ -17203,6 +17377,7 @@ components:
               docker_container_name: docker_container_name
               docker_container_created: docker_container_created
               malware_latest_scan_id: malware_latest_scan_id
+              kubernetes_cluster_id: kubernetes_cluster_id
               malwares_count: 1
               node_name: node_name
               docker_container_networks: docker_container_networks
@@ -17264,7 +17439,7 @@ components:
         no_of_hosts: 1
         no_of_images_in_registry: 5
         message: message
-        kengine_support_email: kengine_support_email
+        khulnasoft_support_email: khulnasoft_support_email
         license_email: license_email
         no_of_cloud_accounts: 6
         license_email_domain: license_email_domain
@@ -17273,7 +17448,7 @@ components:
       properties:
         current_hosts:
           type: integer
-        kengine_support_email:
+        khulnasoft_support_email:
           type: string
         description:
           type: string
@@ -17652,6 +17827,7 @@ components:
     ModelMalwareScanTriggerReq:
       example:
         is_priority: true
+        khulnasoft_system_scan: true
         filters:
           container_scan_filter:
             filter_in:
@@ -17684,6 +17860,8 @@ components:
         - node_type: image
           node_id: node_id
       properties:
+        khulnasoft_system_scan:
+          type: boolean
         filters:
           $ref: '#/components/schemas/ModelScanFilter'
         is_priority:
@@ -17779,6 +17957,7 @@ components:
       type: object
     ModelPod:
       example:
+        is_khulnasoft_system: true
         kubernetes_ip: kubernetes_ip
         processes:
         - memory_max: 9
@@ -17820,18 +17999,21 @@ components:
         containers:
         - vulnerabilities_count: 6
           secrets_count: 1
+          kubernetes_cluster_name: kubernetes_cluster_name
           docker_container_state: docker_container_state
           cpu_max: 0.8008281904610115
           memory_usage: 5
           secret_latest_scan_id: secret_latest_scan_id
           docker_container_network_mode: docker_container_network_mode
           vulnerability_latest_scan_id: vulnerability_latest_scan_id
+          kubernetes_namespace: kubernetes_namespace
           malware_scan_status: malware_scan_status
           docker_container_ips:
           - ""
           - ""
           docker_labels:
             key: ""
+          is_khulnasoft_system: true
           image: null
           processes:
           - memory_max: 9
@@ -17862,6 +18044,7 @@ components:
           docker_container_name: docker_container_name
           docker_container_created: docker_container_created
           malware_latest_scan_id: malware_latest_scan_id
+          kubernetes_cluster_id: kubernetes_cluster_id
           malwares_count: 1
           node_name: node_name
           docker_container_networks: docker_container_networks
@@ -17876,18 +18059,21 @@ components:
           node_id: node_id
         - vulnerabilities_count: 6
           secrets_count: 1
+          kubernetes_cluster_name: kubernetes_cluster_name
           docker_container_state: docker_container_state
           cpu_max: 0.8008281904610115
           memory_usage: 5
           secret_latest_scan_id: secret_latest_scan_id
           docker_container_network_mode: docker_container_network_mode
           vulnerability_latest_scan_id: vulnerability_latest_scan_id
+          kubernetes_namespace: kubernetes_namespace
           malware_scan_status: malware_scan_status
           docker_container_ips:
           - ""
           - ""
           docker_labels:
             key: ""
+          is_khulnasoft_system: true
           image: null
           processes:
           - memory_max: 9
@@ -17918,6 +18104,7 @@ components:
           docker_container_name: docker_container_name
           docker_container_created: docker_container_created
           malware_latest_scan_id: malware_latest_scan_id
+          kubernetes_cluster_id: kubernetes_cluster_id
           malwares_count: 1
           node_name: node_name
           docker_container_networks: docker_container_networks
@@ -17941,6 +18128,8 @@ components:
           type: array
         host_name:
           type: string
+        is_khulnasoft_system:
+          type: boolean
         kubernetes_cluster_id:
           type: string
         kubernetes_cluster_name:
@@ -17979,6 +18168,7 @@ components:
       required:
       - containers
       - host_name
+      - is_khulnasoft_system
       - kubernetes_cluster_id
       - kubernetes_cluster_name
       - kubernetes_created
@@ -18130,7 +18320,8 @@ components:
       example:
         syncing: true
         container_images:
-        - metadata:
+        - is_khulnasoft_system: true
+          metadata:
             key: ""
           secret_scan_status: secret_scan_status
           vulnerabilities_count: 4
@@ -18149,18 +18340,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -18191,6 +18385,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -18205,18 +18400,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -18247,6 +18445,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -18266,7 +18465,8 @@ components:
           - docker_image_tag_list
           - docker_image_tag_list
           node_id: node_id
-        - metadata:
+        - is_khulnasoft_system: true
+          metadata:
             key: ""
           secret_scan_status: secret_scan_status
           vulnerabilities_count: 4
@@ -18285,18 +18485,21 @@ components:
           containers:
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -18327,6 +18530,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -18341,18 +18545,21 @@ components:
             node_id: node_id
           - vulnerabilities_count: 6
             secrets_count: 1
+            kubernetes_cluster_name: kubernetes_cluster_name
             docker_container_state: docker_container_state
             cpu_max: 0.8008281904610115
             memory_usage: 5
             secret_latest_scan_id: secret_latest_scan_id
             docker_container_network_mode: docker_container_network_mode
             vulnerability_latest_scan_id: vulnerability_latest_scan_id
+            kubernetes_namespace: kubernetes_namespace
             malware_scan_status: malware_scan_status
             docker_container_ips:
             - ""
             - ""
             docker_labels:
               key: ""
+            is_khulnasoft_system: true
             image: null
             processes:
             - memory_max: 9
@@ -18383,6 +18590,7 @@ components:
             docker_container_name: docker_container_name
             docker_container_created: docker_container_created
             malware_latest_scan_id: malware_latest_scan_id
+            kubernetes_cluster_id: kubernetes_cluster_id
             malwares_count: 1
             node_name: node_name
             docker_container_networks: docker_container_networks
@@ -18820,7 +19028,7 @@ components:
       - to_scan_id
       - window
       type: object
-    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCloudCompliance:
+    ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCloudCompliance:
       example:
         new:
         - severity: severity
@@ -18888,7 +19096,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelCompliance:
+    ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelCompliance:
       example:
         new:
         - resource: resource
@@ -18952,7 +19160,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelMalware:
+    ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelMalware:
       example:
         new:
         - date: date
@@ -19022,7 +19230,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelSecret:
+    ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelSecret:
       example:
         new:
         - full_filename: full_filename
@@ -19080,7 +19288,7 @@ components:
       required:
       - new
       type: object
-    ModelScanCompareResGithubComKengineThreatMapperKengineServerModelVulnerability:
+    ModelScanCompareResGithubComKhulnasoftKengineKhulnasoftServerModelVulnerability:
       example:
         new:
         - parsed_attack_vector: parsed_attack_vector
@@ -19882,6 +20090,7 @@ components:
     ModelSecretScanTriggerReq:
       example:
         is_priority: true
+        khulnasoft_system_scan: true
         filters:
           container_scan_filter:
             filter_in:
@@ -19914,6 +20123,8 @@ components:
         - node_type: image
           node_id: node_id
       properties:
+        khulnasoft_system_scan:
+          type: boolean
         filters:
           $ref: '#/components/schemas/ModelScanFilter'
         is_priority:
@@ -20567,6 +20778,7 @@ components:
         scan_config:
         - language: base
         - language: base
+        khulnasoft_system_scan: true
         filters:
           container_scan_filter:
             filter_in:
@@ -20599,6 +20811,8 @@ components:
         - node_type: image
           node_id: node_id
       properties:
+        khulnasoft_system_scan:
+          type: boolean
         filters:
           $ref: '#/components/schemas/ModelScanFilter'
         is_priority:
@@ -20767,6 +20981,7 @@ components:
         interface_ips:
         - interface_ips
         - interface_ips
+        is_khulnasoft_system: true
         availability_zone: availability_zone
         is_console_vm: true
         os: os
@@ -20865,6 +21080,8 @@ components:
             type: string
           type: array
         is_console_vm:
+          type: boolean
+        is_khulnasoft_system:
           type: boolean
         kernel_id:
           type: string
@@ -21804,11 +22021,11 @@ components:
       type: object
     UtilsReportOptions:
       example:
-        sbom_format: syft-json@11.0.1
+        sbom_format: syft-json
       properties:
         sbom_format:
           enum:
-          - syft-json@11.0.1
+          - syft-json
           - cyclonedx-json@1.5
           - spdx-json@2.2
           - spdx-json@2.3

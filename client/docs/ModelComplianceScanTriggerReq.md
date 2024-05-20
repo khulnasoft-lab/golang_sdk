@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BenchmarkTypes** | **[]string** |  | 
+**KhulnasoftSystemScan** | Pointer to **bool** |  | [optional] 
 **Filters** | [**ModelScanFilter**](ModelScanFilter.md) |  | 
 **IsPriority** | Pointer to **bool** |  | [optional] 
 **NodeIds** | [**[]ModelNodeIdentifier**](ModelNodeIdentifier.md) |  | 
@@ -58,6 +59,31 @@ SetBenchmarkTypes sets BenchmarkTypes field to given value.
 `func (o *ModelComplianceScanTriggerReq) UnsetBenchmarkTypes()`
 
 UnsetBenchmarkTypes ensures that no value is present for BenchmarkTypes, not even an explicit nil
+### GetKhulnasoftSystemScan
+
+`func (o *ModelComplianceScanTriggerReq) GetKhulnasoftSystemScan() bool`
+
+GetKhulnasoftSystemScan returns the KhulnasoftSystemScan field if non-nil, zero value otherwise.
+
+### GetKhulnasoftSystemScanOk
+
+`func (o *ModelComplianceScanTriggerReq) GetKhulnasoftSystemScanOk() (*bool, bool)`
+
+GetKhulnasoftSystemScanOk returns a tuple with the KhulnasoftSystemScan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKhulnasoftSystemScan
+
+`func (o *ModelComplianceScanTriggerReq) SetKhulnasoftSystemScan(v bool)`
+
+SetKhulnasoftSystemScan sets KhulnasoftSystemScan field to given value.
+
+### HasKhulnasoftSystemScan
+
+`func (o *ModelComplianceScanTriggerReq) HasKhulnasoftSystemScan() bool`
+
+HasKhulnasoftSystemScan returns a boolean if a field has been set.
+
 ### GetFilters
 
 `func (o *ModelComplianceScanTriggerReq) GetFilters() ModelScanFilter`

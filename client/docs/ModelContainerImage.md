@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **DockerImageTagList** | **[]string** |  | 
 **DockerImageVirtualSize** | **string** |  | 
 **ImageNodeId** | **string** |  | 
+**IsKhulnasoftSystem** | **bool** |  | 
 **MalwareLatestScanId** | **string** |  | 
 **MalwareScanStatus** | **string** |  | 
 **MalwaresCount** | **int32** |  | 
@@ -30,7 +31,7 @@ Name | Type | Description | Notes
 
 ### NewModelContainerImage
 
-`func NewModelContainerImage(containers []ModelContainer, dockerImageCreatedAt string, dockerImageId string, dockerImageName string, dockerImageSize string, dockerImageTag string, dockerImageTagList []string, dockerImageVirtualSize string, imageNodeId string, malwareLatestScanId string, malwareScanStatus string, malwaresCount int32, nodeId string, nodeName string, secretLatestScanId string, secretScanStatus string, secretsCount int32, vulnerabilitiesCount int32, vulnerabilityLatestScanId string, vulnerabilityScanStatus string, ) *ModelContainerImage`
+`func NewModelContainerImage(containers []ModelContainer, dockerImageCreatedAt string, dockerImageId string, dockerImageName string, dockerImageSize string, dockerImageTag string, dockerImageTagList []string, dockerImageVirtualSize string, imageNodeId string, isKhulnasoftSystem bool, malwareLatestScanId string, malwareScanStatus string, malwaresCount int32, nodeId string, nodeName string, secretLatestScanId string, secretScanStatus string, secretsCount int32, vulnerabilitiesCount int32, vulnerabilityLatestScanId string, vulnerabilityScanStatus string, ) *ModelContainerImage`
 
 NewModelContainerImage instantiates a new ModelContainerImage object
 This constructor will assign default values to properties that have it defined,
@@ -243,6 +244,26 @@ and a boolean to check if the value has been set.
 `func (o *ModelContainerImage) SetImageNodeId(v string)`
 
 SetImageNodeId sets ImageNodeId field to given value.
+
+
+### GetIsKhulnasoftSystem
+
+`func (o *ModelContainerImage) GetIsKhulnasoftSystem() bool`
+
+GetIsKhulnasoftSystem returns the IsKhulnasoftSystem field if non-nil, zero value otherwise.
+
+### GetIsKhulnasoftSystemOk
+
+`func (o *ModelContainerImage) GetIsKhulnasoftSystemOk() (*bool, bool)`
+
+GetIsKhulnasoftSystemOk returns a tuple with the IsKhulnasoftSystem field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsKhulnasoftSystem
+
+`func (o *ModelContainerImage) SetIsKhulnasoftSystem(v bool)`
+
+SetIsKhulnasoftSystem sets IsKhulnasoftSystem field to given value.
 
 
 ### GetMalwareLatestScanId

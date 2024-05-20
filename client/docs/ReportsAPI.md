@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BulkDeleteReports**](ReportsAPI.md#BulkDeleteReports) | **Patch** /kengine/reports/delete | Bulk Delete Reports
-[**DeleteReport**](ReportsAPI.md#DeleteReport) | **Delete** /kengine/reports/{report_id} | Delete Report
-[**GenerateReport**](ReportsAPI.md#GenerateReport) | **Post** /kengine/reports | Generate Report
-[**GetReport**](ReportsAPI.md#GetReport) | **Get** /kengine/reports/{report_id} | Get Report
-[**ListReports**](ReportsAPI.md#ListReports) | **Get** /kengine/reports | List Reports
+[**BulkDeleteReports**](ReportsAPI.md#BulkDeleteReports) | **Patch** /khulnasoft/reports/delete | Bulk Delete Reports
+[**DeleteReport**](ReportsAPI.md#DeleteReport) | **Delete** /khulnasoft/reports/{report_id} | Delete Report
+[**GenerateReport**](ReportsAPI.md#GenerateReport) | **Post** /khulnasoft/reports | Generate Report
+[**GetReport**](ReportsAPI.md#GetReport) | **Get** /khulnasoft/reports/{report_id} | Get Report
+[**ListReports**](ReportsAPI.md#ListReports) | **Get** /khulnasoft/reports | List Reports
 
 
 

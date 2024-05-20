@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteCloudNodeAccount**](CloudNodesAPI.md#DeleteCloudNodeAccount) | **Patch** /kengine/cloud-node/account/delete | Delete Cloud Node Account
-[**ListCloudNodeAccount**](CloudNodesAPI.md#ListCloudNodeAccount) | **Post** /kengine/cloud-node/list/accounts | List Cloud Node Accounts
-[**ListCloudProviders**](CloudNodesAPI.md#ListCloudProviders) | **Get** /kengine/cloud-node/list/providers | List Cloud Node Providers
-[**RefreshCloudNodeAccount**](CloudNodesAPI.md#RefreshCloudNodeAccount) | **Post** /kengine/cloud-node/account/refresh | Refresh Cloud Account
-[**RegisterCloudNodeAccount**](CloudNodesAPI.md#RegisterCloudNodeAccount) | **Post** /kengine/cloud-node/account | Register Cloud Node Account
+[**DeleteCloudNodeAccount**](CloudNodesAPI.md#DeleteCloudNodeAccount) | **Patch** /khulnasoft/cloud-node/account/delete | Delete Cloud Node Account
+[**ListCloudNodeAccount**](CloudNodesAPI.md#ListCloudNodeAccount) | **Post** /khulnasoft/cloud-node/list/accounts | List Cloud Node Accounts
+[**ListCloudProviders**](CloudNodesAPI.md#ListCloudProviders) | **Get** /khulnasoft/cloud-node/list/providers | List Cloud Node Providers
+[**RefreshCloudNodeAccount**](CloudNodesAPI.md#RefreshCloudNodeAccount) | **Post** /khulnasoft/cloud-node/account/refresh | Refresh Cloud Account
+[**RegisterCloudNodeAccount**](CloudNodesAPI.md#RegisterCloudNodeAccount) | **Post** /khulnasoft/cloud-node/account | Register Cloud Node Account
 
 
 

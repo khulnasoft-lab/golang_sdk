@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Containers** | [**[]ModelContainer**](ModelContainer.md) |  | 
 **HostName** | **string** |  | 
+**IsKhulnasoftSystem** | **bool** |  | 
 **KubernetesClusterId** | **string** |  | 
 **KubernetesClusterName** | **string** |  | 
 **KubernetesCreated** | **string** |  | 
@@ -26,7 +27,7 @@ Name | Type | Description | Notes
 
 ### NewModelPod
 
-`func NewModelPod(containers []ModelContainer, hostName string, kubernetesClusterId string, kubernetesClusterName string, kubernetesCreated string, kubernetesIp string, kubernetesIsInHostNetwork bool, kubernetesLabels map[string]interface{}, kubernetesNamespace string, kubernetesState string, malwareScanStatus string, nodeId string, nodeName string, podName string, processes []ModelProcess, secretScanStatus string, vulnerabilityScanStatus string, ) *ModelPod`
+`func NewModelPod(containers []ModelContainer, hostName string, isKhulnasoftSystem bool, kubernetesClusterId string, kubernetesClusterName string, kubernetesCreated string, kubernetesIp string, kubernetesIsInHostNetwork bool, kubernetesLabels map[string]interface{}, kubernetesNamespace string, kubernetesState string, malwareScanStatus string, nodeId string, nodeName string, podName string, processes []ModelProcess, secretScanStatus string, vulnerabilityScanStatus string, ) *ModelPod`
 
 NewModelPod instantiates a new ModelPod object
 This constructor will assign default values to properties that have it defined,
@@ -89,6 +90,26 @@ and a boolean to check if the value has been set.
 `func (o *ModelPod) SetHostName(v string)`
 
 SetHostName sets HostName field to given value.
+
+
+### GetIsKhulnasoftSystem
+
+`func (o *ModelPod) GetIsKhulnasoftSystem() bool`
+
+GetIsKhulnasoftSystem returns the IsKhulnasoftSystem field if non-nil, zero value otherwise.
+
+### GetIsKhulnasoftSystemOk
+
+`func (o *ModelPod) GetIsKhulnasoftSystemOk() (*bool, bool)`
+
+GetIsKhulnasoftSystemOk returns a tuple with the IsKhulnasoftSystem field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsKhulnasoftSystem
+
+`func (o *ModelPod) SetIsKhulnasoftSystem(v bool)`
+
+SetIsKhulnasoftSystem sets IsKhulnasoftSystem field to given value.
 
 
 ### GetKubernetesClusterId

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**KhulnasoftSystemScan** | Pointer to **bool** |  | [optional] 
 **Filters** | [**ModelScanFilter**](ModelScanFilter.md) |  | 
 **IsPriority** | Pointer to **bool** |  | [optional] 
 **NodeIds** | [**[]ModelNodeIdentifier**](ModelNodeIdentifier.md) |  | 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewModelSecretScanTriggerReqWithDefaults instantiates a new ModelSecretScanTriggerReq object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetKhulnasoftSystemScan
+
+`func (o *ModelSecretScanTriggerReq) GetKhulnasoftSystemScan() bool`
+
+GetKhulnasoftSystemScan returns the KhulnasoftSystemScan field if non-nil, zero value otherwise.
+
+### GetKhulnasoftSystemScanOk
+
+`func (o *ModelSecretScanTriggerReq) GetKhulnasoftSystemScanOk() (*bool, bool)`
+
+GetKhulnasoftSystemScanOk returns a tuple with the KhulnasoftSystemScan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKhulnasoftSystemScan
+
+`func (o *ModelSecretScanTriggerReq) SetKhulnasoftSystemScan(v bool)`
+
+SetKhulnasoftSystemScan sets KhulnasoftSystemScan field to given value.
+
+### HasKhulnasoftSystemScan
+
+`func (o *ModelSecretScanTriggerReq) HasKhulnasoftSystemScan() bool`
+
+HasKhulnasoftSystemScan returns a boolean if a field has been set.
 
 ### GetFilters
 

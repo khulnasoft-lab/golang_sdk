@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CurrentHosts** | Pointer to **int32** |  | [optional] 
-**KengineSupportEmail** | Pointer to **string** |  | [optional] 
+**KhulnasoftSupportEmail** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **EndDate** | Pointer to **string** |  | [optional] 
 **IsActive** | Pointer to **bool** |  | [optional] 
@@ -67,30 +67,30 @@ SetCurrentHosts sets CurrentHosts field to given value.
 
 HasCurrentHosts returns a boolean if a field has been set.
 
-### GetKengineSupportEmail
+### GetKhulnasoftSupportEmail
 
-`func (o *ModelLicense) GetKengineSupportEmail() string`
+`func (o *ModelLicense) GetKhulnasoftSupportEmail() string`
 
-GetKengineSupportEmail returns the KengineSupportEmail field if non-nil, zero value otherwise.
+GetKhulnasoftSupportEmail returns the KhulnasoftSupportEmail field if non-nil, zero value otherwise.
 
-### GetKengineSupportEmailOk
+### GetKhulnasoftSupportEmailOk
 
-`func (o *ModelLicense) GetKengineSupportEmailOk() (*string, bool)`
+`func (o *ModelLicense) GetKhulnasoftSupportEmailOk() (*string, bool)`
 
-GetKengineSupportEmailOk returns a tuple with the KengineSupportEmail field if it's non-nil, zero value otherwise
+GetKhulnasoftSupportEmailOk returns a tuple with the KhulnasoftSupportEmail field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetKengineSupportEmail
+### SetKhulnasoftSupportEmail
 
-`func (o *ModelLicense) SetKengineSupportEmail(v string)`
+`func (o *ModelLicense) SetKhulnasoftSupportEmail(v string)`
 
-SetKengineSupportEmail sets KengineSupportEmail field to given value.
+SetKhulnasoftSupportEmail sets KhulnasoftSupportEmail field to given value.
 
-### HasKengineSupportEmail
+### HasKhulnasoftSupportEmail
 
-`func (o *ModelLicense) HasKengineSupportEmail() bool`
+`func (o *ModelLicense) HasKhulnasoftSupportEmail() bool`
 
-HasKengineSupportEmail returns a boolean if a field has been set.
+HasKhulnasoftSupportEmail returns a boolean if a field has been set.
 
 ### GetDescription
 

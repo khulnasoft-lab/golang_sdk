@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteCurrentUser**](UserAPI.md#DeleteCurrentUser) | **Delete** /kengine/user | Delete Current User
-[**DeleteUser**](UserAPI.md#DeleteUser) | **Delete** /kengine/users/{id} | Delete User by User ID
-[**GetApiTokens**](UserAPI.md#GetApiTokens) | **Get** /kengine/api-token | Get User&#39;s API Tokens
-[**GetCurrentUser**](UserAPI.md#GetCurrentUser) | **Get** /kengine/user | Get Current User
-[**GetUser**](UserAPI.md#GetUser) | **Get** /kengine/users/{id} | Get User by User ID
-[**GetUsers**](UserAPI.md#GetUsers) | **Get** /kengine/users | Get all users
-[**InviteUser**](UserAPI.md#InviteUser) | **Post** /kengine/user/invite | Invite User
-[**RegisterInvitedUser**](UserAPI.md#RegisterInvitedUser) | **Post** /kengine/user/invite/register | Register Invited User
-[**RegisterUser**](UserAPI.md#RegisterUser) | **Post** /kengine/user/register | Register User
-[**ResetApiTokens**](UserAPI.md#ResetApiTokens) | **Post** /kengine/api-token/reset | Reset User&#39;s API Tokens
-[**ResetPasswordRequest**](UserAPI.md#ResetPasswordRequest) | **Post** /kengine/user/reset-password/request | Reset Password Request
-[**UpdateCurrentUser**](UserAPI.md#UpdateCurrentUser) | **Put** /kengine/user | Update Current User
-[**UpdatePassword**](UserAPI.md#UpdatePassword) | **Put** /kengine/user/password | Update Password
-[**UpdateUser**](UserAPI.md#UpdateUser) | **Put** /kengine/users/{id} | Update User by User ID
-[**VerifyResetPasswordRequest**](UserAPI.md#VerifyResetPasswordRequest) | **Post** /kengine/user/reset-password/verify | Verify and Reset Password
+[**DeleteCurrentUser**](UserAPI.md#DeleteCurrentUser) | **Delete** /khulnasoft/user | Delete Current User
+[**DeleteUser**](UserAPI.md#DeleteUser) | **Delete** /khulnasoft/users/{id} | Delete User by User ID
+[**GetApiTokens**](UserAPI.md#GetApiTokens) | **Get** /khulnasoft/api-token | Get User&#39;s API Tokens
+[**GetCurrentUser**](UserAPI.md#GetCurrentUser) | **Get** /khulnasoft/user | Get Current User
+[**GetUser**](UserAPI.md#GetUser) | **Get** /khulnasoft/users/{id} | Get User by User ID
+[**GetUsers**](UserAPI.md#GetUsers) | **Get** /khulnasoft/users | Get all users
+[**InviteUser**](UserAPI.md#InviteUser) | **Post** /khulnasoft/user/invite | Invite User
+[**RegisterInvitedUser**](UserAPI.md#RegisterInvitedUser) | **Post** /khulnasoft/user/invite/register | Register Invited User
+[**RegisterUser**](UserAPI.md#RegisterUser) | **Post** /khulnasoft/user/register | Register User
+[**ResetApiTokens**](UserAPI.md#ResetApiTokens) | **Post** /khulnasoft/api-token/reset | Reset User&#39;s API Tokens
+[**ResetPasswordRequest**](UserAPI.md#ResetPasswordRequest) | **Post** /khulnasoft/user/reset-password/request | Reset Password Request
+[**UpdateCurrentUser**](UserAPI.md#UpdateCurrentUser) | **Put** /khulnasoft/user | Update Current User
+[**UpdatePassword**](UserAPI.md#UpdatePassword) | **Put** /khulnasoft/user/password | Update Password
+[**UpdateUser**](UserAPI.md#UpdateUser) | **Put** /khulnasoft/users/{id} | Update User by User ID
+[**VerifyResetPasswordRequest**](UserAPI.md#VerifyResetPasswordRequest) | **Post** /khulnasoft/user/reset-password/verify | Verify and Reset Password
 
 
 

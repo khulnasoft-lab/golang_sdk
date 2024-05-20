@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CountResultsComplianceScan**](ComplianceAPI.md#CountResultsComplianceScan) | **Post** /kengine/scan/results/count/compliance | Get Compliance Scans Results
-[**IngestComplianceScanStatus**](ComplianceAPI.md#IngestComplianceScanStatus) | **Post** /kengine/ingest/compliance-scan-logs | Ingest Compliance Scan Status
-[**IngestCompliances**](ComplianceAPI.md#IngestCompliances) | **Post** /kengine/ingest/compliance | Ingest Compliances
-[**ListComplianceScan**](ComplianceAPI.md#ListComplianceScan) | **Post** /kengine/scan/list/compliance | Get Compliance Scans List
-[**ResultsComplianceScan**](ComplianceAPI.md#ResultsComplianceScan) | **Post** /kengine/scan/results/compliance | Get Compliance Scans Results
-[**StartComplianceScan**](ComplianceAPI.md#StartComplianceScan) | **Post** /kengine/scan/start/compliance | Start Compliance Scan
-[**StatusComplianceScan**](ComplianceAPI.md#StatusComplianceScan) | **Post** /kengine/scan/status/compliance | Get Compliance Scan Status
-[**StopComplianceScan**](ComplianceAPI.md#StopComplianceScan) | **Post** /kengine/scan/stop/compliance | Stop Compliance Scan
+[**CountResultsComplianceScan**](ComplianceAPI.md#CountResultsComplianceScan) | **Post** /khulnasoft/scan/results/count/compliance | Get Compliance Scans Results
+[**IngestComplianceScanStatus**](ComplianceAPI.md#IngestComplianceScanStatus) | **Post** /khulnasoft/ingest/compliance-scan-logs | Ingest Compliance Scan Status
+[**IngestCompliances**](ComplianceAPI.md#IngestCompliances) | **Post** /khulnasoft/ingest/compliance | Ingest Compliances
+[**ListComplianceScan**](ComplianceAPI.md#ListComplianceScan) | **Post** /khulnasoft/scan/list/compliance | Get Compliance Scans List
+[**ResultsComplianceScan**](ComplianceAPI.md#ResultsComplianceScan) | **Post** /khulnasoft/scan/results/compliance | Get Compliance Scans Results
+[**StartComplianceScan**](ComplianceAPI.md#StartComplianceScan) | **Post** /khulnasoft/scan/start/compliance | Start Compliance Scan
+[**StatusComplianceScan**](ComplianceAPI.md#StatusComplianceScan) | **Post** /khulnasoft/scan/status/compliance | Get Compliance Scan Status
+[**StopComplianceScan**](ComplianceAPI.md#StopComplianceScan) | **Post** /khulnasoft/scan/stop/compliance | Stop Compliance Scan
 
 
 

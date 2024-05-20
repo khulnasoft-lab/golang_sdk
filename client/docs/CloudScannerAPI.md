@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CountResultsCloudComplianceScan**](CloudScannerAPI.md#CountResultsCloudComplianceScan) | **Post** /kengine/scan/results/count/cloud-compliance | Get Cloud Compliance Scan Results
-[**IngestCloudComplianceScanStatus**](CloudScannerAPI.md#IngestCloudComplianceScanStatus) | **Post** /kengine/ingest/cloud-compliance-status | Ingest Cloud Compliances scan status
-[**IngestCloudCompliances**](CloudScannerAPI.md#IngestCloudCompliances) | **Post** /kengine/ingest/cloud-compliance | Ingest Cloud Compliances
-[**ListCloudComplianceScan**](CloudScannerAPI.md#ListCloudComplianceScan) | **Post** /kengine/scan/list/cloud-compliance | Get Cloud Compliance Scans List
-[**ResultsCloudComplianceScan**](CloudScannerAPI.md#ResultsCloudComplianceScan) | **Post** /kengine/scan/results/cloud-compliance | Get Cloud Compliance Scan Results
-[**StatusCloudComplianceScan**](CloudScannerAPI.md#StatusCloudComplianceScan) | **Post** /kengine/scan/status/cloud-compliance | Get Cloud Compliance Scan Status
+[**CountResultsCloudComplianceScan**](CloudScannerAPI.md#CountResultsCloudComplianceScan) | **Post** /khulnasoft/scan/results/count/cloud-compliance | Get Cloud Compliance Scan Results
+[**IngestCloudComplianceScanStatus**](CloudScannerAPI.md#IngestCloudComplianceScanStatus) | **Post** /khulnasoft/ingest/cloud-compliance-status | Ingest Cloud Compliances scan status
+[**IngestCloudCompliances**](CloudScannerAPI.md#IngestCloudCompliances) | **Post** /khulnasoft/ingest/cloud-compliance | Ingest Cloud Compliances
+[**ListCloudComplianceScan**](CloudScannerAPI.md#ListCloudComplianceScan) | **Post** /khulnasoft/scan/list/cloud-compliance | Get Cloud Compliance Scans List
+[**ResultsCloudComplianceScan**](CloudScannerAPI.md#ResultsCloudComplianceScan) | **Post** /khulnasoft/scan/results/cloud-compliance | Get Cloud Compliance Scan Results
+[**StatusCloudComplianceScan**](CloudScannerAPI.md#StatusCloudComplianceScan) | **Post** /khulnasoft/scan/status/cloud-compliance | Get Cloud Compliance Scan Status
 
 
 

@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Eula**](CommonAPI.md#Eula) | **Get** /kengine/end-user-license-agreement | Get End User License Agreement
-[**GetScanReportFields**](CommonAPI.md#GetScanReportFields) | **Get** /kengine/scan/results/fields | Get Scan Report Fields
+[**Eula**](CommonAPI.md#Eula) | **Get** /khulnasoft/end-user-license-agreement | Get End User License Agreement
+[**GetScanReportFields**](CommonAPI.md#GetScanReportFields) | **Get** /khulnasoft/scan/results/fields | Get Scan Report Fields
 
 
 

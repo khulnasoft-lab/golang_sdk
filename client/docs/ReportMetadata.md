@@ -39,6 +39,7 @@ Name | Type | Description | Notes
 **InterfaceIps** | Pointer to **[]string** |  | [optional] 
 **InterfaceNames** | Pointer to **[]string** |  | [optional] 
 **IsConsoleVm** | Pointer to **bool** |  | [optional] 
+**IsKhulnasoftSystem** | Pointer to **bool** |  | [optional] 
 **KernelId** | Pointer to **string** |  | [optional] 
 **KernelVersion** | Pointer to **string** |  | [optional] 
 **KubernetesClusterId** | Pointer to **string** |  | [optional] 
@@ -972,6 +973,31 @@ SetIsConsoleVm sets IsConsoleVm field to given value.
 `func (o *ReportMetadata) HasIsConsoleVm() bool`
 
 HasIsConsoleVm returns a boolean if a field has been set.
+
+### GetIsKhulnasoftSystem
+
+`func (o *ReportMetadata) GetIsKhulnasoftSystem() bool`
+
+GetIsKhulnasoftSystem returns the IsKhulnasoftSystem field if non-nil, zero value otherwise.
+
+### GetIsKhulnasoftSystemOk
+
+`func (o *ReportMetadata) GetIsKhulnasoftSystemOk() (*bool, bool)`
+
+GetIsKhulnasoftSystemOk returns a tuple with the IsKhulnasoftSystem field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsKhulnasoftSystem
+
+`func (o *ReportMetadata) SetIsKhulnasoftSystem(v bool)`
+
+SetIsKhulnasoftSystem sets IsKhulnasoftSystem field to given value.
+
+### HasIsKhulnasoftSystem
+
+`func (o *ReportMetadata) HasIsKhulnasoftSystem() bool`
+
+HasIsKhulnasoftSystem returns a boolean if a field has been set.
 
 ### GetKernelId
 

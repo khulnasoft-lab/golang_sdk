@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddIntegration**](IntegrationAPI.md#AddIntegration) | **Post** /kengine/integration | Add Integration
-[**DeleteIntegration**](IntegrationAPI.md#DeleteIntegration) | **Delete** /kengine/integration/{integration_id} | Delete Single Integration
-[**DeleteIntegrations**](IntegrationAPI.md#DeleteIntegrations) | **Patch** /kengine/integration/delete | Delete Integrations
-[**ListIntegration**](IntegrationAPI.md#ListIntegration) | **Get** /kengine/integration | List Integrations
-[**UpdateIntegration**](IntegrationAPI.md#UpdateIntegration) | **Put** /kengine/integration/{integration_id} | Update Integration
+[**AddIntegration**](IntegrationAPI.md#AddIntegration) | **Post** /khulnasoft/integration | Add Integration
+[**DeleteIntegration**](IntegrationAPI.md#DeleteIntegration) | **Delete** /khulnasoft/integration/{integration_id} | Delete Single Integration
+[**DeleteIntegrations**](IntegrationAPI.md#DeleteIntegrations) | **Patch** /khulnasoft/integration/delete | Delete Integrations
+[**ListIntegration**](IntegrationAPI.md#ListIntegration) | **Get** /khulnasoft/integration | List Integrations
+[**UpdateIntegration**](IntegrationAPI.md#UpdateIntegration) | **Put** /khulnasoft/integration/{integration_id} | Update Integration
 
 
 

@@ -4,30 +4,30 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddEmailConfiguration**](SettingsAPI.md#AddEmailConfiguration) | **Post** /kengine/settings/email | Add Email Configuration
-[**AddScheduledTask**](SettingsAPI.md#AddScheduledTask) | **Post** /kengine/scheduled-task | Add scheduled task
-[**DeleteCustomScheduledTask**](SettingsAPI.md#DeleteCustomScheduledTask) | **Delete** /kengine/scheduled-task/{id} | Delete Custom Schedule task
-[**DeleteEmailConfiguration**](SettingsAPI.md#DeleteEmailConfiguration) | **Delete** /kengine/settings/email/{config_id} | Delete Email Configurations
-[**DeleteLicense**](SettingsAPI.md#DeleteLicense) | **Delete** /kengine/license | Delete License
-[**GenerateLicense**](SettingsAPI.md#GenerateLicense) | **Post** /kengine/license/generate | Generate License Key
-[**GetAgentBinaryDownloadURL**](SettingsAPI.md#GetAgentBinaryDownloadURL) | **Get** /kengine/agent-deployment/binary/download-url | Get agent binary download url
-[**GetAgentVersions**](SettingsAPI.md#GetAgentVersions) | **Get** /kengine/settings/agent/versions | Get available agent versions
-[**GetEmailConfiguration**](SettingsAPI.md#GetEmailConfiguration) | **Get** /kengine/settings/email | Get Email Configurations
-[**GetLicense**](SettingsAPI.md#GetLicense) | **Get** /kengine/license | Get License Details
-[**GetScheduledTasks**](SettingsAPI.md#GetScheduledTasks) | **Get** /kengine/scheduled-task | Get scheduled tasks
-[**GetSettings**](SettingsAPI.md#GetSettings) | **Get** /kengine/settings/global-settings | Get settings
-[**GetUserAuditLogs**](SettingsAPI.md#GetUserAuditLogs) | **Post** /kengine/settings/user-audit-log | Get user audit logs
-[**GetUserAuditLogsCount**](SettingsAPI.md#GetUserAuditLogsCount) | **Get** /kengine/settings/user-audit-log/count | Get user audit logs count
-[**RegisterLicense**](SettingsAPI.md#RegisterLicense) | **Post** /kengine/license | Register License
-[**TestConfiguredEmail**](SettingsAPI.md#TestConfiguredEmail) | **Post** /kengine/settings/email/test | Test Configured Email
-[**TestUnconfiguredEmail**](SettingsAPI.md#TestUnconfiguredEmail) | **Post** /kengine/settings/email/test-unconfigured | Test Unconfigured Email
-[**UpdateScheduledTask**](SettingsAPI.md#UpdateScheduledTask) | **Patch** /kengine/scheduled-task/{id} | Update scheduled task
-[**UpdateSetting**](SettingsAPI.md#UpdateSetting) | **Patch** /kengine/settings/global-settings/{id} | Update setting
-[**UploadAgentVersion**](SettingsAPI.md#UploadAgentVersion) | **Put** /kengine/settings/agent/version | Upload New agent version
-[**UploadMalwareRules**](SettingsAPI.md#UploadMalwareRules) | **Put** /kengine/database/malware | Upload Malware Rules
-[**UploadPostureControls**](SettingsAPI.md#UploadPostureControls) | **Put** /kengine/database/posture | Upload Posture Controls
-[**UploadSecretsRules**](SettingsAPI.md#UploadSecretsRules) | **Put** /kengine/database/secret | Upload Secrets Rules
-[**UploadVulnerabilityDatabase**](SettingsAPI.md#UploadVulnerabilityDatabase) | **Put** /kengine/database/vulnerability | Upload Vulnerability Database
+[**AddEmailConfiguration**](SettingsAPI.md#AddEmailConfiguration) | **Post** /khulnasoft/settings/email | Add Email Configuration
+[**AddScheduledTask**](SettingsAPI.md#AddScheduledTask) | **Post** /khulnasoft/scheduled-task | Add scheduled task
+[**DeleteCustomScheduledTask**](SettingsAPI.md#DeleteCustomScheduledTask) | **Delete** /khulnasoft/scheduled-task/{id} | Delete Custom Schedule task
+[**DeleteEmailConfiguration**](SettingsAPI.md#DeleteEmailConfiguration) | **Delete** /khulnasoft/settings/email/{config_id} | Delete Email Configurations
+[**DeleteLicense**](SettingsAPI.md#DeleteLicense) | **Delete** /khulnasoft/license | Delete License
+[**GenerateLicense**](SettingsAPI.md#GenerateLicense) | **Post** /khulnasoft/license/generate | Generate License Key
+[**GetAgentBinaryDownloadURL**](SettingsAPI.md#GetAgentBinaryDownloadURL) | **Get** /khulnasoft/agent-deployment/binary/download-url | Get agent binary download url
+[**GetAgentVersions**](SettingsAPI.md#GetAgentVersions) | **Get** /khulnasoft/settings/agent/versions | Get available agent versions
+[**GetEmailConfiguration**](SettingsAPI.md#GetEmailConfiguration) | **Get** /khulnasoft/settings/email | Get Email Configurations
+[**GetLicense**](SettingsAPI.md#GetLicense) | **Get** /khulnasoft/license | Get License Details
+[**GetScheduledTasks**](SettingsAPI.md#GetScheduledTasks) | **Get** /khulnasoft/scheduled-task | Get scheduled tasks
+[**GetSettings**](SettingsAPI.md#GetSettings) | **Get** /khulnasoft/settings/global-settings | Get settings
+[**GetUserAuditLogs**](SettingsAPI.md#GetUserAuditLogs) | **Post** /khulnasoft/settings/user-audit-log | Get user audit logs
+[**GetUserAuditLogsCount**](SettingsAPI.md#GetUserAuditLogsCount) | **Get** /khulnasoft/settings/user-audit-log/count | Get user audit logs count
+[**RegisterLicense**](SettingsAPI.md#RegisterLicense) | **Post** /khulnasoft/license | Register License
+[**TestConfiguredEmail**](SettingsAPI.md#TestConfiguredEmail) | **Post** /khulnasoft/settings/email/test | Test Configured Email
+[**TestUnconfiguredEmail**](SettingsAPI.md#TestUnconfiguredEmail) | **Post** /khulnasoft/settings/email/test-unconfigured | Test Unconfigured Email
+[**UpdateScheduledTask**](SettingsAPI.md#UpdateScheduledTask) | **Patch** /khulnasoft/scheduled-task/{id} | Update scheduled task
+[**UpdateSetting**](SettingsAPI.md#UpdateSetting) | **Patch** /khulnasoft/settings/global-settings/{id} | Update setting
+[**UploadAgentVersion**](SettingsAPI.md#UploadAgentVersion) | **Put** /khulnasoft/settings/agent/version | Upload New agent version
+[**UploadMalwareRules**](SettingsAPI.md#UploadMalwareRules) | **Put** /khulnasoft/database/malware | Upload Malware Rules
+[**UploadPostureControls**](SettingsAPI.md#UploadPostureControls) | **Put** /khulnasoft/database/posture | Upload Posture Controls
+[**UploadSecretsRules**](SettingsAPI.md#UploadSecretsRules) | **Put** /khulnasoft/database/secret | Upload Secrets Rules
+[**UploadVulnerabilityDatabase**](SettingsAPI.md#UploadVulnerabilityDatabase) | **Put** /khulnasoft/database/vulnerability | Upload Vulnerability Database
 
 
 

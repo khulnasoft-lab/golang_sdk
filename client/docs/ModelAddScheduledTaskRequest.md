@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Action** | **string** |  | 
 **BenchmarkTypes** | **[]string** |  | 
 **CronExpr** | Pointer to **string** |  | [optional] 
+**KhulnasoftSystemScan** | Pointer to **bool** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
 **Filters** | [**ModelScanFilter**](ModelScanFilter.md) |  | 
 **IsPriority** | Pointer to **bool** |  | [optional] 
@@ -106,6 +107,31 @@ SetCronExpr sets CronExpr field to given value.
 `func (o *ModelAddScheduledTaskRequest) HasCronExpr() bool`
 
 HasCronExpr returns a boolean if a field has been set.
+
+### GetKhulnasoftSystemScan
+
+`func (o *ModelAddScheduledTaskRequest) GetKhulnasoftSystemScan() bool`
+
+GetKhulnasoftSystemScan returns the KhulnasoftSystemScan field if non-nil, zero value otherwise.
+
+### GetKhulnasoftSystemScanOk
+
+`func (o *ModelAddScheduledTaskRequest) GetKhulnasoftSystemScanOk() (*bool, bool)`
+
+GetKhulnasoftSystemScanOk returns a tuple with the KhulnasoftSystemScan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKhulnasoftSystemScan
+
+`func (o *ModelAddScheduledTaskRequest) SetKhulnasoftSystemScan(v bool)`
+
+SetKhulnasoftSystemScan sets KhulnasoftSystemScan field to given value.
+
+### HasKhulnasoftSystemScan
+
+`func (o *ModelAddScheduledTaskRequest) HasKhulnasoftSystemScan() bool`
+
+HasKhulnasoftSystemScan returns a boolean if a field has been set.
 
 ### GetDescription
 

@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DiagnosticNotification**](DiagnosisAPI.md#DiagnosticNotification) | **Get** /kengine/diagnosis/notification | Get Diagnostic Notification
-[**GenerateAgentDiagnosticLogs**](DiagnosisAPI.md#GenerateAgentDiagnosticLogs) | **Post** /kengine/diagnosis/agent-logs | Generate Agent Diagnostic Logs
-[**GenerateCloudScannerDiagnosticLogs**](DiagnosisAPI.md#GenerateCloudScannerDiagnosticLogs) | **Post** /kengine/diagnosis/cloud-scanner-logs | Generate Cloud Scanner Diagnostic Logs
-[**GenerateConsoleDiagnosticLogs**](DiagnosisAPI.md#GenerateConsoleDiagnosticLogs) | **Post** /kengine/diagnosis/console-logs | Generate Console Diagnostic Logs
-[**GetDiagnosticLogs**](DiagnosisAPI.md#GetDiagnosticLogs) | **Get** /kengine/diagnosis/diagnostic-logs | Get Diagnostic Logs
-[**UpdateAgentDiagnosticLogsStatus**](DiagnosisAPI.md#UpdateAgentDiagnosticLogsStatus) | **Put** /kengine/diagnosis/agent-logs/status/{node_id} | Update Agent Diagnostic Logs Status
-[**UpdateCloudScannerDiagnosticLogsStatus**](DiagnosisAPI.md#UpdateCloudScannerDiagnosticLogsStatus) | **Put** /kengine/diagnosis/cloud-scanner-logs/status/{node_id} | Update Cloud Scanner Diagnostic Logs Status
+[**DiagnosticNotification**](DiagnosisAPI.md#DiagnosticNotification) | **Get** /khulnasoft/diagnosis/notification | Get Diagnostic Notification
+[**GenerateAgentDiagnosticLogs**](DiagnosisAPI.md#GenerateAgentDiagnosticLogs) | **Post** /khulnasoft/diagnosis/agent-logs | Generate Agent Diagnostic Logs
+[**GenerateCloudScannerDiagnosticLogs**](DiagnosisAPI.md#GenerateCloudScannerDiagnosticLogs) | **Post** /khulnasoft/diagnosis/cloud-scanner-logs | Generate Cloud Scanner Diagnostic Logs
+[**GenerateConsoleDiagnosticLogs**](DiagnosisAPI.md#GenerateConsoleDiagnosticLogs) | **Post** /khulnasoft/diagnosis/console-logs | Generate Console Diagnostic Logs
+[**GetDiagnosticLogs**](DiagnosisAPI.md#GetDiagnosticLogs) | **Get** /khulnasoft/diagnosis/diagnostic-logs | Get Diagnostic Logs
+[**UpdateAgentDiagnosticLogsStatus**](DiagnosisAPI.md#UpdateAgentDiagnosticLogsStatus) | **Put** /khulnasoft/diagnosis/agent-logs/status/{node_id} | Update Agent Diagnostic Logs Status
+[**UpdateCloudScannerDiagnosticLogsStatus**](DiagnosisAPI.md#UpdateCloudScannerDiagnosticLogsStatus) | **Put** /khulnasoft/diagnosis/cloud-scanner-logs/status/{node_id} | Update Cloud Scanner Diagnostic Logs Status
 
 
 

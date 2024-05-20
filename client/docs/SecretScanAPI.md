@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CountResultsSecretScan**](SecretScanAPI.md#CountResultsSecretScan) | **Post** /kengine/scan/results/count/secret | Get Secret Scans Results
-[**GroupResultsSecrets**](SecretScanAPI.md#GroupResultsSecrets) | **Get** /kengine/scan/results/count/group/secret | Group Secret Results
-[**IngestSecretScanStatus**](SecretScanAPI.md#IngestSecretScanStatus) | **Post** /kengine/ingest/secret-scan-logs | Ingest Secrets Scan Status
-[**IngestSecrets**](SecretScanAPI.md#IngestSecrets) | **Post** /kengine/ingest/secrets | Ingest Secrets
-[**ListSecretScan**](SecretScanAPI.md#ListSecretScan) | **Post** /kengine/scan/list/secret | Get Secret Scans List
-[**ResultsRulesSecretScan**](SecretScanAPI.md#ResultsRulesSecretScan) | **Post** /kengine/scan/results/secret/rules | Get Secret Scans Result Rules
-[**ResultsSecretScan**](SecretScanAPI.md#ResultsSecretScan) | **Post** /kengine/scan/results/secret | Get Secret Scans Results
-[**StartSecretScan**](SecretScanAPI.md#StartSecretScan) | **Post** /kengine/scan/start/secret | Start Secret Scan
-[**StatusSecretScan**](SecretScanAPI.md#StatusSecretScan) | **Post** /kengine/scan/status/secret | Get Secret Scan Status
-[**StopSecretScan**](SecretScanAPI.md#StopSecretScan) | **Post** /kengine/scan/stop/secret | Stop Secret Scan
+[**CountResultsSecretScan**](SecretScanAPI.md#CountResultsSecretScan) | **Post** /khulnasoft/scan/results/count/secret | Get Secret Scans Results
+[**GroupResultsSecrets**](SecretScanAPI.md#GroupResultsSecrets) | **Get** /khulnasoft/scan/results/count/group/secret | Group Secret Results
+[**IngestSecretScanStatus**](SecretScanAPI.md#IngestSecretScanStatus) | **Post** /khulnasoft/ingest/secret-scan-logs | Ingest Secrets Scan Status
+[**IngestSecrets**](SecretScanAPI.md#IngestSecrets) | **Post** /khulnasoft/ingest/secrets | Ingest Secrets
+[**ListSecretScan**](SecretScanAPI.md#ListSecretScan) | **Post** /khulnasoft/scan/list/secret | Get Secret Scans List
+[**ResultsRulesSecretScan**](SecretScanAPI.md#ResultsRulesSecretScan) | **Post** /khulnasoft/scan/results/secret/rules | Get Secret Scans Result Rules
+[**ResultsSecretScan**](SecretScanAPI.md#ResultsSecretScan) | **Post** /khulnasoft/scan/results/secret | Get Secret Scans Results
+[**StartSecretScan**](SecretScanAPI.md#StartSecretScan) | **Post** /khulnasoft/scan/start/secret | Start Secret Scan
+[**StatusSecretScan**](SecretScanAPI.md#StatusSecretScan) | **Post** /khulnasoft/scan/status/secret | Get Secret Scan Status
+[**StopSecretScan**](SecretScanAPI.md#StopSecretScan) | **Post** /khulnasoft/scan/stop/secret | Stop Secret Scan
 
 
 
