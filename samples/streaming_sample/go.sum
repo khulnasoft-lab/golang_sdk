@@ -6,6 +6,8 @@ github.com/hashicorp/go-cleanhttp v0.5.2/go.mod h1:kO/YDlP8L1346E6Sodw+PrpBSV4/S
 github.com/hashicorp/go-hclog v1.6.3 h1:Qr2kF+eVWjTiYmU7Y31tYlP1h0q/X3Nl3tPGdaB11/k=
 github.com/hashicorp/go-retryablehttp v0.7.6 h1:TwRYfx2z2C4cLbXmT8I5PgP/xmuqASDyiVuGYfs9GZM=
 github.com/hashicorp/go-retryablehttp v0.7.6/go.mod h1:pkQpWZeYWskR+D1tR2O5OcBFOxfA7DoAO6xtkuQnHTk=
+github.com/hashicorp/go-retryablehttp v0.7.7 h1:C8hUCYzor8PIfXHa4UrZkU4VvK8o9ISHxT2Q8+VepXU=
+github.com/hashicorp/go-retryablehttp v0.7.7/go.mod h1:pkQpWZeYWskR+D1tR2O5OcBFOxfA7DoAO6xtkuQnHTk=
 github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240517042822-c98d5dfb7872 h1:2UpeLeP94XBwW6VM6yMg06qnwUIKDNsRMxvp7s6MgtM=
 github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240517042822-c98d5dfb7872/go.mod h1:L2E+zDeBZofLoEsyBxfUEs5X1kfiRaZ7f2TiC4/7gnA=
 github.com/khulnasoft-lab/golang_sdk/client v0.0.0-20240520213426-d989e5f20024 h1:rxaPbljlCmCyJctAgDnkp/3NSs2ewq8gTLeqOzHUEP0=
@@ -16,6 +18,8 @@ github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240520213426-d989e5f20024 h1
 github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240520213426-d989e5f20024/go.mod h1:g20u3GANovlgQSRAas4UF1D5kJ3qnvDSbUbujADJ6fI=
 github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240606060842-fae368ff2239 h1:P1n1fuPDhyzt0VDTgBHK62a3rm1/pWk+8nkOVbbKneQ=
 github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240606060842-fae368ff2239/go.mod h1:OZltweCrRHB+0xnrjMXDVRCWiqq+UsuomIxibIdjN8A=
+github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240606104307-bf32ab7fa596 h1:KXUeCLAqsJSHkGJkwWv2njStWezl8qMbjZou8TlTOQs=
+github.com/khulnasoft-lab/golang_sdk/utils v0.0.0-20240606104307-bf32ab7fa596/go.mod h1:PAGZD0OHgqcyqSJajVHkjDX+TpH9B8FX6Jceo5lKdSA=
 github.com/mattn/go-colorable v0.1.13 h1:fFA4WZxdEF4tXPZVKMLwD8oUnCTTo08duU7wxecdEvA=
 github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBDR4GtXTXX8a3vIGJpMovkB8vQcUbaXHg=
 github.com/mattn/go-isatty v0.0.16/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
